@@ -1,0 +1,10 @@
+{
+  "coco_origins": {
+    "('val2017', True)": 7,
+    "('val2017', False)": 8,
+    "('train2017', True)": 8,
+    "('train2017', False)": 15
+  },
+  "initial_generic_weights_source": "/usr/src/ultralytics/ultralytics/cfg/datasets/coco.yaml",
+  "note": "New to this project and not used for board training, but YOLO COCO pretraining may have seen images from COCO train2017 for other classes. No claim of globally unseen source images."
+}

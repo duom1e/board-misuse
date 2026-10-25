@@ -1,0 +1,17 @@
+{
+  "experiment_name": "new_kitchen_photos_v1",
+  "data": "../datasets/REPLACE_WITH_NEW_DATA/data.yaml",
+  "initial_weights": "training_runs/board_v2_real/weights/best.pt",
+  "data_status": "fresh_holdout_declared",
+  "allow_training": true,
+  "groups_file": "../datasets/REPLACE_WITH_NEW_DATA/scene_groups.json",
+  "near_duplicate_hamming": 4,
+  "training": {"epochs": 40, "imgsz": 640, "batch": 8, "device": 0, "workers": 0, "amp": false, "seed": 42, "lr0": 0.0005, "mosaic": 0.2, "scale": 0.2},
+  "evaluation": {
+    "confidence": 0.5,
+    "match_iou": 0.5,
+    "calibration": {"confidence_grid": [0.35, 0.5, 0.65], "minimum_precision": 0.7}
+  },
+  "acceptance": {"min_map50": 0.6, "min_map50_95": 0.4, "min_precision": 0.7, "min_recall": 0.5},
+  "description": "Replace paths and declare acceptance rules before training. Values are examples, not validated kitchen requirements. Hold out different source videos/scenes; do not call reused public images fresh."
+}

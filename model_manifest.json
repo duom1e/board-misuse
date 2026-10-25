@@ -1,0 +1,52 @@
+{
+  "vegetable": {
+    "weights": "training_runs/vegetable_baseline/weights/best.pt",
+    "status": "experimental; retained after candidate negative-example regression",
+    "imgsz": 640,
+    "classes": null,
+    "sha256": "81b9866ac0f4c578f9040b8c4a419da6476b274e197f41d893cb269cd961f24d",
+    "included_in_git": false
+  },
+  "board": {
+    "weights": "training_runs/board_v2_real/weights/best.pt",
+    "status": "experimental, improved on real kitchen scenes; default board model for check_board_misuse.py",
+    "imgsz": 640,
+    "classes": [
+      "cutting_board"
+    ],
+    "sha256": "9b5116f6d0341be44b15745909f4b4f40ac9579c1ede56cef90255673b65bca1",
+    "included_in_git": false
+  },
+  "foodseg": {
+    "weights": "training_runs/foodseg_2cls/weights/best.pt",
+    "status": "experimental, best model so far; opt-in via --food-model foodseg; NOT the default",
+    "imgsz": 640,
+    "classes": [
+      "meat",
+      "vegetable"
+    ],
+    "sha256": "f8761c6d5e7643c6ca08ac5292944113e78c8d955f6eb3f46b46bf80faa982e8",
+    "included_in_git": false
+  },
+  "food_type": {
+    "weights": "training_runs/food_taxonomy_v1/weights/best.pt",
+    "status": "experimental research model; opt-in only via --food-model food_type; NOT the default",
+    "imgsz": 640,
+    "classes": [
+      "plant_food",
+      "animal_food"
+    ],
+    "sha256": "f77deeb50349b4fcfcaf3dfe3aa091d6ede11ed9b7dcd632d01f85ae6d9549c6",
+    "included_in_git": false
+  },
+  "board_lvis": {
+    "weights": "experiments/lvis_board_ccby_trial/training/weights/best.pt",
+    "status": "experimental opt-in only; not promoted because predefined absolute criteria were not all met",
+    "imgsz": 640,
+    "classes": [
+      "cutting_board"
+    ],
+    "sha256": "2bfd3e08b69efa73b059c64499aca7a6b7d6930194cdaacdc4b86b33af22edeb",
+    "included_in_git": false
+  }
+}

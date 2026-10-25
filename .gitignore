@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+*.pt
+*.onnx
+*.zip
+work/
+*_dataset*/
+training_runs/
+experiments/
+review_results/
+annotation_pool/
+annotation_audits/
+batch_results/
+misuse_results/

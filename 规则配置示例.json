@@ -1,0 +1,13 @@
+{
+  "demo_not_site_policy": true,
+  "description": "演示规则，不能代表任何后厨制度。请先按实际图片修改案板区域和允许食材。",
+  "food_confidence": 0.5,
+  "min_food_overlap": 0.8,
+  "boards": [
+    {
+      "id": "board_A",
+      "xyxy_normalized": [0.1, 0.1, 0.9, 0.9],
+      "allowed_foods": ["meat"]
+    }
+  ]
+}

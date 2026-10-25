@@ -1,0 +1,23 @@
+{
+  "created_before_model_evaluation": true,
+  "created_at": "2026-10-25T20:25:57.554506+08:00",
+  "question": "Does new, separately annotated LVIS board data improve the current board detector on fresh source images?",
+  "reference_weights": "D:\\CodexProjects\\board-misuse\\outputs\\training_runs\\board_v2_real\\weights\\best.pt",
+  "fresh_data": "D:\\CodexProjects\\board-misuse\\outputs\\board_lvis_ccby\\data.yaml",
+  "confidence": 0.5,
+  "match_iou": 0.5,
+  "all_required": {
+    "fresh_min_precision": 0.7,
+    "fresh_min_recall": 0.5,
+    "fresh_min_map50": 0.6,
+    "fresh_min_f1_improvement": 0.05,
+    "fresh_max_precision_drop": 0.03,
+    "fresh_max_recall_drop": 0.03,
+    "fresh_max_extra_false_boxes_per_negative_image": 0.05,
+    "historical_max_map50_drop": 0.03,
+    "historical_max_fixed_recall_drop": 0.05
+  },
+  "if_fails": "Keep the currently registered board detector; retain the candidate and data for research.",
+  "scope": "Public household/food photos. Not a new canteen/surveillance benchmark; small fresh test set.",
+  "provenance": "LVIS v1 chopping_board 253, image license ID4 only; no not-exhaustive labels; prior Flickr IDs/content filtered before training."
+}

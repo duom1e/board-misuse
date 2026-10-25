@@ -1,0 +1,211 @@
+{
+  "vegetable": {
+    "weights": "training_runs/vegetable_baseline/weights/best.pt",
+    "imgsz": 640,
+    "status": "experimental; retained after candidate negative-example regression",
+    "selection_record": "model_release_decision.json"
+  },
+  "board": {
+    "weights": "training_runs/board_v2_real/weights/best.pt",
+    "imgsz": 640,
+    "status": "experimental, improved on real kitchen scenes; default board model for check_board_misuse.py",
+    "selection_record": "real_kitchen_probe/board_v2_verification.json",
+    "classes": [
+      "cutting_board"
+    ],
+    "why_not_default_food": "not a food model; board localisation only",
+    "change_vs_baseline": "fine-tuned from board_baseline with 2 verified real boards and 44 verified no-board kitchen scenes",
+    "board_dataset_test": {
+      "before": {
+        "mAP50": 0.8943,
+        "mAP50_95": 0.7167,
+        "precision": 0.7756,
+        "recall": 0.92
+      },
+      "after": {
+        "mAP50": 0.9117,
+        "mAP50_95": 0.7404,
+        "precision": 0.9325,
+        "recall": 0.8
+      }
+    },
+    "kitchen_holdout": {
+      "images": 92,
+      "detections_before": {
+        "images_with_detection": 27,
+        "boxes": 29
+      },
+      "detections_after": {
+        "images_with_detection": 13,
+        "boxes": 17
+      },
+      "precision_among_detections_before": 0.087,
+      "precision_among_detections_after": 0.438,
+      "verified_images": 12
+    },
+    "limitations": [
+      "Precision 0.44 on real kitchen photos is better but still far from usable for automatic judgement.",
+      "Recall on real kitchens is unmeasured.",
+      "Hold-out is 92 Open Images kitchen photos, not canteen footage."
+    ],
+    "evaluated_alternatives": [
+      {
+        "name": "board_v3_real (second labelling batch, 284 train images)",
+        "weights": "training_runs\\board_v3_real\\weights\\best.pt",
+        "verdict": "not promoted: board test mAP50 0.897 vs 0.912, precision 0.902 vs 0.933, and more detections on the fresh 90-image kitchen probe (39 vs 32 boxes)",
+        "record": "board_v3_metrics.json"
+      }
+    ],
+    "data_status": "Open Images cutting-board images are exhausted: all 196 train / 10 validation / 24 test images have been used. Further public-data experiments would reuse the same photos, so the only meaningful next step is self-shot kitchen or canteen photos."
+  },
+  "foodseg": {
+    "weights": "training_runs/foodseg_2cls/weights/best.pt",
+    "imgsz": 640,
+    "status": "experimental, best model so far; opt-in via --food-model foodseg; NOT the default",
+    "selection_record": "foodseg_2cls_decision.json",
+    "classes": [
+      "meat",
+      "vegetable"
+    ],
+    "why_not_default": "Trained on FoodSeg103 dish photos plus 156 empty board photos, never on real kitchen footage. Its numbers come from dish photography, so treat them as an upper bound for a real 后厨.",
+    "dataset": "foodseg_two_class (FoodSeg103, processed_meat merged into meat, + 156 background boards)",
+    "test_metrics": {
+      "mAP50": 0.5908,
+      "mAP50_95": 0.4425,
+      "meat_AP50": 0.5654,
+      "vegetable_AP50": 0.6162
+    },
+    "fixed_confidence": {
+      "at_0.50": {
+        "precision": 0.7478,
+        "recall": 0.4243
+      },
+      "at_0.35": {
+        "precision": 0.6302,
+        "recall": 0.5214
+      }
+    },
+    "board_only_probe": {
+      "images": 22,
+      "raw_detections_at_0.5": 3,
+      "audited_false_positives_at_0.5": 1,
+      "audit": "probe_audit.json",
+      "note": "2 of the 3 raw detections were on probe images that actually contain food"
+    },
+    "calibrated_thresholds": {
+      "record": "threshold_calibration_foodseg_2cls.json",
+      "precision_first": {
+        "confidence": 0.5,
+        "test_precision": 0.7478,
+        "test_recall": 0.4243
+      },
+      "recall_first": {
+        "confidence": 0.35,
+        "test_precision": 0.6302,
+        "test_recall": 0.5214
+      }
+    },
+    "policy_alias_notes": [
+      "meat covers steak/pork/chicken-duck/lamb plus sausage/fried meat from FoodSeg103",
+      "vegetable covers 28 vegetable categories",
+      "processed_meat was merged into meat because it was not learnable at this data size",
+      "FoodSeg103 has no raw-vs-cooked annotation: do not read 生熟 out of this model"
+    ],
+    "previous_entries": [
+      {
+        "weights": "training_runs\\foodseg_v2\\weights\\best.pt",
+        "verdict": "superseded: three classes cost 0.17 mAP50; merging processed_meat into meat lifted mAP50 0.416 to 0.591 and recall 0.368 to 0.424, at the price of one audited bare-board false positive",
+        "record": "foodseg_2cls_decision.json"
+      },
+      {
+        "weights": "training_runs\\foodseg_v1\\weights\\best.pt",
+        "verdict": "superseded: 156 background boards removed bare-board false positives (7/22 to 0/22 at conf 0.5) at a small cost to mAP50 (0.435 to 0.416)",
+        "record": "foodseg_v2_decision.json"
+      }
+    ]
+  },
+  "food_type": {
+    "weights": "training_runs/food_taxonomy_v1/weights/best.pt",
+    "imgsz": 640,
+    "status": "experimental research model; opt-in only via --food-model food_type; NOT the default",
+    "selection_record": "food_taxonomy_metrics.json",
+    "classes": [
+      "plant_food",
+      "animal_food"
+    ],
+    "why_not_default": "Fixed-confidence recall is very low (0.092 at conf 0.50 on 220 test images) and 10 of 22 board-only weak-negative images produced at least one detection. The legacy vegetable model remains the default.",
+    "evaluated_alternatives": [
+      {
+        "name": "food_taxonomy_v2 (background boards)",
+        "weights": "training_runs\\food_taxonomy_v2\\weights\\best.pt",
+        "verdict": "not promoted: board-only false positives fell 10/22 to 3/22 but test mAP50-95 dropped 0.0228",
+        "record": "food_taxonomy_v2_decision.json"
+      },
+      {
+        "name": "food_taxonomy_v3 (third class other_food + 120 backgrounds)",
+        "weights": "training_runs\\food_taxonomy_v3\\weights\\best.pt",
+        "verdict": "not promoted: other_food works (AP50 0.566) and held-out bread is now correct, but animal_food AP50 fell 0.320 to 0.144 and cheese matched recall fell 11.2% to 0.9% at conf 0.50",
+        "record": "food_taxonomy_v3_decision.json",
+        "cheese_comparison": "cheese_recall_comparison.json"
+      },
+      {
+        "name": "food_taxonomy_v4s (YOLO11s on the v3 data)",
+        "weights": "training_runs\\food_taxonomy_v4s\\weights\\best.pt",
+        "verdict": "not promoted: 3.6x parameters did not recover animal_food (AP50 0.144 to 0.138, cheese 0.9% to 6.0%), so capacity is not the bottleneck",
+        "record": "food_taxonomy_v4s_decision.json",
+        "subtype_analysis": "food_subtype_analysis.json"
+      }
+    ],
+    "open_findings": [
+      "At conf 0.50 the detector is far from usable: per-subtype hit rates are 1-40% for everything except hamburger/bread/doughnut.",
+      "animal_food is not one visual class (egg 0.585 vs seafood 0.203 at conf 0.25 in v1). Splitting it into seafood and egg_dairy is the next class change.",
+      "The 0.50 operating point was never calibrated. A threshold sweep on existing test data is the cheapest next step."
+    ],
+    "calibrated_thresholds": {
+      "record": "threshold_calibration_v1.json",
+      "precision_first": {
+        "confidence": 0.5,
+        "test_precision": 0.552,
+        "test_recall": 0.092,
+        "false_boxes_per_image": 0.3,
+        "status": "current default; kept because the rule engine is an alerting tool where false alarms cost more"
+      },
+      "recall_first": {
+        "confidence": 0.25,
+        "test_precision": 0.364,
+        "test_recall": 0.179,
+        "false_boxes_per_image": 1.3,
+        "status": "available via --food-confidence 0.25; needs more human review capacity"
+      },
+      "finding": "No threshold makes the detector usable: best F1 is about 0.30 at conf 0.10-0.20, and per-class only other_food reaches a workable point (P 0.744 / R 0.408 at conf 0.50). The bottleneck is detection quality, not the threshold.",
+      "caveat": "Calibrated on the food_taxonomy_v1 validation split (139 images) and confirmed on its 220-image test split, both public-data, not kitchen data."
+    }
+  },
+  "board_lvis": {
+    "weights": "experiments/lvis_board_ccby_trial/training/weights/best.pt",
+    "imgsz": 640,
+    "classes": [
+      "cutting_board"
+    ],
+    "status": "experimental opt-in only; not promoted because predefined absolute criteria were not all met",
+    "selection_record": "lvis_board_comparison.json",
+    "fresh_project_holdout": {
+      "images": 38,
+      "positive_images": 15,
+      "negative_images": 23,
+      "confidence": 0.5,
+      "precision": 0.9,
+      "recall": 0.47368421052631576,
+      "map50": 0.40505113145143457,
+      "negative_false_boxes": 0
+    },
+    "limitations": [
+      "Public LVIS/COCO photos new to board-label development, not canteen footage.",
+      "Only 38 test images, 15 positive and 23 explicitly negative.",
+      "23 source images come from COCO train2017; generic YOLO pretraining may have seen them for other classes. No globally unseen-image claim.",
+      "Historical test used only as a predefined regression guard, not independent performance evidence.",
+      "Photo/source filtering does not prove independent households or scenes."
+    ],
+    "default_promoted": false
+  }
+}
