@@ -207,5 +207,37 @@
       "Photo/source filtering does not prove independent households or scenes."
     ],
     "default_promoted": false
+  },
+  "board_canteen": {
+    "weights": "training_runs/board_v5_canteen_mix/weights/best.pt",
+    "imgsz": 960,
+    "status": "experimental, domain-adapted for a fixed commercial-kitchen camera; opt-in via --board-model board_canteen; NOT the default",
+    "selection_record": "canteen_mix_metrics.json",
+    "classes": [
+      "cutting_board"
+    ],
+    "change_vs_default": "board_v2_real + 25 frames from one real Chinese commercial kitchen (cutting task, overhead camera)",
+    "canteen_holdout_15_frames": {
+      "before": {
+        "conf_0.5": 0.0,
+        "conf_0.25": 0.467
+      },
+      "after": {
+        "conf_0.5": 0.667,
+        "conf_0.25": 0.933
+      }
+    },
+    "board_dataset_test": {
+      "mAP50": 0.9258,
+      "mAP50_95": 0.6421,
+      "precision": 1.0,
+      "recall": 0.7979
+    },
+    "why_not_default": "the held-out frames come from the same video and camera, so this is same-scene adaptation, not generalisation; a pure-canteen run (no mixing) reached recall 1.0 but destroyed the Open Images test (mAP50 0.036)",
+    "limitations": [
+      "one kitchen, one camera, one chef, CC BY-NC 4.0 data",
+      "food detection in this domain still fails (0 detections at conf 0.5)",
+      "labels for the canteen frames came from the model proposals + a fixed-region median, not hand drawing"
+    ]
   }
 }

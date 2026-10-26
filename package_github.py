@@ -7,8 +7,8 @@ root.mkdir(exist_ok=False)
 for p in src.iterdir():
     if p.is_file() and (p.suffix=='.py' or (p.suffix=='.md' and p.name not in ['交接提示词.md','D盘存储位置.md','环境检查结果.md'])):
         text=p.read_text(encoding='utf-8-sig')
-        text=text.replace(r'<LOCAL_WORKSPACE>','<LOCAL_WORKSPACE>')
-        text=text.replace('<LOCAL_WORKSPACE>','<LOCAL_WORKSPACE>')
+        text=text.replace(r'<USER_HOME>\Documents\Codex\2026-10-25\wo-x','<LOCAL_WORKSPACE>')
+        text=text.replace('<USER_HOME>/Documents/Codex/2026-10-25/wo-x','<LOCAL_WORKSPACE>')
         (root/p.name).write_text(text,encoding='utf-8')
 for name in ['requirements-lock.txt','规则配置示例.json','experiment_new_photos.example.json','lvis_board_decision_rule.json','lvis_pretraining_overlap_note.json']:
     shutil.copyfile(src/name,root/name)
