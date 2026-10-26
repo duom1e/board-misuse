@@ -10,8 +10,9 @@ import uuid
 from pathlib import Path
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
-from PIL import ImageTk
+from PIL import Image, ImageTk
 from annotation_io import prepare_image, normalized_box, export_annotation
+from review_sessions import save_draft, load_draft
 
 BASE = Path(__file__).resolve().parent
 RULES = {'肉类专用': ['meat'], '蔬菜专用': ['vegetable'], '允许肉类和蔬菜': ['meat', 'vegetable']}
@@ -23,6 +24,8 @@ class ReviewApp:
         root.title('案板图片复核 · 本地试验工具')
         root.geometry('1180x960')
         self.folder = None
+        self.save_timer = None
+        self.restoring = False
         self.boxes = []
         self.board_rules = []
         self.models = {}
@@ -35,7 +38,7 @@ class ReviewApp:
         self.status = tk.StringVar(value='打开图片后，在图上拖动框选案板。所有文件保存在D盘。')
         bar = ttk.Frame(root); bar.pack(fill='x', padx=10, pady=6)
         self.buttons = []
-        for text, command in [('打开图片', self.open_image), ('撤销最后一个框', self.undo), ('清空框', self.clear), ('检查人工样本池', self.audit_pool)]:
+        for text, command in [('打开图片', self.open_image), ('撤销最后一个框', self.undo), ('清空框', self.clear), ('检查人工样本池', self.audit_pool), ('保存复核进度', self.save_progress), ('恢复复核进度', self.restore_progress)]:
             button = ttk.Button(bar, text=text, command=command); button.pack(side='left', padx=4); self.buttons.append(button)
         ttk.Label(root, text='试验提示：用途需要由现场规定确认；系统仅提示疑似冲突或待复核，不能判断生熟及真实接触。').pack(anchor='w', padx=14)
         self.canvas = tk.Canvas(root, width=1100, height=560, background='#222222', highlightthickness=0)
@@ -64,20 +67,74 @@ class ReviewApp:
         button = ttk.Button(row, text='导出人工案板标注', command=self.export); button.pack(side='left'); self.buttons.append(button)
         ttk.Label(root, textvariable=self.status, wraplength=1120).pack(anchor='w', padx=14, pady=5)
         ttk.Label(root, text='手框方式：每块案板拖一个框；再在列表逐块设置用途；每个框均需明确设置。标注只进入待整理池，不会自动加入训练。').pack(anchor='w', padx=14)
+        for variable in (self.rule, self.model, self.group):
+            variable.trace_add('write', self.schedule_save)
+        root.protocol('WM_DELETE_WINDOW', self.close)
         root.after(100, self.poll)
 
     def open_image(self):
         path = filedialog.askopenfilename(filetypes=[('图片', '*.jpg *.jpeg *.png *.bmp *.webp *.tif *.tiff'), ('所有文件', '*.*')])
         if not path: return
         try:
+            if self.folder: self.save_progress(silent=True)
+            self.restoring = True
             self.folder, self.im, self.metadata = prepare_image(path, BASE/'review_results')
             self.boxes = []; self.board_rules = []; self.decision.set(''); self.group.set(''); self.rule.set('')
             self.scale = min(1100/self.im.width, 560/self.im.height, 1)
             self.display_size = (max(1, round(self.im.width*self.scale)), max(1, round(self.im.height*self.scale)))
             self.photo = ImageTk.PhotoImage(self.im.resize(self.display_size))
+            self.restoring = False
             self.redraw()
+            self.schedule_save()
             self.status.set(f'已打开 {Path(path).name}；请框选案板，选择用途。')
-        except Exception as exc: messagebox.showerror('打开失败', str(exc))
+        except Exception as exc:
+            self.restoring = False
+            messagebox.showerror('打开失败', str(exc))
+
+    def schedule_save(self, *args):
+        if self.restoring or not self.folder: return
+        if self.save_timer is not None: self.root.after_cancel(self.save_timer)
+        self.save_timer = self.root.after(500, lambda: self.save_progress(silent=True))
+
+    def save_progress(self, silent=False):
+        if self.save_timer is not None:
+            self.root.after_cancel(self.save_timer); self.save_timer = None
+        if not self.folder: return
+        try:
+            path = save_draft(self.folder, self.boxes, self.board_rules, self.rule.get(), self.model.get(), self.group.get())
+            if not silent: self.status.set(f'复核进度已保存：{path}')
+        except Exception as exc:
+            self.status.set(f'复核进度保存失败：{exc}')
+            raise
+
+    def restore_progress(self):
+        if self.busy: return
+        path = filedialog.askopenfilename(initialdir=str(BASE/'review_results'), filetypes=[('复核进度', '*.json')])
+        if not path: return
+        try:
+            folder, draft, meta = load_draft(path)
+            with Image.open(folder/'image.png') as im: restored_image = im.convert('RGB')
+            if list(restored_image.size) != meta['size']: raise ValueError('图片尺寸与来源记录不一致。')
+            if self.folder: self.save_progress(silent=True)
+            self.restoring = True
+            self.folder, self.im, self.metadata = folder, restored_image, meta
+            self.boxes = draft['boxes']; self.board_rules = draft['board_rules']
+            self.rule.set(draft['rule']); self.model.set(draft['model']); self.group.set(draft['source_group'])
+            self.decision.set('')  # Whole-image review must be made again, never silently restored.
+            self.drag_start = None
+            self.scale = min(1100/self.im.width, 560/self.im.height, 1)
+            self.display_size = (max(1, round(self.im.width*self.scale)), max(1, round(self.im.height*self.scale)))
+            self.photo = ImageTk.PhotoImage(self.im.resize(self.display_size))
+            self.redraw()
+            self.status.set('已恢复案板框、用途和来源组。导出标注前请重新检查整图并选择审核结论。')
+        except Exception as exc: messagebox.showerror('恢复失败', str(exc))
+        finally: self.restoring = False
+
+    def close(self):
+        try: self.save_progress(silent=True)
+        except Exception as exc:
+            messagebox.showerror('进度未保存', f'{exc}\n请先解决保存问题，再关闭窗口。'); return
+        self.root.destroy()
 
     def redraw(self):
         self.canvas.delete('all')
@@ -111,6 +168,7 @@ class ReviewApp:
         except ValueError as exc: self.status.set(str(exc))
         self.drag_start = None
         self.redraw()
+        self.schedule_save()
         if self.board_rules: self.board_list.selection_set(str(len(self.board_rules)-1))
 
     def assign_rule(self):
@@ -120,14 +178,15 @@ class ReviewApp:
             self.status.set('请在列表选中案板，并选择用途，再点击设置按钮。'); return
         self.board_rules[int(selected[0])] = self.rule.get()
         self.redraw()
+        self.schedule_save()
 
     def undo(self):
         if self.boxes:
             self.boxes.pop(); self.board_rules.pop()
-        self.decision.set(''); self.redraw()
+        self.decision.set(''); self.redraw(); self.schedule_save()
 
     def clear(self):
-        self.boxes.clear(); self.board_rules.clear(); self.decision.set(''); self.redraw()
+        self.boxes.clear(); self.board_rules.clear(); self.decision.set(''); self.redraw(); self.schedule_save()
 
     def inspection_config(self, manual):
         if not self.folder: raise ValueError('请先打开图片。')
