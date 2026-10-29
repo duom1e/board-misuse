@@ -17,7 +17,9 @@ def main():
     p.add_argument('--interval',type=float,default=2);p.add_argument('--replay',type=Path,help='JSON with video_sha256 and responses keyed by frame index; no VLM inference')
     p.add_argument('--food-categories',action='store_true',help='Also classify board-candidate food crops; live mode only, opinions remain needs_review')
     p.add_argument('--food-context',action='store_true',help='Add a separate full-image category opinion and contradiction hints; requires --food-categories')
+    p.add_argument('--board-identity-review',action='store_true',help='Optional board crop identity opinions; no veto or box removal')
     args=p.parse_args()
+    if args.replay and args.board_identity_review:p.error('--board-identity-review cannot be combined with replay')
     if not args.video.is_file():p.error('Video does not exist')
     if args.output_dir.exists():p.error('Output directory must be new')
     if args.replay and args.food_categories:p.error('--food-categories cannot be combined with replay: no saved category responses')
@@ -43,6 +45,8 @@ def main():
     from food_context_review import CONTEXT_PROMPT,review_food_context
     plan.update(food_context_review=args.food_context,food_context_prompt=CONTEXT_PROMPT if args.food_context else None,context_max_new_tokens=12 if args.food_context else None)
     if args.replay:plan.update(replay_file=str(args.replay.resolve()),replay_file_sha256=sha(args.replay))
+    from board_identity_review import review_boards,PROMPT as IDENTITY_PROMPT
+    plan.update(board_identity_review=args.board_identity_review,board_identity_prompt=IDENTITY_PROMPT if args.board_identity_review else None,board_identity_crop_margin=.15,board_identity_max_new_tokens=12)
     save('locked_plan.json',plan);save('status.json',{'stage':'loading','mode':plan['mode']})
     runtime=None
     if not replay:
@@ -77,6 +81,9 @@ def main():
                     draw=ImageDraw.Draw(image)
                     for key,color in [('boards','cyan'),('containers','yellow'),('food','red')]:
                         for box in boxes[key]:draw.rectangle(box,outline=color,width=4)
+                    if args.board_identity_review:
+                        original=Image.open(path).convert('RGB')
+                        row['board_identity_opinions']=review_boards(original,boxes['boards'],lambda crop:runtime.predict(crop,prompt=IDENTITY_PROMPT,max_new_tokens=12))
                     review=frames/(stem+'_review.jpg');image.save(review);row['review_image']=str(review.resolve())
             except Exception as exc:
                 row['frame_error']={'code':'replay_error' if replay else 'inference_or_processing_error','message':repr(exc)};row['board_state']='unknown'
@@ -107,6 +114,9 @@ def main():
         report+=['','## 局部与整图类别的矛盾提示','','两份意见来自同一模型的不同提问，不是独立模型证据。不矛盾也不证明局部为食物、在板上或合规；局部类别始终保留，不被整图覆盖。']
         for r in rows:
             context=r.get('food_context_review',{});report.append(f"- {r['frame_seconds']:.3f}s：整图 {context.get('context_category','未调用')}；类别矛盾 {context.get('contradiction_count',0)} 处。")
+    if args.board_identity_review:
+        report+=['','## 案板候选身份复核','','仅额外意见，不删除原框、不改变食材位置及判定；other或unknown不能当作无板。']
+        for r in rows:report.append(f"- {r['frame_seconds']:.3f}s："+', '.join(x['opinion'] for x in r.get('board_identity_opinions',[])))
     (out/'report.md').write_text('\n'.join(report)+'\n',encoding='utf-8')
     save('status.json',{'stage':'completed','mode':plan['mode'],'summary':summary,'training_performed':False});print(str((out/'report.md').resolve()))
 if __name__=='__main__':main()

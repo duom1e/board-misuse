@@ -24,7 +24,8 @@ def main():
  for i,row in enumerate(data['rows']):
     state,reason,evidence=decide(row,allowed);source=Path(row['image']);name=f'evidence/{i:03}.jpg';shutil.copy2(source,a.output/name)
     time=row.get('frame_seconds');label=f'{time:.3f}秒' if isinstance(time,(int,float)) else f'样本{i+1}（时间见来源记录）'
-    record=dict(index=i,time_seconds=time,source_image=str(source),source_image_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),status=state,reason=reason,evidence=evidence,compliance_determined=False,demo_not_site_policy=True,review_required=True);records.append(record)
+    if row.get('source'):label=str(row['source'])+' · '+label
+    record=dict(index=i,time_seconds=time,source_group=row.get('source'),source_image=str(source),source_image_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),status=state,reason=reason,evidence=evidence,compliance_determined=False,demo_not_site_policy=True,review_required=True);records.append(record)
     captions={'suspected_misuse':'与演示假设不符','needs_review':'证据不足','no_supported_conflict':'未见支持冲突的证据'}
     im=Image.open(source).convert('RGB');draw=ImageDraw.Draw(im);v=row.get('output_validation',row.get('validation',{}))
     if v.get('valid'):

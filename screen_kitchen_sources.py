@@ -5,9 +5,9 @@ import cv2
 from PIL import Image,ImageDraw
 B=Path(__file__).resolve().parent.parent
 def main():
-    p=argparse.ArgumentParser();p.add_argument('ids',nargs='+');p.add_argument('--output',required=True);a=p.parse_args();e=Path(a.output);e.mkdir(exist_ok=True);records=[]
+    p=argparse.ArgumentParser();p.add_argument('ids',nargs='+');p.add_argument('--output',required=True);p.add_argument('--prefix',default='kitchennew');a=p.parse_args();e=Path(a.output);e.mkdir(exist_ok=True);records=[]
     for id in a.ids:
-        video=B/'待导入视频'/f'kitchennew_{id}.mp4';meta=video.with_suffix('.info.json');info=json.loads(meta.read_text(encoding='utf-8'))
+        video=B/'待导入视频'/f'{a.prefix}_{id}.mp4';meta=video.with_suffix('.info.json');info=json.loads(meta.read_text(encoding='utf-8')) if meta.exists() else {'webpage_url':f'https://www.bilibili.com/video/{id}', 'metadata_unavailable':True}
         c=cv2.VideoCapture(str(video));fps=c.get(5);count=int(c.get(7));assert fps>0 and count>0
         sheet=Image.new('RGB',(1280,960));draw=ImageDraw.Draw(sheet);frames=[]
         for i in range(12):

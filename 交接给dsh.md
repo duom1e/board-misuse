@@ -1,3 +1,29 @@
+> 2026-10-29完成跨源食材背景真实小头训练：新增已有BV14W41197Rd/BV1264y1F7a6各12帧筛查，4原图16精确crop全看；food_presence_patches_v2合旧36/4视频/8原图=20背景10肉6菜，非专家开发。冻结原YOLO11s640rectFalse CPU嵌入L2，4折整视频留出训练Linear3 Adam.01固定120seed20261029最后轮；各train全拟合，留出鸡6/8辣椒6/10猪7/8王9/10。背景19/20肉7/10菜2/6，8错例全看（鸡皮误菜/辣椒蒜误肉/刀误菜/小肥肉漏），拒绝自动采用不调参追分。food_presence_head_v1含锁计划/4权重/features/results/audit/errors.jpg/index.html/报告.md；源视频原图crop跨折SHA无交集且默认SHA未变，无VLM/主干微调/后台。非盲测或自动定位准确率。脚本expand_food_presence_patches.py train_food_presence_head.py report_food_presence_head.py。后续补不同源黄色皮脂与红绿菜/刀背景，当前36固定开发回归。
+
+> 2026-10-29手刀食材成对数据完成：screen_kitchen_sources.py新增--prefix/缺info保留URL，已有BV14K4y1x7LF、BV1Ys411L7r6各12帧筛查；4原图20手工精确裁剪全看(11background6veg3meat)，food_presence_patches_v1/reviewed_manifest.json非专家候选仅本地分类训练资格，detection资格false；classification_candidates按源/类导出SHA全核，不分train/test。固定YOLO .25/640/rectFalse CPU背景误1/11(纯手meat)，食材有候选3/9；原4B精确crop无margin 11unknown+3meat6veg符合参考。不是独立准确率/自动定位，不能推翻上批手刀误meat；肉仅一个来源不可现在三分类训练验收。3脚本prepare/evaluate/export，index.html与报告.md，编译过、无训练/默认切换/后台，未浏览器验收。下一步不同来源肉类与手遮配对，勿随机拆同源或把背景crop原图标空。
+
+> 2026-10-29完整候选复核完成：review_food_candidates_batch.py 固定36帧全部27YOLO框+16位置排除框=43，先看4页裁剪锁非专家参考37可比6不确定，再原提示/10%margin/512/12token冻结4B一次。YOLO可比19/21与参考一致：手刀00仍误meat、鸡肉23误mixed；骨架08/水果31意见符合参考，不能自动覆盖。16位置排除=10meat5veg1unknown，与参考16一致但不恢复板上归属。43原框/源crop SHA核验，32软件测试通过，无训练/默认切换/后台。food_candidate_review_v1/index.html与报告.md，未浏览器验收；已消费非盲测不报准确率，training_eligible全false。下一步跨源手刀负例与小食材正例，保留本批固定回归，不自动伪标训练。
+
+> 2026-10-29完成完整36帧双路线批次：run_food_batch36.py，food_batch36_v1首图保存变量错失败保留，修复后v2原输入prompt完整36(两鸡视频+菜教学各12)。4B35有效1失败，29板帧57food候选=41板(29meat12veg)+7容器+9uncertain；3场景页+4页41裁剪全看，默认全needs_review。原YOLOCPU同36实跑：鸡1肉8菜2/8帧检出，鸡2肉4/4帧，菜肉2菜11/6帧；4可疑框裁剪已看主要手/刀、鸡骨架误菜、手部误肉，yolo_suspects.json不自动GT。IoU.5双方可分配分歧0不代表一致(框不同)，82软件测试过，无训练采用后台。完整交付v2/evidence/index.html与批次报告.md，10问题待复核；下步批量标注手/骨架/小肉/容器，勿只清楚肉菜或报41/41。
+
+> 2026-10-29食材定位/类别分离核查完成：audit_food_localization.py，food_localization_audit_v1已消费4图人工7粗GT(肉4菜3)，原图/叠框已看，manifest SHA/范围非穷尽/训练资格false；旧自动food_regions IoU.5一对一匹配5/7，5匹配类别2肉3菜一致，2未匹配手上小肉/边缘碗肉（不全称完全漏看）；无全图FP资格。白菜手持仍板候选不证接触。非盲标无训练新推理/采用后台，报告.md。下一步多源食材定位监督，分开位置类别接触，不只报meat输出数。
+
+> 2026-10-29蔬菜视频整段入口完成：vegetable_video_full_v1 BV15gZzYXE4N0—310/30s11点(实际0..300余10.4s未采)，10结构有效1约240s未知、6板候选；11分类裁剪6veg5unknown0meat，原图/全部裁剪已看，0秒4小白块/119.987手遮unknown不补分，29.997板背景漏、89.99手持菜可能2D板候选不证接触。audit SHA通过，证据页含视频时间线，未浏览器验收，无训练采用后台。核查报告.md；非新源盲测，不宣称肉菜混淆已解决。
+
+> 2026-10-29可移植模型路径完成：region_vlm_runtime.resolve_local_model支持BOARD_VLM_MODEL_DIR，无metadata时明确提示；run_video_evidence.py --model-dir传子进程并计划记目录/config SHA/revision null。未指定保留原默认；坏override拒绝不回退，无自动下载升级。真实explicit_model_path_smoke_v1 49秒1点成功候选板，57测试过，无训练/采用/后台。说明一键视频识别说明.md末节；非跨机一键安装，仅消除本机实验metadata依赖。
+
+> 2026-10-29身份复核接入视频入口：board_identity_review.py + review_board_video.py --board-identity-review默认关，replay拒绝，复用同4B逐自动板框15%crop/12token保留原文/原框，无删框否决、不影响food_regions；未来中文report含身份段。真实49/74两点board_identity_entrypoint_v1跑通，意见数等原板框且detection_removed全false检查；报告本轮离线补身份段。新增3测试总55通过，无训练/采用/后台。仅工程联调非新准确率；other/unknown仍人工复核。
+
+> 2026-10-29新来源身份任务完成：下载BV13s411H7dn207.32s+BV1TS4y1K7ZH330.2s，boardcare_sources_v1各12抽样已看、4原图人工ROI先锁(手持圆/刀遮圆/白圆/手遮方)，probe_board_identity_newsource.py沿用旧身份prompt15%/512/12，4全board，裁剪已看。board_identity_newsource_v1结果保留，非自动定位/全图GT、多板ROI只一个，字幕可见影响解释；不能推翻旧8难例误伤风险，不自动过滤，无训练采用/后台。报告新来源案板身份复核报告.md。
+
+> 2026-10-29候选身份困难真板验证完成：probe_board_identity_hard.py，board_identity_hard_v1锁同视频8人工板ROI(6手遮2边缘)，沿用原prompt/15%/512/12token，5board2unknown1other(510s)，8裁剪已看。按非board删会误伤3/8，unknown保留仅删other也误伤1/8；不接自动否决，原框全保留，无训练/采用/后台。人工ROI不是自动找回漏检，不是新源盲测。报告候选复核困难真板验证报告.md，勿只引用上一轮定向6真6假好结果。
+
+> 2026-10-29YOLO候选4B身份复核定向探针完成：review_detector_candidates.py，detector_candidate_vlm_v1已有已知结果选6真匹配板+6无板误框，每原图1候选锁计划，15%margin/512/12token固定prompt一次，6真全cutting_board，6假2table_surface3food_container1other。12裁剪联系图已全看。非盲测/泛化12/12，真板未覆盖漏检难例，other不能自动删框；所有原框保留needs_review/detection_removed=false，无训练采用/后台。报告候选案板大模型复核报告.md。下一步可选二次意见+新源困难真板误伤验证，不直接过滤。
+
+> 2026-10-29完整场景混合真实训练完成：run_broad_board_trial.py，broad_board_trial_v1旧OI+已有LVIS train去重后526+24视频=550独特/408框/190负，固定10轮AdamW.0003全层，排除OI/LVIS valtest SHA+圆板留出SHA无重合。OI mAP50 .9117→.9145但.95 .7404→.7265；已消费LVIS57 val mAP50 .1512→.3085/.95 .1027→.2028，未看LVIS test；视频训练正3/12→5/12、负误3/12→2/12，圆板留出6/6→3/6，拒绝采用。候选叠框已查，merge_integrity/audit留存，默认不变无后台。报告完整场景混合训练报告.md；不是新增550素材，不重复加242，不称新盲测。下一步跨源圆板边缘手遮监督，勿再无目标加轮数。
+
+> 2026-10-29标注与评估口径审计完成：board_annotation_audit_v1旧train242/214框近整幅29面积>=90%53，val10框近整幅5大7，test25框近整幅9大16；看新24训练叠图+旧12最大框，官方OI标签近整幅不等于错，有多板包络候选需复核未改。旧24图默认/260多来源实跑.25/.5/640/rectFalse一对一：大框15/16 vs14/16，其余5/9 vs8/9，FP7 vs2；非AP、较小面积不等于小目标，不能翻转此前新源失败。报告案板标注与评估构成审计报告.md；无训练/采用/后台。后续分层+跨源数据，别只盯旧mAP。
+
 > 2026-10-29统一分组回归完成：evaluate_board_cohort.py，board_cohort_v1锁30图SHA去重/7视频/18正12负，5YOLO同.25/640/rectFalse/IoU.5实际150预测；按视频明确本项目训练暴露，非盲测；报告35分组含匹配/负例误帧/额外框，integrity核150唯一模型图对。原默认分层：手遮圆板0/6、边缘0/2、满屏板3/3、木桌圆板3/3、方板3/4、负例3/12误帧；不得把近景易例混为困难总准确率。无训练无采用无后台。下一步新来源手遮/边缘优先，当前30固定开发回归不再新测试。
 
 > 2026-10-29负例增强真实训练完成：multisource_negative_trial_v1旧242+24(12正12负)=266固定10轮AdamW.0003全层，同上轮配置。新增6锅盘钢台原图已看；同12负例实跑上轮误5/12→本轮3/12(默认3/12)，训练正例9/12→10/12；训练外圆板6/6→4/6额外3框，旧mAP50 .9092/mAP50-95 .7226，拒绝采用。audit/候选叠框/annotation_provenance/previous_same_negative_set已存，默认SHA不变、留出SHA不重合，无训练后台（同负例评估session97333已输出5/12需如必要核结束）。报告多来源负例增强训练报告.md；下一步扩大标注源/分层，勿再反复小加图调参这批。
