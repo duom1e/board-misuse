@@ -18,7 +18,9 @@ def main():
     p.add_argument('--food-categories',action='store_true',help='Also classify board-candidate food crops; live mode only, opinions remain needs_review')
     p.add_argument('--food-context',action='store_true',help='Add a separate full-image category opinion and contradiction hints; requires --food-categories')
     p.add_argument('--board-identity-review',action='store_true',help='Optional board crop identity opinions; no veto or box removal')
+    p.add_argument('--food-crop-pairs',action='store_true',help='Compare tight and expanded food crops; requires --food-categories; no override')
     args=p.parse_args()
+    if args.food_crop_pairs and not args.food_categories:p.error('--food-crop-pairs requires --food-categories')
     if args.replay and args.board_identity_review:p.error('--board-identity-review cannot be combined with replay')
     if not args.video.is_file():p.error('Video does not exist')
     if args.output_dir.exists():p.error('Output directory must be new')
@@ -41,7 +43,7 @@ def main():
         temporary.replace(out/name)
     plan={'video':str(args.video.resolve()),'video_sha256':digest,'fps':fps,'frame_count':count,'schedule':schedule,'prompt':PROMPT,'thumbnail':512,'max_new_tokens':300,'do_sample':False,'mode':'replay' if replay else 'live','scope':'Uniform sampled review only. No tracking, smoothing, event duration, full-fps or compliance judgement. No classification-head filtering.'}
     from food_category_review import FOOD_CATEGORY_PROMPT,review_board_foods
-    plan.update(food_category_review=args.food_categories,food_category_prompt=FOOD_CATEGORY_PROMPT if args.food_categories else None,category_max_new_tokens=12 if args.food_categories else None,category_crop_margin=.1,category_min_crop_side_pixels=20)
+    plan.update(food_crop_pairs=args.food_crop_pairs,food_category_review=args.food_categories,food_category_prompt=FOOD_CATEGORY_PROMPT if args.food_categories else None,category_max_new_tokens=12 if args.food_categories else None,category_crop_margin=.1,category_min_crop_side_pixels=20)
     from food_context_review import CONTEXT_PROMPT,review_food_context
     plan.update(food_context_review=args.food_context,food_context_prompt=CONTEXT_PROMPT if args.food_context else None,context_max_new_tokens=12 if args.food_context else None)
     if args.replay:plan.update(replay_file=str(args.replay.resolve()),replay_file_sha256=sha(args.replay))
@@ -76,7 +78,7 @@ def main():
                     image=Image.open(path).convert('RGB');w,h=image.size
                     boxes={k:[[a*w/1000,b*h/1000,c*w/1000,d*h/1000] for a,b,c,d in values] for k,values in validation['normalized_boxes'].items()};row['pixel_boxes']=boxes
                     row['food_regions']=[{'box':box,**locate(box,boxes['boards'],boxes['containers'])} for box in boxes['food']]
-                    if args.food_categories:row['food_regions']=review_board_foods(image,row['food_regions'],lambda crop:runtime.predict(crop,prompt=FOOD_CATEGORY_PROMPT,max_new_tokens=12))
+                    if args.food_categories:row['food_regions']=review_board_foods(image,row['food_regions'],lambda crop:runtime.predict(crop,prompt=FOOD_CATEGORY_PROMPT,max_new_tokens=12),compare_tight_crop=args.food_crop_pairs)
                     if args.food_context:row['food_regions'],row['food_context_review']=review_food_context(image,row['food_regions'],lambda im:runtime.predict(im,prompt=CONTEXT_PROMPT,max_new_tokens=12))
                     draw=ImageDraw.Draw(image)
                     for key,color in [('boards','cyan'),('containers','yellow'),('food','red')]:
@@ -110,6 +112,12 @@ def main():
         for r in rows:
             details=[f"{z.get('food_category','unknown')} ({z.get('category_review_status','not_requested')})" for z in r.get('food_regions',[]) if z['location']=='board_candidate']
             report.append(f"- {r['frame_seconds']:.3f}s："+('、'.join(details) if details else '没有可供分类的板上食材候选，不能据此认定空板。'))
+    if args.food_crop_pairs:
+        report+=['','## 紧裁剪与扩边意见','','两次意见仅供复核；一致不证明正确，扩边可引入周围食材。原类别不被覆盖。']
+        for r in rows:
+            for z in r.get('food_regions',[]):
+                pair=z.get('tight_crop_comparison')
+                if pair:report.append(f"- {r['frame_seconds']:.3f}s：扩边 {z['food_category']}；紧框 {pair['tight_opinion']}；{pair['relation']}")
     if args.food_context:
         report+=['','## 局部与整图类别的矛盾提示','','两份意见来自同一模型的不同提问，不是独立模型证据。不矛盾也不证明局部为食物、在板上或合规；局部类别始终保留，不被整图覆盖。']
         for r in rows:
