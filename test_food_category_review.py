@@ -20,4 +20,24 @@ class CategoryReviewTest(unittest.TestCase):
         result=review_board_foods(self.image,rows,fail)[0];self.assertEqual(rows,original);self.assertEqual(result['box'],original[0]['box']);self.assertFalse(result['compliance_determined']);self.assertEqual(result['food_category'],'unknown')
     def test_margin_clamps_at_image_edge(self):
         result=review_board_foods(self.image,[self.region(box=[0,0,100,100])],lambda crop:'meat')[0];self.assertEqual(result['category_crop_xyxy'],[0,0,100,100])
+    def test_paired_opinions_never_override_original(self):
+        answers=iter(['meat','vegetable'])
+        result=review_board_foods(self.image,[self.region()],lambda crop:next(answers),compare_tight_crop=True)[0]
+        self.assertEqual(result['food_category'],'meat')
+        self.assertEqual(result['tight_crop_comparison']['relation'],'different_category')
+        self.assertFalse(result['tight_crop_comparison']['detection_removed'])
+        self.assertFalse(result['center_object_identity_verified'])
+    def test_unknown_pair_is_evidence_insufficient(self):
+        answers=iter(['meat','unknown'])
+        result=review_board_foods(self.image,[self.region()],lambda crop:next(answers),compare_tight_crop=True)[0]
+        self.assertEqual(result['tight_crop_comparison']['relation'],'insufficient_evidence')
+    def test_pair_failure_preserves_primary_result(self):
+        calls=[]
+        def predict(crop):
+            calls.append(crop.size)
+            if len(calls)>1:raise RuntimeError('paired failure')
+            return 'meat'
+        result=review_board_foods(self.image,[self.region()],predict,compare_tight_crop=True)[0]
+        self.assertEqual(result['food_category'],'meat')
+        self.assertEqual(result['tight_crop_comparison']['status'],'category_inference_failed')
 if __name__=='__main__':unittest.main()
