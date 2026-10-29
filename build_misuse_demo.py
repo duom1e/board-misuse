@@ -1,5 +1,14 @@
 """Offline evidence viewer with explicit hypothetical food-use rules."""
 import argparse,hashlib,html,json,shutil
+def crop_pair_html(regions):
+    parts=[]
+    labels={'same_category':'两次类别相同（不证明正确）','different_category':'两次类别不同，需复核','insufficient_evidence':'至少一次证据不足'}
+    for i,r in enumerate(regions):
+        pair=r.get('tight_crop_comparison')
+        if not pair:continue
+        esc=lambda value:html.escape(str(value))
+        parts.append(f'<section><h3>食材候选 {i+1}：裁剪范围复核</h3><p>扩边意见：{esc(r.get("food_category","unknown"))}；紧框意见：{esc(pair.get("tight_opinion","unknown"))}</p><p>{esc(labels.get(pair.get("relation"),"复核未完成"))}</p><p>扩边坐标：{esc(r.get("category_crop_xyxy"))}<br>紧框坐标：{esc(pair.get("tight_crop_xyxy"))}</p><p>扩边可能引入周围食材；类别不证明中心物体身份、板上接触或错用。原意见保留。</p></section>')
+    return ''.join(parts)
 from pathlib import Path
 from PIL import Image,ImageDraw
 
@@ -26,6 +35,7 @@ def main():
     time=row.get('frame_seconds');label=f'{time:.3f}秒' if isinstance(time,(int,float)) else f'样本{i+1}（时间见来源记录）'
     if row.get('source'):label=str(row['source'])+' · '+label
     record=dict(index=i,time_seconds=time,source_group=row.get('source'),source_image=str(source),source_image_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),status=state,reason=reason,evidence=evidence,compliance_determined=False,demo_not_site_policy=True,review_required=True);records.append(record)
+    record['crop_pair_reviews']=[dict(region=j,expanded_category=r.get('food_category'),expanded_crop=r.get('category_crop_xyxy'),comparison=r['tight_crop_comparison']) for j,r in enumerate(row.get('food_regions',row.get('regions',[]))) if 'tight_crop_comparison' in r]
     captions={'suspected_misuse':'与演示假设不符','needs_review':'证据不足','no_supported_conflict':'未见支持冲突的证据'}
     im=Image.open(source).convert('RGB');draw=ImageDraw.Draw(im);v=row.get('output_validation',row.get('validation',{}))
     if v.get('valid'):
@@ -33,6 +43,7 @@ def main():
         for region in row.get('food_regions',row.get('regions',[])):draw.rectangle(region['box'],outline='orange',width=3)
     overlay=f'evidence/{i:03}_overlay.jpg';im.save(a.output/overlay)
     cards.append(f'<article data-status="{state}"><h2>{html.escape(label)} · {captions[state]}</h2><img src="{name}"><p>{html.escape(reason)}</p><p>类别意见：{html.escape(", ".join(e["category"] for e in evidence) or "无")}</p><details><summary>证据与原图来源</summary><pre>{html.escape(json.dumps(record,ensure_ascii=False,indent=2))}</pre></details></article>')
+    cards[-1]=cards[-1].replace('</article>',crop_pair_html(row.get('food_regions',row.get('regions',[])))+'</article>')
     cards[-1]=cards[-1].replace(f'<img src="{name}">',f'<p>青框：案板候选；橙框：食材候选。框不证明接触。</p><img src="{overlay}"><details><summary>查看原图</summary><img src="{name}"></details>')
  plan=dict(allowed_foods=allowed,policy_configured=bool(allowed),scope='假设每个案板候选都使用相同用途；无板ID跟踪或现场用途核实' if allowed else '未配置用途，只展示观察',demo_not_site_policy=True,source_results=str(a.results.resolve()),source_results_sha256=hashlib.sha256(a.results.read_bytes()).hexdigest(),training_performed=False,records=records)
  (a.output/'events.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2),encoding='utf-8')
