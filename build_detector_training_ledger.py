@@ -2,7 +2,7 @@
 import json,csv,hashlib
 from pathlib import Path
 B=Path(__file__).resolve().parent
-FOLDERS=['food_hard_negative_detector_v1','food_balanced_detector_v1','food_replay512_detector_v1','food_replay512_positive3_detector_v1','food_group_adaptation_v1','food_chicken_group_adaptation_v1','food_yellow_chicken_adaptation_v1','food_color_augmentation_v1','food_clsweight_detector_v1','food_bamboo_source_adaptation_v1','food_bamboo_replay1024_v1']
+FOLDERS=['food_hard_negative_detector_v1','food_balanced_detector_v1','food_replay512_detector_v1','food_replay512_positive3_detector_v1','food_group_adaptation_v1','food_chicken_group_adaptation_v1','food_yellow_chicken_adaptation_v1','food_color_augmentation_v1','food_clsweight_detector_v1','food_bamboo_source_adaptation_v1','food_bamboo_replay1024_v1','food_frozen_backbone_v1']
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def main():
  rows=[]
