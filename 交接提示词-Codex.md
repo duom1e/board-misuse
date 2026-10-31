@@ -1,3 +1,15 @@
+# 最新完成：2026-10-31 第20次检测器训练
+
+food_pov_operation_training_v1完成660图15轮960，无训练后台。已运行report_food_pov_operation.py与evaluate_pov_operation_kitchen.py。657图15轮→本次：旧mAP50 .5485→.5403、鸡肉4/6→2/6、新厨房1/4→0/4、背景1/23→2/23、参考类别10/19→12/19。新增3张第一视角6组框未带来整体收益，不替换默认。详细报告在该实验及pov_operation_kitchen_validation_v1下。接下来不能把反复使用的开发集当独立测试；应扩大来源覆盖和标注质量，而非仅继续添加少量相邻帧。
+
+---
+
+# 进行中：2026-10-31 第一视角操作增量
+
+food_pov_operation_training_v1 已启动660图15轮960训练，进程会话56647。不得重复启动；先查status.json和food_pov_operation_training_v1.log。新数据pov_operation_replay_v1：BV1dHckzwEBA的930/940/1000秒3张ROI、6个蔬菜组框，已看原图与overlay，非专家标注，单来源相关画面，只训练。完成后运行report_food_pov_operation.py、evaluate_pov_operation_kitchen.py；将该实验加入build_detector_training_ledger.py后重建总表。注意报告旧模板的描述需核对更新。默认模型未变，尚无新训练结论。上次19次训练完成结果仍保留。
+
+---
+
 # 最新接力：2026-10-31
 
 第19次检测器真实训练已完成：food_meat_operation_30epochs_v1，同657图30轮。上轮中断使进程终止，使用resume_food_meat_operation_30epochs.py从28轮检查点完成，results.csv核对30行。恢复随机状态未经逐步复现核验。默认模型未变，无训练后台。
