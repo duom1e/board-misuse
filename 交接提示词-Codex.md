@@ -1,3 +1,67 @@
+# 最新接力：2026-10-31
+
+第19次检测器真实训练已完成：food_meat_operation_30epochs_v1，同657图30轮。上轮中断使进程终止，使用resume_food_meat_operation_30epochs.py从28轮检查点完成，results.csv核对30行。恢复随机状态未经逐步复现核验。默认模型未变，无训练后台。
+
+15→30轮：旧mAP50 .5485→.4899；鸡肉4/6→3/6；新厨房1/4→1/4；背景1/23→0/23；食材13/19→12/19，参考类10/19→11/19。整体无收益，不推荐继续仅加轮数。详情food_meat_operation_30epochs_v1/报告.md和meat_operation_30epochs_kitchen_v1/报告.md。检测器总表已核对19次，未微调大模型。下一步增加不同厨房操作来源的可靠训练标注，现有开发样本不入训练。
+
+---
+
+> 2026-10-30操作肉域补充真实训练完成：prepare_meat_operation_replay.pyBV1dK4y1M7Qe12帧筛4ROI5框全看(低清/第一截断)，合统一653→657，train_food_meat_operation.py15轮960，验收640。food_meat_operation_training_v1原鸡held4/6，food13/19类10，bg1/23，旧map50 .5485/.95 .4031，新鱼果val .6569/.5350；新厨房4GT终于1/4(02容器肉)，其余鱼/菜/肉仍漏，对比上轮0；不是独立统计显著收益，域间退步不采用。新厨房与新valSHA无交，ledger核18轮，无后台默认改变VLM微调。
+
+> 2026-10-30类别统一真实训练完成：merge_aligned_food_replay.py旧465fs mask全重建含鱼果，559原+120扩充-26重=653独特，保留47非mask旧及增量，官方train/新val30 SHA无交。train_food_taxonomy_aligned.py15轮960，report原鸡held4/6，food13/19类12，bg3/23，旧窄64map50 .5505/.95 .4185；新扩展30val .6353→.7081/.95 .5342→.5707。evaluate_taxonomy_kitchen_source.py新厨房4GT仍0/4且无预测，拒绝采用。数据/标签/样本量同时变非单因素；16新+8旧叠图样例已看非专家全量。实验food_taxonomy_aligned_training_v1与taxonomy_kitchen_validation_v1，ledger核17轮，无后台默认变化VLM微调。
+
+> 2026-10-30重要类别覆盖纠正：原FoodSeg meat46/47/48/51+49/50不含fish54，veg69..96不含fruit25..45，与VLM口径不一致。prepare_food_taxonomy_alignment.py原mask转换150图(官方train鱼60果60/val15+15)，新classes含鱼与水果，16样例叠框全看，新splitSHA无交，integrity记录与旧512回放重复。food_taxonomy_alignment_v1报告/manifest/yaml/labels，尚未训练。下步必须统一旧回放全部mask标签并去重，不能同图旧窄标签+新宽标签混训；鱼0/4解释需加覆盖限制。无后台默认变化。
+
+> 2026-10-30扩充固定来源验收kitchen_source_validation_v1：BV1tP4y1R7Ye02/03/04/05人工4限定ROI(3肉含鱼头1菜)4粗组框叠图全看，先锁后对照；06/07姜肉混合预先排除。prepare_kitchen_source_validation.py/evaluate_kitchen_source_validation.py 5模型固定.25/640rectFalse/.5IoU：original/bamboo/carrot几何1/4类0，cleaning960几何0类0，multiveg几何0类0。历史查看源非盲测，手工ROI与粗GT限制，无全图precision；这4留在固定开发验收不转训练。来源/图SHA/原预测/报告存，未训练默认切换后台。结果说明16轮旧鸡2图不代表厨房泛化，下步必须新验收约束训练。
+
+> 2026-10-30多蔬菜补框真实训练完成：prepare_multiveg_group_expansion.pyBV15gZzYXE4N01/03/05/07四整图14框全看(非专家含密集遮挡)，food_group_boxes_v6。train_food_multiveg960.py559图15轮960/验收640，同64val鸡源隔离。food_multiveg960_v1鸡held2/6(前3)，bg3/23(前2)，food13/19类10，旧mAP50 .5549/.95 .4179，拒绝采用。总表核16轮，无后台默认改变/VLM微调。下一步优先统一粗组框/单物体粒度和扩大来源验收，避免继续少量增量混训波动。
+
+> 2026-10-30清洗背景960真实训练完成：train_food_cleaning_negative960.py555图15轮，新增BV16g9nYNE6d02/07为肉菜两类空背景(乳白液体不是无食物，绿擦洗04/05不明排除)。固定640验收，food_cleaning_negative960_v1鸡held3/6(前9604)，bg2/23(前4)，旧mAP50 .5801/.95 .4425，food10/19类9；仍取舍不采用。记录cleaning_records/last/报告，ledger核15轮，无后台默认改变VLM微调。
+
+> 2026-10-30真实960训练完成train_food_resolution960.py553图15轮，与640基准训练图SHA与关键配置同，controlled_settings存；所有验收仍640rectFalse。food_resolution960_v1鸡held4/6(前3)，旧map50 .5618/.95 .4290，bg4/23(前0)，food10/19类10，训练旧9框4，误报退步拒绝采用。训练总表核14轮，权重/原结果存，无后台默认切换VLM微调。
+
+> 2026-10-30蔬菜增量真实训练完成：prepare_carrot_group_expansion.py胡萝卜12帧筛3图4框全看，food_group_boxes_v5。train_food_carrot_balance.py基于550竹板配方+3veg=553，15轮全层同64val，鸡留出未训。food_carrot_balance_v1鸡held3/6(竹板4)，旧map50 .5799/.95 .4338，bg0/23 food11/19类8；比竹板恢复旧域food但held少1，候选不采用。训练总表核13轮，无后台默认改变VLM微调。
+
+> 2026-10-30冻结真实训练完成train_food_frozen_backbone.py1062条15轮freeze10，同64val/关键配置；audit_food_frozen_weights核99前部参数张量不变、153后部更新(不含BNbuffers)。food_frozen_backbone_v1鸡held1/6(全层2)，旧mAP50 .5197/.95 .3924，bg0/23 food15/19类12；crop改善旧域退步拒绝采用。检测器真实训练总表核12轮，参数审计/last完整，无后台默认变化VLM微调。
+
+> 2026-10-30真实1024旧图回放对照完成train_food_bamboo_replay1024.py1062条15轮；原512全保留，新增组框/正负/64val同，replay_integrity。food_bamboo_replay1024_v1旧mAP50 .5875/.95 .4227，bg0/23 food13/19类7，鸡held2/6(512竹板4)，训练旧9框8/未匹配预测11，恢复旧域但鸡收益回落，不采用。build_detector_training_ledger.py核11轮results.csv15+lastSHA+oldafter，检测器真实训练总表.md。无后台默认变化VLM微调。
+
+> 2026-10-30竹板新源真实训练完成：prepare_bamboo_chicken_boxes.py BV1PW411F7mD02/03两整图11框叠图全核，food_group_boxes_v4；train_food_bamboo_source_adaptation.py550图15轮固定last，同64val/held来源隔离核。food_bamboo_source_adaptation_v1原鸡6框匹配4(前黄皮1)，训练旧9框7，旧mAP50 .5677/.95 .4106，bg0/23 food8/19类6。鸡held改善但其他退步，保留不采用；原held已反复开发非独立测试。报告/last/source_integrity完整，无后台默认改变/VLM微调。下步保住4/6同时恢复其他food检出，不能只报4。
+
+> 2026-10-29真实cls权重对照完成train_food_clsweight_detector.py548图15轮，args核cls.5→1其余关键设置/同训练图SHA/64val一致，controlled_settings存。food_clsweight_detector_v1训练9框9匹配，鸡held0/6，旧map50 .5872/.95 .4308，bg0/23 food10/19类8；比基线held1→0，拒绝采用。训练拟合不泛化，停止在这小批继续HSV/cls追分，下一步来源扩充检测框。report/last/results完整，无后台VLM微调默认切换。
+
+> 2026-10-29用户要求实际训练，完成颜色增强YOLO全层15轮：train_food_color_augmentation.py548图与上一轮图/标签SHA多重集、64val一致，HSV .015/.4/.3 vs全0，fixedlast。food_color_augmentation_v1旧mAP50 .5788/.95 .4295，bg0/23 food13/19类10/19；鸡held正确框1/6→0/6训练9框6，拒绝采用。报告/controlled_inputs/last存，无后台默认改变VLM微调。用户不满频繁只诊断，后续优先成批训练但必须验收held。
+
+> 2026-10-29整图/ROI/分块尺度诊断food_scale_diagnosis_v1：同黄皮YOLO2旧鸡原帧6GT，full几何2肉0/3候选，manual直接裁剪4肉1/5候选，固定800x600四角窗+同类NMS.5几何3肉0/6候选。6叠框联系图全看，分块多大框重复无肉改善，暂不接默认。manual此轮原帧直接裁剪，旧ROI JPEG重编码5/6，不能说模型退步或纯尺度因果。diagnose_full_frame_food_scale.py与报告.md，无训练默认切换后台。下一步固定编码/缩放评估，优先类别监督，非只加tile。
+
+> 2026-10-29新review_detector_food_video.py显式weights3点90/115/140实跑smoke_v2，0/0/2候选，原类别保留无板/接触推断，最多20点JSON/HTML/SHA；smoke_v1画框污染后续crop bug已修独立副本并重跑，旧不作有效成绩。检测器类别复核视频入口说明.md，无训练默认切换后台，未浏览器验收。
+
+> 2026-10-29完整混合检测+4B类别复核：evaluate_detector_vlm_category_chain.py6组ROI15GT+23bg，两YOLO实际58图推理及所有proposal原4B复核完成。原几何7/15、类2→复核7；yellow候选几何12、类8→复核12。同23bg原有4proposal=3unknown1仍food，yellow0proposal未触发bg复核，不能声称VLM负例全成功。原类别保留，假设替类统计不部署；detector_vlm_category_chain_v1报告/audit/results/plan，report_detector_vlm_chain.py。历史消费且部分训练图/同源，非独立准确率。无训练默认切换后台。下一步纠错链保留误报复核，不自动把unknown当正确过滤。
+
+> 2026-10-29重要纠正鸡误差：chicken_error_decomposition_v1同2鸡ROI6GT，类别无关一对一IoU.5匹配5/6，肉类正确1/6；4几何框实际veg，1GT定位缺。不能再笼统说定位只有1。原4B对全部6真实proposal复核均meat，离线假设替类5/6但不部署(已知肉定向无负，手刀曾误肉)，6裁剪全看。diagnose_chicken_category_vs_location.py/报告.md，未训练无自动覆盖无后台。下一步类别混淆监督+非食物安全对照。
+
+> 2026-10-29新下载BV1PW411F7mD251s/BV1Go4y1o7ym173s各12帧已看，后者黄皮清楚；food_group_boxes_v3两新ROI7框全看，train_food_yellow_chicken_adaptation.py548图15轮完成。旧mAP50 .5851/.95 .4363，背景0/23，food11/19类9/19；原鸡框仍1/6，bestmeatIoU 0/.008/.869/.120/0/0，拒绝采用。yellow源已训练消费不可盲测，另美食台源仅筛未训。报告/held_iou_diagnosis/raw权重留存，无后台默认未改无VLM微调。旧foodcheck2源24帧也筛但不适配排除。
+
+> 2026-10-29另一鸡源补框真实训练完成：food_group_boxes_v2新增BV1hK411u73L01/04/08三ROI4框，06混边碗肉排除保留理由，非专家叠图全看。train_food_chicken_group_adaptation.py546图15轮，原鸡2ROI留出未训。训练旧9框7→8，鸡6框仍1，旧mAP50 .5883→.5722/.95 .4273，23bg0误，19food9检出8类，退步拒绝采用。报告food_chicken_group_adaptation_v1，权重/结果/计划存，无后台VLM微调默认未变。下一步黄皮小块/遮挡有针对跨源数据，不再白皮近景堆量。
+
+> 2026-10-29新增4食材组ROI真实YOLO训练完成：train_food_group_adaptation.py 543(512旧16负11原正4组ROI)，15轮AdamW.0001固定last，同64val。原/512回放/新增组框：训练9框匹配2/4/7，鸡来源留出6框0/1/1，未匹配预测8/8/5；旧mAP50 .5777→.5883，.95 .4328→.4409；23背景0误，19food12检出9参考类。food_group_adaptation_v1含last/plan/groupresults/报告，report_food_group_adaptation.py SHA隔离核。训练拟合提升鸡源仍差，不默认采用；下步别的鸡肉来源检测框，勿把当前2鸡留出追分训练。无后台/VLM微调。
+
+> 2026-10-29新检测框数据food_group_boxes_v1：6限定ROI15食材组框(猪5鸡6菜4)叠框全看，manifest非专家SHA来源，4猪/椒训练候选2鸡整源开发留出，非全帧实例/盲测。4检测模型固定.25/640rectFalse类别IoU.5一对一：原2/15 balanced1285/15 replay5125/15 positive3 3/15；未匹配预测8/3/8/6不全称FP。prepare_food_group_boxes.py/evaluate_food_group_boxes.py与报告.md，尚未用这6ROI训练；下步512回放+4ROI，保留鸡来源，勿继续曝同11。无后台训练默认未变。
+
+> 2026-10-29真实YOLO第4轮正例曝光3完成：train_food_replay512_positive3.py 539独特/561条(512旧16负11正x3)，15轮固定last，同旧64val，源SHA与曝光次数核验。原/正1/正3：food检出11/11/9，参考类8/8/6，背景训/外源2→0→0，旧mAP50 .5777/.5865/.5855，.95 .4328/.4332/.4282。曝光增加失败，拒绝采用，停止调该批重复；下一步不同源检测框数据。food_replay512_positive3_detector_v1报告/comparison/last.pt，report_food_positive_exposure.py，默认未变，无VLM微调后台。
+
+> 2026-10-29第三轮YOLO真实全层训练完成：train_food_replay512_detector.py旧128→512，同16负+11框正=539，15轮AdamW.0001固定last，同64val/源cropSHA断言无交。原/128平衡/512平衡背景FP2→0→0/16、外源2→0→0/7，19food检出11→11→11，参考类8→10→8；旧mAP50 .5777→.5414→.5865，.95 .4328→.4049→.4332。旧域恢复但类别改善回落，默认不变。food_replay512_detector_v1报告/comparison/last.pt，report_food_replay512.py。训练结束无后台，无VLM微调，历史开发不称盲测。
+
+> 2026-10-29因用户要求转回真实检测训练：train_food_hard_negatives.py 128旧+16紧crop负144，15轮AdamW.0001全层固定last；train_food_balanced_detector.py同配置+11已有肉末检测框正155，两个真实训练完成。64相同旧val/trainSHA无交。原/负/平衡：训练背景FP2→0→0/16，训练外源背景FP2→0→0/7，19foodcrop有候选11→7→11，出现参考类8→6→10；旧mAP50 .5777→.5556→.5414。正负平衡开发改善但旧域退步，默认未改，无VLM微调后台。两个实验目录before/after/plan/last.pt完整，食材检测两轮训练对照.md与compare_food_detector_training.py。后续扩大检测框正例与旧域回放，不只加负。先前视频辣椒5点pipeline完成但未审计，不冒称效果。
+
+> 2026-10-29成对意见进HTML/events：build_misuse_demo.crop_pair_html展示双类别/坐标/关系，events.crop_pair_reviews保留，旧输入无段。video_food_pairs_evidence_v2真实74s旧结果重导3组核，状态needsreview，3新展示测试，无训练推理后台，未浏览器验收。成对裁剪证据页说明.md。
+
+> 2026-10-29成对裁剪接视频CLI与wrapper --food-crop-pairs默认关requiresfoodcategories，49s直接和74s完整pipeline实跑成功，27测试+依赖拒绝不建目录通过。视频成对裁剪复核说明.md；pair存JSON/report，HTML仍原类别不声称双展示，无训练采用后台。
+
+> 2026-10-29分类helper可选compare_tight_crop默认关，实际4可疑候选8推理，帧0手刀肉肉仍错；不能把一致当正确。27测试通过，无训练采用后台，报告food_candidate_pairs_v1/报告.md。仅Python参数未接视频CLI。
+
+> 2026-10-29裁剪敏感性完成：food_crop_context_v1 12对24实推，3页全看，4变化(3手扩边引入食材unknown转肉菜，蒜扩边菜转unknown)，不是4误分类；原prompt/4B不变，实验margin50%非默认10%。报告.md/audit.json。后续标注实际检测宽框与紧ROI分开审核，背景标签不能扩边继承，无训练采用后台。
+
 > 2026-10-29增加已消费BV1XN411q7XJ12帧筛查，2原图6crop全看(3veg3background)，food_presence_patches_v3共5源42。固定原120/Adam.01/seed/冻结YOLO640rectFalse做5折整源训练food_presence_head_v2：鸡6/8辣椒7/10猪7/8新增椒4/6王8/10。同旧36=28/36→28/36无净改善，新增6单列不混分母；刀修但肉类退步，拒绝采用。comparison.json核源视频/原帧/cropSHA隔离与默认SHA，报告.md完整；训练结束无后台。run_food_presence_expansion_v2.py准备数据，train_food_presence_head_v2.py可复现训练，report_food_presence_expansion.py对照。无VLM微调，勿再调这42追分。
 
 > 2026-10-29完成跨源食材背景真实小头训练：新增已有BV14W41197Rd/BV1264y1F7a6各12帧筛查，4原图16精确crop全看；food_presence_patches_v2合旧36/4视频/8原图=20背景10肉6菜，非专家开发。冻结原YOLO11s640rectFalse CPU嵌入L2，4折整视频留出训练Linear3 Adam.01固定120seed20261029最后轮；各train全拟合，留出鸡6/8辣椒6/10猪7/8王9/10。背景19/20肉7/10菜2/6，8错例全看（鸡皮误菜/辣椒蒜误肉/刀误菜/小肥肉漏），拒绝自动采用不调参追分。food_presence_head_v1含锁计划/4权重/features/results/audit/errors.jpg/index.html/报告.md；源视频原图crop跨折SHA无交集且默认SHA未变，无VLM/主干微调/后台。非盲测或自动定位准确率。脚本expand_food_presence_patches.py train_food_presence_head.py report_food_presence_head.py。后续补不同源黄色皮脂与红绿菜/刀背景，当前36固定开发回归。
