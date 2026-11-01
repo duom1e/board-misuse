@@ -30,6 +30,7 @@ def link(src, dest):
 
 
 def main():
+    raise RuntimeError("Legacy dataset builder disabled: absence of food annotations does not establish a negative image. Use the reviewed empty_label_clean_replay_v1 manifest; preserve existing historical datasets.")
     manifest = json.loads((SRC / 'manifest.json').read_text())
     probe = json.loads((SRC / 'negatives_board.json').read_text())
     probe_ids = {rec['image_id'] for rec in probe['images']}
