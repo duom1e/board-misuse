@@ -1,0 +1,462 @@
+{
+  "summary": {
+    "frames": 26,
+    "board_presence_counts": {
+      "absent": 9,
+      "present_vlm_box_coarse_using_yolo": 3,
+      "present": 5,
+      "present_position_coarse": 9
+    },
+    "position_usable": 5,
+    "vlm_parse_failures": 0,
+    "conflicts": 12,
+    "with_board_label": 17,
+    "note": "分布统计，不是准确率"
+  },
+  "rows": [
+    {
+      "frame": "BV12a41187Ja_015s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "absent",
+      "board_source": "none",
+      "position_usable": false,
+      "vlm_state": "no_board_detected",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 1,
+      "food_locations": [
+        "uncertain"
+      ],
+      "label_board": "no",
+      "label_usable": true
+    },
+    {
+      "frame": "BV12a41187Ja_040s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "absent",
+      "board_source": "none",
+      "position_usable": false,
+      "vlm_state": "no_board_detected",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 0,
+      "food_locations": [],
+      "label_board": "no",
+      "label_usable": true
+    },
+    {
+      "frame": "BV12a41187Ja_065s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "absent",
+      "board_source": "none",
+      "position_usable": false,
+      "vlm_state": "no_board_detected",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 0,
+      "food_locations": [],
+      "label_board": "no",
+      "label_usable": true
+    },
+    {
+      "frame": "BV12a41187Ja_090s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present_vlm_box_coarse_using_yolo",
+      "board_source": "yolo_fallback",
+      "position_usable": false,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 1,
+      "food_boxes": 0,
+      "food_locations": [],
+      "label_board": "yes",
+      "label_usable": true
+    },
+    {
+      "frame": "BV12a41187Ja_115s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "absent",
+      "board_source": "none",
+      "position_usable": false,
+      "vlm_state": "no_board_detected",
+      "vlm_valid": true,
+      "yolo_boards": 2,
+      "food_boxes": 2,
+      "food_locations": [
+        "uncertain",
+        "uncertain"
+      ],
+      "label_board": "unclear",
+      "label_usable": true
+    },
+    {
+      "frame": "BV12a41187Ja_140s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "absent",
+      "board_source": "none",
+      "position_usable": false,
+      "vlm_state": "no_board_detected",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 1,
+      "food_locations": [
+        "uncertain"
+      ],
+      "label_board": "no",
+      "label_usable": true
+    },
+    {
+      "frame": "BV12a41187Ja_165s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "absent",
+      "board_source": "none",
+      "position_usable": false,
+      "vlm_state": "no_board_detected",
+      "vlm_valid": true,
+      "yolo_boards": 1,
+      "food_boxes": 1,
+      "food_locations": [
+        "uncertain"
+      ],
+      "label_board": "no",
+      "label_usable": true
+    },
+    {
+      "frame": "BV12a41187Ja_190s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present",
+      "board_source": "vlm",
+      "position_usable": true,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 1,
+      "food_locations": [
+        "uncertain"
+      ],
+      "label_board": "yes",
+      "label_usable": true
+    },
+    {
+      "frame": "BV12a41187Ja_215s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "absent",
+      "board_source": "none",
+      "position_usable": false,
+      "vlm_state": "no_board_detected",
+      "vlm_valid": true,
+      "yolo_boards": 1,
+      "food_boxes": 0,
+      "food_locations": [],
+      "label_board": "no",
+      "label_usable": true
+    },
+    {
+      "frame": "BV12a41187Ja_240s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present",
+      "board_source": "vlm",
+      "position_usable": true,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 1,
+      "food_locations": [
+        "uncertain"
+      ],
+      "label_board": "yes",
+      "label_usable": true
+    },
+    {
+      "frame": "BV12a41187Ja_265s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "absent",
+      "board_source": "none",
+      "position_usable": false,
+      "vlm_state": "no_board_detected",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 0,
+      "food_locations": [],
+      "label_board": "no",
+      "label_usable": true
+    },
+    {
+      "frame": "BV12a41187Ja_290s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "absent",
+      "board_source": "none",
+      "position_usable": false,
+      "vlm_state": "no_board_detected",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 1,
+      "food_locations": [
+        "uncertain"
+      ],
+      "label_board": "no",
+      "label_usable": true
+    },
+    {
+      "frame": "BV1pq4y147jk_020s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present",
+      "board_source": "vlm",
+      "position_usable": true,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 3,
+      "food_locations": [
+        "board_candidate",
+        "uncertain",
+        "board_candidate"
+      ],
+      "label_board": "yes",
+      "label_usable": true
+    },
+    {
+      "frame": "BV1pq4y147jk_050s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present",
+      "board_source": "vlm",
+      "position_usable": true,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 3,
+      "food_locations": [
+        "uncertain",
+        "board_candidate",
+        "board_candidate"
+      ],
+      "label_board": "yes",
+      "label_usable": true
+    },
+    {
+      "frame": "BV1pq4y147jk_080s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present",
+      "board_source": "vlm",
+      "position_usable": true,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 2,
+      "food_locations": [
+        "board_candidate",
+        "board_candidate"
+      ],
+      "label_board": "yes",
+      "label_usable": true
+    },
+    {
+      "frame": "BV1pq4y147jk_110s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present_position_coarse",
+      "board_source": "vlm_box_coarse",
+      "position_usable": false,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 5,
+      "food_locations": [
+        "uncertain",
+        "uncertain",
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "label_board": "yes",
+      "label_usable": true
+    },
+    {
+      "frame": "BV1pq4y147jk_140s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present_position_coarse",
+      "board_source": "vlm_box_coarse",
+      "position_usable": false,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 5,
+      "food_locations": [
+        "uncertain",
+        "uncertain",
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "label_board": "yes",
+      "label_usable": true
+    },
+    {
+      "frame": "BV1pq4y147jk_170s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present_position_coarse",
+      "board_source": "vlm_box_coarse",
+      "position_usable": false,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 4,
+      "food_locations": [
+        "uncertain",
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "label_board": "yes",
+      "label_usable": true
+    },
+    {
+      "frame": "BV1pq4y147jk_200s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present_position_coarse",
+      "board_source": "vlm_box_coarse",
+      "position_usable": false,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 4,
+      "food_locations": [
+        "uncertain",
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "label_board": "yes",
+      "label_usable": true
+    },
+    {
+      "frame": "BV1pq4y147jk_230s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present_position_coarse",
+      "board_source": "vlm_box_coarse",
+      "position_usable": false,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 5,
+      "food_locations": [
+        "uncertain",
+        "uncertain",
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "label_board": "yes",
+      "label_usable": true
+    },
+    {
+      "frame": "BV1pq4y147jk_260s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present_position_coarse",
+      "board_source": "vlm_box_coarse",
+      "position_usable": false,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 5,
+      "food_locations": [
+        "uncertain",
+        "uncertain",
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "label_board": "yes",
+      "label_usable": true
+    },
+    {
+      "frame": "BV1pq4y147jk_290s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present_position_coarse",
+      "board_source": "vlm_box_coarse",
+      "position_usable": false,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 3,
+      "food_locations": [
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "label_board": "yes",
+      "label_usable": true
+    },
+    {
+      "frame": "BV1pq4y147jk_320s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present_position_coarse",
+      "board_source": "vlm_box_coarse",
+      "position_usable": false,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 4,
+      "food_locations": [
+        "uncertain",
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "label_board": "yes",
+      "label_usable": true
+    },
+    {
+      "frame": "BV1pq4y147jk_350s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present_vlm_box_coarse_using_yolo",
+      "board_source": "yolo_fallback",
+      "position_usable": false,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 1,
+      "food_boxes": 4,
+      "food_locations": [
+        "uncertain",
+        "uncertain",
+        "uncertain",
+        "uncertain"
+      ],
+      "label_board": "yes",
+      "label_usable": true
+    },
+    {
+      "frame": "BV1pq4y147jk_380s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present_vlm_box_coarse_using_yolo",
+      "board_source": "yolo_fallback",
+      "position_usable": false,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 1,
+      "food_boxes": 2,
+      "food_locations": [
+        "uncertain",
+        "uncertain"
+      ],
+      "label_board": "yes",
+      "label_usable": true
+    },
+    {
+      "frame": "BV1pq4y147jk_410s.jpg",
+      "source": "new_source_video_v3",
+      "board_presence": "present_position_coarse",
+      "board_source": "vlm_box_coarse",
+      "position_usable": false,
+      "vlm_state": "candidate_present",
+      "vlm_valid": true,
+      "yolo_boards": 0,
+      "food_boxes": 2,
+      "food_locations": [
+        "uncertain",
+        "uncertain"
+      ],
+      "label_board": "yes",
+      "label_usable": true
+    }
+  ]
+}

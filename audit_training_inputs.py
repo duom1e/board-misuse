@@ -3,9 +3,13 @@ import argparse,json,hashlib,math
 from pathlib import Path
 B=Path(__file__).resolve().parent
 def digest(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
-def audit(train_list):
+def audit(train_list,extra_reviewed=None):
  removed=json.loads((B/'empty_label_clean_replay_v1/manifest.json').read_text())['removed_records'];blocked={digest(r['image']) for r in removed}
  reviewed=json.loads((B/'empty_label_visual_audit_v1/manifest.json').read_text());allowed_empty={digest(r['image']) for r in reviewed}-blocked
+ if extra_reviewed:
+  for r in json.loads(Path(extra_reviewed).read_text())['records']:
+   assert r['review_status']=='visually_checked_no_target_nonexpert' and digest(r['image'])==r['sha256']
+   allowed_empty.add(r['sha256'])
  held=(B/'food_empty_label_clean_training_v1/val.txt').read_text().splitlines()+(B/'food_aligned_replay_v1/alignedval.txt').read_text().splitlines()
  for name in ['kitchen_source_validation_v1','food_group_boxes_v1']:
   for r in json.loads((B/name/'manifest.json').read_text(encoding='utf-8'))['records']:

@@ -1,4 +1,4 @@
-"""Per-subtype breakdown of what the food models actually detect.
+﻿"""Per-subtype breakdown of what the food models actually detect.
 
 Motivation: every 3-class run scores badly on `animal_food` (AP50 0.14) while `other_food`
 reaches 0.53-0.57. Either the models are weak, or `animal_food` is not one visual class:

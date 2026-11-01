@@ -3,7 +3,7 @@ import argparse,json,hashlib
 from pathlib import Path
 from food_region_gate import locate
 from evaluate_qwen4b_regions import PROMPT
-from region_response_validation import validate_region_response
+from region_response_validation import box_quality, validate_region_response
 B=Path(__file__).resolve().parent
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
@@ -40,7 +40,14 @@ def main():
         parsed=validation['normalized_boxes']
         w,h=image.size;boxes={k:[[a*w/1000,b*h/1000,c*w/1000,d*h/1000] for a,b,c,d in v] for k,v in parsed.items()}
         result['pixel_boxes']=boxes
-        result['food_regions']=[{'box':box,**locate(box,boxes['boards'],boxes['containers'])} for box in boxes['food']]
+        quality=box_quality(parsed['boards'])
+        result['board_position']=quality
+        result['position_usable']=quality['position_usable']
+        result['food_regions']=[{'box':box,**locate(box,boxes['boards'],boxes['containers'],
+                                                   board_position_usable=quality['position_usable'])}
+                                for box in boxes['food']]
+        if not quality['position_usable'] and boxes['boards']:
+            result['position_warning']='案板框过粗（覆盖画面大部分），食物与板的重叠关系不可作为位置证据'
         result['limitations']='Coarse bounding boxes can include hands, merge objects or miss food. Empty detections do not imply clean, empty board, or compliance.'
         draw=ImageDraw.Draw(image)
         for k,color in [('boards','cyan'),('containers','yellow'),('food','red')]:
@@ -67,8 +74,14 @@ def main():
     if validation['errors']:
         report+=['','## 输出错误','']
         report += [f"- `{e['path']}`：`{e['code']}` — {e['message']}" for e in validation['errors']]
-        report+=['','整条结果保持未知，不展开嵌套坐标、不发布部分字段为成功候选，也不生成识别叠框图。']
+        codes='、'.join(f"{k}×{v}" for k,v in sorted(validation['errors_by_code'].items()))
+        report+=['',f'错误类型统计：{codes}',f'原始响应长度：{validation["raw_length"]} 字节，sha256：`{validation["raw_sha256"]}`',
+                 '','整条结果保持未知，不展开嵌套坐标、不发布部分字段为成功候选，也不生成识别叠框图。']
     else:report+=['','叠框图为review.jpg。格式通过只表示结构有效，不能证明框正确、食材接触或案板使用合规。']
     (args.output_dir/'validation_report.md').write_text('\n'.join(report)+'\n',encoding='utf-8')
+    summary=f"{args.output_dir.name}: board_state={result['board_state']} valid={validation['valid']}"
+    if validation['errors']:
+        summary += " codes=" + ','.join(f"{k}x{v}" for k,v in sorted(validation['errors_by_code'].items()))
+    print(summary)
     print(str((args.output_dir/'result.json').resolve()))
 if __name__=='__main__':main()

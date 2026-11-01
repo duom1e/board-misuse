@@ -1,12 +1,12 @@
 {
   "vegetable": {
-    "weights": "training_runs/vegetable_baseline/weights/best.pt",
+    "weights": "D:\\CodexProjects\\board-misuse\\outputs\\training_runs\\vegetable_baseline\\weights\\best.pt",
     "imgsz": 640,
     "status": "experimental; retained after candidate negative-example regression",
     "selection_record": "model_release_decision.json"
   },
   "board": {
-    "weights": "training_runs/board_v2_real/weights/best.pt",
+    "weights": "D:\\CodexProjects\\board-misuse\\outputs\\training_runs\\board_v2_real\\weights\\best.pt",
     "imgsz": 640,
     "status": "experimental, improved on real kitchen scenes; default board model for check_board_misuse.py",
     "selection_record": "real_kitchen_probe/board_v2_verification.json",
@@ -59,7 +59,7 @@
     "data_status": "Open Images cutting-board images are exhausted: all 196 train / 10 validation / 24 test images have been used. Further public-data experiments would reuse the same photos, so the only meaningful next step is self-shot kitchen or canteen photos."
   },
   "foodseg": {
-    "weights": "training_runs/foodseg_2cls/weights/best.pt",
+    "weights": "D:\\CodexProjects\\board-misuse\\outputs\\training_runs\\foodseg_2cls\\weights\\best.pt",
     "imgsz": 640,
     "status": "experimental, best model so far; opt-in via --food-model foodseg; NOT the default",
     "selection_record": "foodseg_2cls_decision.json",
@@ -125,7 +125,7 @@
     ]
   },
   "food_type": {
-    "weights": "training_runs/food_taxonomy_v1/weights/best.pt",
+    "weights": "D:\\CodexProjects\\board-misuse\\outputs\\training_runs\\food_taxonomy_v1\\weights\\best.pt",
     "imgsz": 640,
     "status": "experimental research model; opt-in only via --food-model food_type; NOT the default",
     "selection_record": "food_taxonomy_metrics.json",
@@ -182,7 +182,7 @@
     }
   },
   "board_lvis": {
-    "weights": "experiments/lvis_board_ccby_trial/training/weights/best.pt",
+    "weights": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\lvis_board_ccby_trial\\training\\weights\\best.pt",
     "imgsz": 640,
     "classes": [
       "cutting_board"
@@ -209,7 +209,7 @@
     "default_promoted": false
   },
   "board_canteen": {
-    "weights": "training_runs/board_v5_canteen_mix/weights/best.pt",
+    "weights": "D:\\CodexProjects\\board-misuse\\outputs\\training_runs\\board_v5_canteen_mix\\weights\\best.pt",
     "imgsz": 960,
     "status": "experimental, domain-adapted for a fixed commercial-kitchen camera; opt-in via --board-model board_canteen; NOT the default",
     "selection_record": "canteen_mix_metrics.json",

@@ -1,0 +1,24 @@
+{
+  "frames": 49,
+  "valid": 42,
+  "valid_rate": 0.8571,
+  "schema_failures": 7,
+  "error_codes": {
+    "json_truncated": 4,
+    "box_count": 3
+  },
+  "board_state_changed": 19,
+  "changed_rate": 0.3878,
+  "per_source": [
+    {
+      "source": "new_source_video_v1",
+      "baseline_failures": 1,
+      "contract_failures": 2
+    },
+    {
+      "source": "new_source_video_v2",
+      "baseline_failures": 5,
+      "contract_failures": 5
+    }
+  ]
+}

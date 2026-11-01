@@ -1,0 +1,187 @@
+{
+  "plan": "new_source_video_v4",
+  "stage": "labels_recorded_before_model_inference",
+  "labelled_at": "2026-11-01T22:45:00+08:00",
+  "labelled_by": "assistant visual screening of the frozen frames (single rater, not an expert)",
+  "rule_followed": "标签在看任何模型输出之前写入；看不到就记 unclear；文字卡/黑屏记 unusable",
+  "fields": {
+    "board_present": "yes / no / unclear",
+    "food_present": "yes / no / unclear",
+    "usable": "false 表示非操作画面（纯文字卡等），不进分母"
+  },
+  "labels": {
+    "BV1bqsfzbELh_020s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "砧板上堆着切好的胡萝卜/洋葱"
+    },
+    "BV1bqsfzbELh_055s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木砧板切番茄"
+    },
+    "BV1bqsfzbELh_090s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "圆木砧板上切萝卜"
+    },
+    "BV1bqsfzbELh_125s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木砧板切红洋葱"
+    },
+    "BV1bqsfzbELh_160s.jpg": {
+      "board_present": "unclear",
+      "food_present": "yes",
+      "usable": true,
+      "note": "深色台面切黄油，是否砧板不清"
+    },
+    "BV1bqsfzbELh_195s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "手持胡萝卜在擦丝器上方，无砧板"
+    },
+    "BV1bqsfzbELh_230s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "黑色砧板切洋葱"
+    },
+    "BV1bqsfzbELh_265s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "绿色砧板切番茄"
+    },
+    "BV1bqsfzbELh_300s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "不锈钢容器/托盘，无砧板",
+      "label_original_blind": "no",
+      "revision_reason": "画面下半是黑色砧板（切菜垫）上的蘑菇片与刀，不是金属托盘",
+      "revision_evidence": "experiments/combined_v4_fp/fp_300s/review.jpg",
+      "reviewed_after_model_output": true
+    },
+    "BV1bqsfzbELh_335s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木砧板上摆番茄与卷心菜"
+    },
+    "BV1bqsfzbELh_370s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "炒锅内洋葱，无砧板",
+      "label_original_blind": "no",
+      "revision_reason": "黑色砧板（MATX MAT）上切红洋葱，非炒锅",
+      "revision_evidence": "experiments/combined_v4_fp/fp_370s/review.jpg",
+      "reviewed_after_model_output": true
+    },
+    "BV1bqsfzbELh_405s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "炒锅，无砧板",
+      "label_original_blind": "no",
+      "revision_reason": "同一块黑色砧板上切洋葱，非炒锅",
+      "revision_evidence": "experiments/combined_v4_fp/fp_405s/review.jpg",
+      "reviewed_after_model_output": true
+    },
+    "BV1bqsfzbELh_440s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "绿色砧板切小葱"
+    },
+    "BV1bqsfzbELh_475s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "深色砧板切蘑菇类"
+    },
+    "BV1xW411f7zP_015s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "油炸篮与手，无砧板"
+    },
+    "BV1xW411f7zP_035s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "手伸入油槽"
+    },
+    "BV1xW411f7zP_055s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "不锈钢炸篮"
+    },
+    "BV1xW411f7zP_075s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "钢丝篮与手"
+    },
+    "BV1xW411f7zP_095s.jpg": {
+      "board_present": "no",
+      "food_present": "no",
+      "usable": true,
+      "note": "后厨地面与人员"
+    },
+    "BV1xW411f7zP_115s.jpg": {
+      "board_present": "no",
+      "food_present": "no",
+      "usable": true,
+      "note": "不锈钢台面摆杯子"
+    },
+    "BV1xW411f7zP_135s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "炸篮带薯条"
+    },
+    "BV1xW411f7zP_155s.jpg": {
+      "board_present": "unclear",
+      "food_present": "unclear",
+      "usable": false,
+      "note": "纯文字卡"
+    },
+    "BV1xW411f7zP_175s.jpg": {
+      "board_present": "unclear",
+      "food_present": "unclear",
+      "usable": false,
+      "note": "纯文字卡"
+    },
+    "BV1xW411f7zP_195s.jpg": {
+      "board_present": "unclear",
+      "food_present": "unclear",
+      "usable": false,
+      "note": "纯文字卡"
+    }
+  },
+  "counts": {
+    "total": 24,
+    "usable": 21,
+    "board_present": 12,
+    "board_unclear": 4,
+    "board_absent": 8
+  },
+  "observation": "切菜合集是真正的多场景砧板作业（木板/黑砧板/绿砧板，不同厨房），KFC 那段是油炸线、无砧板且后段为文字卡——正好当'不同场景的无板对照'。",
+  "next": "跑合体批量，重点看：新场景(木板/黑砧板/绿砧板)能否检出、快餐油炸线是否误报。",
+  "revision_log": {
+    "revised_at": "2026-11-01T22:52:00+08:00",
+    "what": "3 帧把黑色砧板误标为无板",
+    "why": "复核模型\"误报\"时逐帧看图，发现画面里确有黑色砧板",
+    "how": "保留 label_original_blind，新增 revisions 与证据路径，不删除原始值",
+    "impact": "v4 指标重算：有板从 9 帧变 12 帧，无板从 11 帧变 8 帧",
+    "note": "这说明此前各批的单人盲标同样可能有错误；凡\"模型与标签不一致\"的帧都应逐帧看图复核"
+  }
+}

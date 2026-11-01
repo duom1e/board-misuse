@@ -1,0 +1,19 @@
+{
+  "tokens": 600,
+  "per_source": {
+    "new_source_video_v1": {
+      "frames": 24,
+      "valid_300": 23,
+      "schema_failures_300": 1,
+      "schema_failures_600": 1,
+      "board_state_changed": 0
+    },
+    "new_source_video_v2": {
+      "frames": 25,
+      "valid_300": 20,
+      "schema_failures_300": 5,
+      "schema_failures_600": 5,
+      "board_state_changed": 0
+    }
+  }
+}

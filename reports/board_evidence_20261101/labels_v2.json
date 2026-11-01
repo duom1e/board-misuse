@@ -1,0 +1,183 @@
+{
+  "plan": "new_source_video_v2",
+  "stage": "labels_recorded_before_model_inference",
+  "labelled_at": "2026-11-01T16:30:00+08:00",
+  "labelled_by": "assistant visual screening of the frozen frames (single rater, not an expert)",
+  "rule_followed": "标签在看任何模型输出之前写入；看不到就记 unclear，不把没标注当作无板",
+  "fields": {
+    "board_present": "yes / no / unclear",
+    "food_present": "yes / no / unclear",
+    "usable": "false 表示非厨房/广告画面，不进分母"
+  },
+  "labels": {
+    "BV1ocXNBrE66_010s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "白色案板上用刀切长豆角，板面清晰可见"
+    },
+    "BV1ocXNBrE66_030s.jpg": {
+      "board_present": "unclear",
+      "food_present": "yes",
+      "usable": true,
+      "note": "手掰豆角，下方白色台面疑似案板边缘"
+    },
+    "BV1ocXNBrE66_050s.jpg": {
+      "board_present": "unclear",
+      "food_present": "yes",
+      "usable": true,
+      "note": "深色台面持刀，看不清是否案板"
+    },
+    "BV1ocXNBrE66_070s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "整筐土豆"
+    },
+    "BV1ocXNBrE66_090s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "成堆红辣椒"
+    },
+    "BV1ocXNBrE66_110s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "手持肉条，旁边调料碗"
+    },
+    "BV1ocXNBrE66_130s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "打包蔬菜"
+    },
+    "BV1ocXNBrE66_150s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "菜摊青菜"
+    },
+    "BV1ocXNBrE66_170s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "摊开的各种食材"
+    },
+    "BV1ocXNBrE66_190s.jpg": {
+      "board_present": "yes",
+      "food_present": "no",
+      "usable": true,
+      "note": "厨房内工作人员，无近景操作台",
+      "label_original_blind": "no",
+      "revision_reason": "放大后可见不锈钢台上的白色砧板（带挂孔），此前误判为\"无近景操作台\"",
+      "revision_evidence": "experiments/disagreement_review/v2_E66_190s_zoom.jpg",
+      "reviewed_after_model_output": true
+    },
+    "BV1ocXNBrE66_210s.jpg": {
+      "board_present": "no",
+      "food_present": "no",
+      "usable": true,
+      "note": "厨房过道"
+    },
+    "BV1ocXNBrE66_230s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "手持辣椒袋"
+    },
+    "BV1ocXNBrE66_250s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "手持香菇"
+    },
+    "BV1ocXNBrE66_270s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "塑料袋里的食材"
+    },
+    "BV1ocXNBrE66_290s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "出餐台与餐盘"
+    },
+    "BV1Uq4y1R7Aj_008s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "菜场全景"
+    },
+    "BV1Uq4y1R7Aj_016s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "摊位食材"
+    },
+    "BV1Uq4y1R7Aj_024s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "手写菜单牌与塑料筐"
+    },
+    "BV1Uq4y1R7Aj_032s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "手部与红色菜筐"
+    },
+    "BV1Uq4y1R7Aj_040s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "摊位与顾客"
+    },
+    "BV1Uq4y1R7Aj_048s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "摊位与包装菜"
+    },
+    "BV1Uq4y1R7Aj_056s.jpg": {
+      "board_present": "unclear",
+      "food_present": "yes",
+      "usable": true,
+      "note": "不锈钢台面上用刀切葱，台面即案板否不清"
+    },
+    "BV1Uq4y1R7Aj_064s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "负责人采访，背景菜筐"
+    },
+    "BV1Uq4y1R7Aj_072s.jpg": {
+      "board_present": "no",
+      "food_present": "no",
+      "usable": true,
+      "note": "菜场远景"
+    },
+    "BV1Uq4y1R7Aj_080s.jpg": {
+      "board_present": "unclear",
+      "food_present": "unclear",
+      "usable": false,
+      "note": "片尾 Logo/广告画面"
+    }
+  },
+  "counts": {
+    "total": 25,
+    "usable": 24,
+    "board_present": 2,
+    "board_unclear": 4,
+    "board_absent": 19
+  },
+  "observation": "这段素材仍以'摊贩/备料特写'为主：25 帧里只有 1 帧是刀在清晰案板上作业（E66 10s），另有 3 帧台面性质不清。适合继续检验'无板不误报'，有板样本仍只有 1 帧。",
+  "next": "GPU 空闲时跑 evaluate_new_source_v1.py --dir experiments/new_source_video_v2，与盲标对比；结果只作对照诊断。",
+  "revision_log": {
+    "revised_at": "2026-11-01T23:02:00+08:00",
+    "what": "1 帧把白色砧板误标为无板",
+    "trigger": "对 v1–v3 做\"分歧帧回看\"时发现的唯一一处分歧",
+    "how": "保留 label_original_blind，追加 revision_reason / revision_evidence"
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "plan": "new_source_video_v3",
+  "stage": "labels_recorded_before_model_inference",
+  "labelled_at": "2026-11-01T22:35:00+08:00",
+  "labelled_by": "assistant visual screening of the frozen frames (single rater, not an expert)",
+  "rule_followed": "标签在看任何模型输出之前写入；看不到就记 unclear；不把没标注当作无板",
+  "fields": {
+    "board_present": "yes / no / unclear",
+    "food_present": "yes / no / unclear",
+    "usable": "false 表示非操作画面（设备特写、过道），不进分母"
+  },
+  "labels": {
+    "BV12a41187Ja_015s.jpg": {
+      "board_present": "no",
+      "food_present": "no",
+      "usable": true,
+      "note": "工人在墙边操作，无案板"
+    },
+    "BV12a41187Ja_040s.jpg": {
+      "board_present": "no",
+      "food_present": "no",
+      "usable": true,
+      "note": "背影过道"
+    },
+    "BV12a41187Ja_065s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "不锈钢盘里分拣胡萝卜，无板"
+    },
+    "BV12a41187Ja_090s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "大块绿色砧板，板上有绿色食材"
+    },
+    "BV12a41187Ja_115s.jpg": {
+      "board_present": "unclear",
+      "food_present": "unclear",
+      "usable": true,
+      "note": "手靠近台面边缘，看不清板"
+    },
+    "BV12a41187Ja_140s.jpg": {
+      "board_present": "no",
+      "food_present": "no",
+      "usable": true,
+      "note": "设备操作"
+    },
+    "BV12a41187Ja_165s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "三盆食材（菌菇/鱼丸/青菜），无板"
+    },
+    "BV12a41187Ja_190s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "绿色砧板，手在板上处理食材"
+    },
+    "BV12a41187Ja_215s.jpg": {
+      "board_present": "no",
+      "food_present": "no",
+      "usable": true,
+      "note": "金属台面上放单子"
+    },
+    "BV12a41187Ja_240s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "在砧板上切西瓜"
+    },
+    "BV12a41187Ja_265s.jpg": {
+      "board_present": "no",
+      "food_present": "no",
+      "usable": true,
+      "note": "饮料机"
+    },
+    "BV12a41187Ja_290s.jpg": {
+      "board_present": "no",
+      "food_present": "no",
+      "usable": true,
+      "note": "水槽前操作"
+    },
+    "BV1pq4y147jk_020s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木案板+菜刀+胡萝卜"
+    },
+    "BV1pq4y147jk_050s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "同一块木案板切胡萝卜"
+    },
+    "BV1pq4y147jk_080s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木案板切胡萝卜"
+    },
+    "BV1pq4y147jk_110s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木案板+刀"
+    },
+    "BV1pq4y147jk_140s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木案板+刀"
+    },
+    "BV1pq4y147jk_170s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木案板+刀"
+    },
+    "BV1pq4y147jk_200s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木案板+刀"
+    },
+    "BV1pq4y147jk_230s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木案板切片"
+    },
+    "BV1pq4y147jk_260s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木案板切片"
+    },
+    "BV1pq4y147jk_290s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木案板+粉色食材"
+    },
+    "BV1pq4y147jk_320s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木案板+刀"
+    },
+    "BV1pq4y147jk_350s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木案板+白萝卜"
+    },
+    "BV1pq4y147jk_380s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木案板+白萝卜"
+    },
+    "BV1pq4y147jk_410s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木案板+白萝卜"
+    }
+  },
+  "counts": {
+    "total": 26,
+    "usable": 26,
+    "board_present": 17,
+    "board_unclear": 1,
+    "board_absent": 8,
+    "food_present": 19,
+    "food_absent": 6,
+    "food_unclear": 1
+  },
+  "observation": "这次终于拿到真正的砧板作业画面：BV12a41187Ja 有 3 帧绿色砧板（切西瓜/处理食材），BV1pq4y147jk 全片是同一块木案板上切胡萝卜/萝卜（14 帧）。注意后者 14 帧属同一静止机位同一动作，高度相关，不能当 14 个独立样本。",
+  "next": "跑 review_combined 批量（VLM + 检测器）对比：这 17 帧有板能否被检出、框是否可用。",
+  "counts_note": "计数由脚本按 labels 重算"
+}

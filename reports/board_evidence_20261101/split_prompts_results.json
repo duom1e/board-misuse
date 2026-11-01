@@ -1,0 +1,971 @@
+{
+  "summary": {
+    "frames": 49,
+    "valid": 38,
+    "valid_rate": 0.7755,
+    "schema_failures": 11,
+    "frames_usable": 46,
+    "board_present_labels": 2,
+    "hits": 2,
+    "misses": 0,
+    "correct_silent": 39,
+    "false_alarms": 0,
+    "board_state_changed_vs_baseline": 8,
+    "note": "对照诊断，不是准确率；每帧推理 3 次"
+  },
+  "rows": [
+    {
+      "frame": "BV1Fj411u7WL_020s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "no",
+        "usable": true,
+        "note": "车间采访，两个人物"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[]}",
+      "raw_food": "{\"food\":[]}"
+    },
+    {
+      "frame": "BV1Fj411u7WL_052s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "机器清洗绿叶菜"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[0,104,998,997]]}",
+      "raw_food": "{\"food\":[[0,208,998,800]]}"
+    },
+    {
+      "frame": "BV1Fj411u7WL_084s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "传送带上的碎菜"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[]}",
+      "raw_food": "{\"food\":[[57,0,857,727]]}"
+    },
+    {
+      "frame": "BV1Fj411u7WL_116s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "no",
+        "usable": true,
+        "note": "两名工人采访"
+      },
+      "board_state": "no_board_detected",
+      "valid": false,
+      "errors_by_code": {},
+      "task_errors": {
+        "merge": "food: no json object"
+      },
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[800, 714, 997, 888], [800, 714, 997, 888], [800, 714, 997, 888], [800, 714, 997, 888]]}",
+      "raw_food": "{\"food\":[[488,538,570,645], [750,375,817,445], [750,445,817,500], [750,500,817,550], [750,550,817,600], [750,600,817,650], [750,650,817,700], [750,700,817,750], [750,750,817,800], [750,800,817,850], [750,850,817,900], [750,900,8"
+    },
+    {
+      "frame": "BV1Fj411u7WL_148s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "no",
+        "usable": true,
+        "note": "走道采访"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[]}",
+      "raw_food": "{\"food\":[]}"
+    },
+    {
+      "frame": "BV1Fj411u7WL_180s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "大锅油炸"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[357, 76, 940, 876]]}",
+      "raw_food": "{\"food\":[[445, 377, 765, 705]]}"
+    },
+    {
+      "frame": "BV1Fj411u7WL_212s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "大锅煮制"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[0,156,1000,800]]}",
+      "raw_food": "{\"food\":[[0,156,998,777]]}"
+    },
+    {
+      "frame": "BV1Fj411u7WL_244s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "no",
+        "usable": true,
+        "note": "分装设备"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[492, 576, 660, 727]]}",
+      "raw_food": "{\"food\":[]}"
+    },
+    {
+      "frame": "BV1Fj411u7WL_276s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "no",
+        "usable": true,
+        "note": "空周转箱"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[516, 414, 807, 790],[437, 557, 787, 790]]}",
+      "raw_food": "{\"food\":[]}"
+    },
+    {
+      "frame": "BV1Fj411u7WL_308s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "成品餐盒"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[137,158,817,877]]}",
+      "raw_food": "{\"food\":[[157, 236, 410, 500],[410, 220, 730, 512],[540, 497, 780, 830],[157, 500, 570, 830]]}"
+    },
+    {
+      "frame": "BV1Fj411u7WL_340s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "工人试吃"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[437, 463, 540, 604], [597, 721, 797, 877], [625, 557, 710, 700], [625, 557, 710, 700]]}",
+      "raw_food": "{\"food\":[[600, 740, 775, 872]]}"
+    },
+    {
+      "frame": "BV1Fj411u7WL_372s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "no",
+        "usable": true,
+        "note": "餐具消毒区采访"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[0,576,157,800]]}",
+      "raw_food": "{\"food\":[]}"
+    },
+    {
+      "frame": "BV1rzdZBTEps_020s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "unclear",
+        "food_present": "unclear",
+        "usable": false,
+        "note": "车内，非厨房"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "excluded",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[]}",
+      "raw_food": "{\"food\":[]}"
+    },
+    {
+      "frame": "BV1rzdZBTEps_052s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "no",
+        "usable": true,
+        "note": "走道两名穿白服工人"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[]}",
+      "raw_food": "{\"food\":[]}"
+    },
+    {
+      "frame": "BV1rzdZBTEps_084s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "整筐毛肚/肉类原料"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[0,387,1000,1000]]}",
+      "raw_food": "{\"food\":[[0,100,1000,997]]}"
+    },
+    {
+      "frame": "BV1rzdZBTEps_116s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "no",
+        "usable": true,
+        "note": "输送设备"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[]}",
+      "raw_food": "{\"food\":[[0,359,100,476],[325,419,429,547]]}"
+    },
+    {
+      "frame": "BV1rzdZBTEps_148s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "unclear",
+        "food_present": "yes",
+        "usable": true,
+        "note": "工人在台面处理肉类，台面是否为案板看不清"
+      },
+      "board_state": "no_board_detected",
+      "valid": false,
+      "errors_by_code": {},
+      "task_errors": {
+        "merge": "containers: no json object"
+      },
+      "baseline_state": "unknown",
+      "verdict": "unclear",
+      "raw_boards": "{\"boards\":[[517, 433, 727, 604]]}",
+      "raw_containers": "{\n  \"containers\": [\n    [220, 433, 500, 700],\n    [320, 576, 620, 900],\n    [98, 300, 300, 500],\n    [270, 196, 420, 312],\n    [72, 168, 200, 300],\n    [710, 368, 998, 650],\n    [700, 476, 998, 800],\n    [700, 100, 800, 150],\n    [700, 150, 800, 200],\n    [700,",
+      "raw_food": "{\"food\":[[240, 452, 497, 670], [347, 598, 597, 840], [124, 320, 297, 440], [147, 240, 300, 310], [0, 520, 130, 730], [840, 650, 998, 790], [830, 600, 998, 730], [830, 450, 998, 580], [830, 300, 998, 430], [830, 150, 998, 280"
+    },
+    {
+      "frame": "BV1rzdZBTEps_180s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "yes",
+        "food_present": "yes",
+        "usable": true,
+        "note": "两名工人持刀在备餐台处理肉，台面疑似木质/白色案板（部分可见）"
+      },
+      "board_state": "candidate_present",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "hit",
+      "raw_boards": "{\"boards\":[[43, 688, 420, 1000]]}",
+      "raw_containers": "{\n  \"containers\": [\n    [220, 476, 500, 700],\n    [400, 533, 700, 857],\n    [500, 360, 688, 576],\n    [220, 676, 420, 997]\n  ]\n}",
+      "raw_food": "{\"food\":[[127, 720, 398, 997], [250, 486, 457, 676], [477, 667, 677, 807], [520, 407, 677, 533]]}"
+    },
+    {
+      "frame": "BV1rzdZBTEps_212s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "大盆酱料"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[258, 300, 1000, 997]]}",
+      "raw_food": "{\"food\":[[357, 476, 1000, 997]]}"
+    },
+    {
+      "frame": "BV1rzdZBTEps_244s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "面条成型输送"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[]}",
+      "raw_food": "{\"food\":[[347, 158, 1000, 997]]}"
+    },
+    {
+      "frame": "BV1rzdZBTEps_276s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "unclear",
+        "food_present": "yes",
+        "usable": true,
+        "note": "工人铺碎菜，台面金属，案板不清"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "unclear",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[]}",
+      "raw_food": "{\"food\":[[0,37,300,540],[300,357,900,677]]}"
+    },
+    {
+      "frame": "BV1rzdZBTEps_308s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "no",
+        "usable": true,
+        "note": "清洗水槽与周转筐"
+      },
+      "board_state": "no_board_detected",
+      "valid": false,
+      "errors_by_code": {},
+      "task_errors": {
+        "merge": "containers: no json object"
+      },
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\n  \"containers\": [\n    [207, 0, 467, 367],\n    [267, 0, 467, 367],\n    [267, 367, 467, 700],\n    [207, 367, 467, 700],\n    [467, 70, 580, 240],\n    [580, 70, 675, 240],\n    [758, 0, 875, 100],\n    [758, 100, 875, 180],\n    [758, 180, 875, 260],\n    [758, 260, 8",
+      "raw_food": "{\"food\":[[687, 747, 750, 820], [967, 250, 998, 290], [967, 290, 998, 320], [967, 320, 998, 350], [967, 350, 998, 380], [967, 380, 998, 410], [967, 410, 998, 440], [967, 440, 998, 470], [967, 470, 998, 500], [967, 500, 998, 5"
+    },
+    {
+      "frame": "BV1rzdZBTEps_340s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "成品大盆菜"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[75,143,857,857]]}",
+      "raw_food": "{\"food\":[[137,148,820,790], [0,30,107,188], [0,100,107,200]]}"
+    },
+    {
+      "frame": "BV1rzdZBTEps_372s.jpg",
+      "source": "new_source_video_v1",
+      "label": {
+        "board_present": "unclear",
+        "food_present": "unclear",
+        "usable": false,
+        "note": "办公区走廊"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "excluded",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[]}",
+      "raw_food": "{\"food\":[]}"
+    },
+    {
+      "frame": "BV1ocXNBrE66_010s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "yes",
+        "food_present": "yes",
+        "usable": true,
+        "note": "白色案板上用刀切长豆角，板面清晰可见"
+      },
+      "board_state": "candidate_present",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "unknown",
+      "verdict": "hit",
+      "raw_boards": "{\"boards\":[[0,0,998,998]]}",
+      "raw_containers": "{\"containers\":[]}",
+      "raw_food": "{\"food\":[[57,54,670,283],[14,438,640,812]]}"
+    },
+    {
+      "frame": "BV1ocXNBrE66_030s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "unclear",
+        "food_present": "yes",
+        "usable": true,
+        "note": "手掰豆角，下方白色台面疑似案板边缘"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "unclear",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[775,0,998,176]]}",
+      "raw_food": "{\"food\":[[306,67,778,624]]}"
+    },
+    {
+      "frame": "BV1ocXNBrE66_050s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "unclear",
+        "food_present": "yes",
+        "usable": true,
+        "note": "深色台面持刀，看不清是否案板"
+      },
+      "board_state": "candidate_present",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "candidate_present",
+      "verdict": "unclear",
+      "raw_boards": "{\"boards\":[[0,0,800,997]]}",
+      "raw_containers": "{\"containers\":[]}",
+      "raw_food": "{\"food\":[[227,86,573,476]]}"
+    },
+    {
+      "frame": "BV1ocXNBrE66_070s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "整筐土豆"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[0,0,1000,997]]}",
+      "raw_food": "{\"food\":[[158,0,1000,997]]}"
+    },
+    {
+      "frame": "BV1ocXNBrE66_090s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "成堆红辣椒"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[0,0,1000,312]]}",
+      "raw_food": "{\"food\":[[0,138,1000,997]]}"
+    },
+    {
+      "frame": "BV1ocXNBrE66_110s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "手持肉条，旁边调料碗"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[668,104,998,576]]}",
+      "raw_food": "{\"food\":[[148,0,809,997],[630,107,998,777]]}"
+    },
+    {
+      "frame": "BV1ocXNBrE66_130s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "打包蔬菜"
+      },
+      "board_state": "no_board_detected",
+      "valid": false,
+      "errors_by_code": {},
+      "task_errors": {
+        "merge": "food: no json object"
+      },
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[375, 330, 708, 620], [375, 576, 708, 998]]}",
+      "raw_food": "{\"food\":[[375, 658, 630, 927], [430, 356, 697, 576], [100, 658, 357, 890], [100, 220, 270, 356], [100, 356, 270, 500], [100, 500, 270, 658], [270, 220, 357, 356], [270, 356, 357, 500], [270, 500, 357, 658], [357, 220, 430, 3"
+    },
+    {
+      "frame": "BV1ocXNBrE66_150s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "菜摊青菜"
+      },
+      "board_state": "no_board_detected",
+      "valid": false,
+      "errors_by_code": {},
+      "task_errors": {
+        "merge": "food: no json object"
+      },
+      "baseline_state": "unknown",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\n  \"containers\": [\n    [500, 0, 600, 102],\n    [375, 310, 488, 470],\n    [0, 498, 238, 998],\n    [0, 500, 238, 998]\n  ]\n}",
+      "raw_food": "{\"food\":[[320,476,575,776],[512,476,638,598],[575,308,675,426],[598,348,690,466],[600,238,688,348],[675,108,750,208],[675,158,750,258],[675,208,750,308],[675,258,750,358],[675,308,750,408],[675,358,750,458],[675,408,750,508],[675,"
+    },
+    {
+      "frame": "BV1ocXNBrE66_170s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "摊开的各种食材"
+      },
+      "board_state": "unknown",
+      "valid": false,
+      "errors_by_code": {
+        "box_count": 1
+      },
+      "task_errors": {},
+      "baseline_state": "unknown",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[210,283,375,557]]}",
+      "raw_food": "{\"food\":[[210,290,367,557],[197,510,463,998],[367,288,745,998],[687,178,1000,998],[530,78,660,278],[730,0,847,178],[387,138,557,378]]}"
+    },
+    {
+      "frame": "BV1ocXNBrE66_190s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "no",
+        "usable": true,
+        "note": "厨房内工作人员，无近景操作台"
+      },
+      "board_state": "no_board_detected",
+      "valid": false,
+      "errors_by_code": {},
+      "task_errors": {
+        "merge": "containers: no json object"
+      },
+      "baseline_state": "candidate_present",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[[567, 721, 777, 997]]}",
+      "raw_containers": "{\"containers\":[[700, 714, 897, 879], [388, 557, 457, 679], [377, 533, 438, 645], [365, 510, 420, 619], [352, 500, 407, 604], [340, 500, 390, 598], [328, 500, 377, 598], [316, 500, 365, 598], [304, 500, 352, 598], [292, 500, 340, 5",
+      "raw_food": "{\"food\":[[390,555,455,670],[708,720,875,820]]}"
+    },
+    {
+      "frame": "BV1ocXNBrE66_210s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "no",
+        "usable": true,
+        "note": "厨房过道"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[700, 727, 894, 900], [700, 727, 894, 900], [700, 727, 894, 900], [700, 727, 894, 900]]}",
+      "raw_food": "{\"food\":[[738, 736, 875, 900], [738, 736, 875, 900], [738, 736, 875, 900], [738, 736, 875, 900]]}"
+    },
+    {
+      "frame": "BV1ocXNBrE66_230s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "手持辣椒袋"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[]}",
+      "raw_food": "{\"food\":[[288, 347, 857, 857]]}"
+    },
+    {
+      "frame": "BV1ocXNBrE66_250s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "手持香菇"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[0,0,437,288]]}",
+      "raw_food": "{\"food\":[[248,148,730,888]]}"
+    },
+    {
+      "frame": "BV1ocXNBrE66_270s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "塑料袋里的食材"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[0,58,500,777]]}",
+      "raw_food": "{\"food\":[[57,107,287,307],[187,57,287,157],[337,71,427,167]]}"
+    },
+    {
+      "frame": "BV1ocXNBrE66_290s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "出餐台与餐盘"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "unknown",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\n  \"containers\": [\n    [388, 486, 607, 786],\n    [330, 374, 500, 536],\n    [266, 124, 416, 336],\n    [375, 58, 520, 286]\n  ]\n}",
+      "raw_food": "{\"food\":[[355,400,510,517],[390,505,604,755],[387,100,510,270],[530,75,688,190],[678,130,888,280]]}"
+    },
+    {
+      "frame": "BV1Uq4y1R7Aj_008s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "菜场全景"
+      },
+      "board_state": "no_board_detected",
+      "valid": false,
+      "errors_by_code": {},
+      "task_errors": {
+        "merge": "containers: no json object"
+      },
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[0,520,100,620], [0,580,100,680], [0,640,100,740], [0,700,100,800], [0,760,100,860], [0,820,100,920], [0,880,100,980], [0,940,100,1000], [0,980,100,1000], [0,940,100,1000], [0,900,100,980], [0,860,100,940], [0,820,100,900",
+      "raw_food": "{\"food\":[[0,885,650,1000], [600,576,788,670], [580,520,788,576], [580,476,788,520], [580,430,788,476], [580,384,788,430], [580,338,788,384], [580,292,788,338], [580,246,788,292], [580,200,788,246], [580,154,788,200], [580,108,78"
+    },
+    {
+      "frame": "BV1Uq4y1R7Aj_016s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "摊位食材"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\n  \"containers\": [\n    [458, 778, 650, 957],\n    [650, 750, 800, 957],\n    [738, 750, 850, 957],\n    [738, 500, 830, 750]\n  ]\n}",
+      "raw_food": "{\"food\":[[525, 786, 667, 937], [675, 770, 797, 925], [377, 898, 500, 1000], [500, 898, 570, 1000]]}"
+    },
+    {
+      "frame": "BV1Uq4y1R7Aj_024s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "手写菜单牌与塑料筐"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[837, 885, 998, 1000]]}",
+      "raw_food": "{\"food\":[]}"
+    },
+    {
+      "frame": "BV1Uq4y1R7Aj_032s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "手部与红色菜筐"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[573, 57, 787, 437], [82, 437, 553, 997], [0, 0, 250, 437]]}",
+      "raw_food": "{\"food\":[[587, 117, 770, 407], [0, 220, 92, 420], [109, 430, 350, 772], [300, 0, 500, 170]]}"
+    },
+    {
+      "frame": "BV1Uq4y1R7Aj_040s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "摊位与顾客"
+      },
+      "board_state": "no_board_detected",
+      "valid": false,
+      "errors_by_code": {},
+      "task_errors": {
+        "merge": "food: no json object"
+      },
+      "baseline_state": "unknown",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\n  \"containers\": [\n    [700, 604, 820, 850],\n    [800, 598, 917, 838],\n    [890, 588, 1000, 820],\n    [970, 578, 1000, 788]\n  ]\n}",
+      "raw_food": "{\"food\":[[0,700,399,1000],[577,658,720,800],[708,658,800,750],[800,658,875,750],[875,658,930,750],[930,658,999,750],[930,550,1000,658],[875,550,930,658],[800,550,875,658],[708,550,780,658],[658,550,708,658],[577,550,658,658],[577,"
+    },
+    {
+      "frame": "BV1Uq4y1R7Aj_048s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "摊位与包装菜"
+      },
+      "board_state": "no_board_detected",
+      "valid": false,
+      "errors_by_code": {},
+      "task_errors": {
+        "merge": "food: no json object"
+      },
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[0,777,197,887],[0,877,280,1000]]}",
+      "raw_food": "{\"food\":[[57,857,260,1000], [0,688,100,757], [0,757,100,827], [0,827,100,897], [0,897,100,967], [0,967,100,1000], [100,757,260,827], [100,827,260,897], [100,897,260,967], [100,967,260,1000], [260,827,300,897], [260,897,300,967], ["
+    },
+    {
+      "frame": "BV1Uq4y1R7Aj_056s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "unclear",
+        "food_present": "yes",
+        "usable": true,
+        "note": "不锈钢台面上用刀切葱，台面即案板否不清"
+      },
+      "board_state": "no_board_detected",
+      "valid": false,
+      "errors_by_code": {},
+      "task_errors": {
+        "merge": "food: no json object"
+      },
+      "baseline_state": "candidate_present",
+      "verdict": "unclear",
+      "raw_boards": "{\"boards\":[[388, 520, 850, 907]]}",
+      "raw_containers": "{\"containers\":[[420, 683, 678, 997], [387, 677, 550, 997], [0, 677, 200, 997]]}",
+      "raw_food": "{\"food\":[[300, 533, 388, 629], [500, 533, 638, 657], [500, 604, 638, 688], [500, 688, 638, 772], [500, 772, 638, 856], [500, 856, 638, 940], [500, 940, 638, 1000], [500, 1000, 638, 1064], [500, 1064, 638, 1128], [500, 1128,"
+    },
+    {
+      "frame": "BV1Uq4y1R7Aj_064s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "yes",
+        "usable": true,
+        "note": "负责人采访，背景菜筐"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\n  \"containers\": [\n    [615, 776, 890, 1000],\n    [875, 776, 1000, 1000],\n    [890, 776, 1000, 1000],\n    [875, 776, 1000, 1000]\n  ]\n}",
+      "raw_food": "{\"food\":[[0,500,158,997], [617,777,877,957], [877,777,1000,997], [617,777,877,957], [877,777,1000,997]]}"
+    },
+    {
+      "frame": "BV1Uq4y1R7Aj_072s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "no",
+        "food_present": "no",
+        "usable": true,
+        "note": "菜场远景"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "correct_silent",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[[828, 865, 1000, 1000], [828, 865, 1000, 1000]]}",
+      "raw_food": "{\"food\":[[308,588,412,788],[437,604,500,736],[598,604,677,736],[677,604,740,736],[838,893,998,1000],[608,800,738,998]]}"
+    },
+    {
+      "frame": "BV1Uq4y1R7Aj_080s.jpg",
+      "source": "new_source_video_v2",
+      "label": {
+        "board_present": "unclear",
+        "food_present": "unclear",
+        "usable": false,
+        "note": "片尾 Logo/广告画面"
+      },
+      "board_state": "no_board_detected",
+      "valid": true,
+      "errors_by_code": {},
+      "task_errors": {},
+      "baseline_state": "no_board_detected",
+      "verdict": "excluded",
+      "raw_boards": "{\"boards\":[]}",
+      "raw_containers": "{\"containers\":[]}",
+      "raw_food": "{\"food\":[]}"
+    }
+  ]
+}

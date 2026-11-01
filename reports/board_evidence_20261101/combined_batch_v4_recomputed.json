@@ -1,0 +1,8 @@
+{
+  "board_frames": 12,
+  "board_hits": 12,
+  "no_board_frames": 8,
+  "false_alarms": 0,
+  "position_usable_among_board_frames": 4,
+  "vlm_parse_failures": 0
+}

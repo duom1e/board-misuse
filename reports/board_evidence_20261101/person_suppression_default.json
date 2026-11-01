@@ -1,0 +1,103 @@
+{
+  "summary": {
+    "images": 4,
+    "person_detected_images": 4,
+    "flagged_in_human_region": 1,
+    "flagged_would_be_suppressed": 1,
+    "suppression_rate": 1.0,
+    "other_food_boxes": 1,
+    "other_would_be_suppressed": 0,
+    "collateral_rate": 0.0,
+    "weights": "training_runs\\foodseg_2cls\\weights\\best.pt",
+    "tag": "default_foodseg",
+    "note": "探针，不是准确率；样本 4 张图"
+  },
+  "rows": [
+    {
+      "index": 12,
+      "kind": "face",
+      "image": "D:\\CodexProjects\\board-misuse\\outputs\\round_board_sources_v1\\BV15J411D718_00.jpg",
+      "person_boxes": [
+        [
+          430.2,
+          35.2,
+          939.7,
+          714.0
+        ]
+      ],
+      "human_region_predictions": [],
+      "other_predictions": []
+    },
+    {
+      "index": 24,
+      "kind": "face",
+      "image": "D:\\CodexProjects\\board-misuse\\outputs\\kitchen_positive_sources_v1\\BV15gZzYXE4N_00.jpg",
+      "person_boxes": [
+        [
+          119.0,
+          42.4,
+          511.0,
+          336.2
+        ]
+      ],
+      "human_region_predictions": [],
+      "other_predictions": []
+    },
+    {
+      "index": 30,
+      "kind": "hand_interior",
+      "image": "D:\\CodexProjects\\board-misuse\\outputs\\kitchen_positive_sources_v1\\BV15gZzYXE4N_06.jpg",
+      "person_boxes": [
+        [
+          85.2,
+          1.1,
+          631.6,
+          209.3
+        ]
+      ],
+      "human_region_predictions": [],
+      "other_predictions": []
+    },
+    {
+      "index": 31,
+      "kind": "hand_interior",
+      "image": "D:\\CodexProjects\\board-misuse\\outputs\\kitchen_positive_sources_v1\\BV15gZzYXE4N_07.jpg",
+      "person_boxes": [
+        [
+          390.2,
+          8.0,
+          639.4,
+          231.5
+        ]
+      ],
+      "human_region_predictions": [
+        {
+          "box": [
+            391.8,
+            5.1,
+            639.7,
+            235.6
+          ],
+          "category": "meat",
+          "confidence": 0.559,
+          "in_human_region": true,
+          "covered_by_person": true
+        }
+      ],
+      "other_predictions": [
+        {
+          "box": [
+            2.7,
+            5.8,
+            304.1,
+            280.9
+          ],
+          "category": "vegetable",
+          "confidence": 0.48,
+          "in_human_region": false,
+          "covered_by_person": false
+        }
+      ]
+    }
+  ]
+}

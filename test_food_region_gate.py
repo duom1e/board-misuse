@@ -20,4 +20,18 @@ class GateTest(unittest.TestCase):
             with self.assertRaises(ValueError):locate(box)
     def test_board_candidate_requires_review(self):
         r=locate([1,1,5,5],[[0,0,10,10]]);self.assertEqual(r['location'],'board_candidate');self.assertEqual(r['status'],'needs_review');self.assertFalse(r['physical_contact_verified'])
+    def test_coarse_board_box_does_not_prove_location(self):
+        food=[0,0,10,10]            # 食物框铺满整帧
+        board=[[0,0,10,10]]         # 案板框也铺满整帧
+        normal=locate(food,board)
+        self.assertEqual(normal['location'],'board_candidate')
+        coarse=locate(food,board,board_position_usable=False)
+        self.assertEqual(coarse['location'],'uncertain')
+        self.assertEqual(coarse['location_reason'],'board_box_too_coarse')
+        self.assertFalse(coarse['board_position_usable'])
+        self.assertFalse(coarse['physical_contact_verified'])
+        self.assertFalse(coarse['compliance_determined'])
+    def test_coarse_board_does_not_override_container_priority(self):
+        result=locate([3,3,7,7],[[0,0,10,10]],[[2,2,8,8]],board_position_usable=False)
+        self.assertEqual(result['location'],'container_candidate')
 if __name__=='__main__':unittest.main()

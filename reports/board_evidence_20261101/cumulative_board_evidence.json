@@ -1,0 +1,35 @@
+{
+  "v1v2": {
+    "frames_total": 49,
+    "frames_usable": 46,
+    "board_frames": 3,
+    "board_hits": 3,
+    "no_board_frames": 38,
+    "false_alarms": 0,
+    "position_usable_among_board": 2
+  },
+  "v3": {
+    "frames_total": 26,
+    "frames_usable": 26,
+    "board_frames": 17,
+    "board_hits": 17,
+    "no_board_frames": 8,
+    "false_alarms": 0,
+    "position_usable_among_board": 5
+  },
+  "v4": {
+    "board_frames": 12,
+    "board_hits": 12,
+    "no_board_frames": 8,
+    "false_alarms": 0,
+    "position_usable_among_board_frames": 4,
+    "vlm_parse_failures": 0
+  },
+  "cumulative_after_corrections": {
+    "board_frames": 32,
+    "board_hits": 32,
+    "no_board_frames": 54,
+    "false_alarms": 0,
+    "position_usable_among_board": 11
+  }
+}
