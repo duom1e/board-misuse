@@ -26,11 +26,11 @@
     "vlm_parse_failures": 0
   },
   "cumulative_after_corrections": {
-    "board_frames": 48,
-    "board_hits": 48,
-    "no_board_frames": 111,
-    "false_alarms": 2,
-    "position_usable_among_board": 16
+    "board_frames": 42,
+    "board_hits": 42,
+    "no_board_frames": 119,
+    "false_alarms": 8,
+    "position_usable_among_board": 14
   },
   "v5": {
     "frames": 23,
@@ -41,7 +41,7 @@
     "false_alarms": 0,
     "vlm_parse_failures": 0
   },
-  "revision_count": 7,
+  "revision_count": 9,
   "v6": {
     "frames": 19,
     "board_frames": 0,
@@ -53,11 +53,11 @@
   },
   "v7": {
     "frames": 20,
-    "board_frames": 6,
-    "board_hits": 6,
-    "position_usable_among_board": 2,
-    "no_board_frames": 11,
-    "false_alarms": 1,
+    "board_frames": 0,
+    "board_hits": 0,
+    "position_usable_among_board": 0,
+    "no_board_frames": 19,
+    "false_alarms": 7,
     "vlm_parse_failures": 0
   },
   "v8": {
