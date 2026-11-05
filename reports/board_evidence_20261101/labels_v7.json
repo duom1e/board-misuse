@@ -1,0 +1,150 @@
+{
+  "plan": "new_source_video_v7",
+  "stage": "labels_recorded_before_model_inference",
+  "labelled_at": "2026-11-05T23:40:00+08:00",
+  "labelled_by": "assistant visual screening of the frozen frames (single rater, not an expert)",
+  "rule_followed": "标签在看任何模型输出之前写入；看不到就记 unclear；广告/黑场记 unusable",
+  "composition": "5ERA = 炒锅线（裸不锈钢台面，无砧板，属于'操作台前无板'的边界负例）；F7mD = 生鸡分割（木砧板，正例）",
+  "labels": {
+    "BV1b1ixB5ERA_008s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "炒锅线与灶台，无砧板"
+    },
+    "BV1b1ixB5ERA_020s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "灶台前景"
+    },
+    "BV1b1ixB5ERA_032s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "灶台与锅"
+    },
+    "BV1b1ixB5ERA_044s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "灶台前景"
+    },
+    "BV1b1ixB5ERA_056s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "灶台"
+    },
+    "BV1b1ixB5ERA_068s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "灶台与配菜盘"
+    },
+    "BV1b1ixB5ERA_080s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "灶台"
+    },
+    "BV1b1ixB5ERA_092s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "灶台与蒸汽"
+    },
+    "BV1b1ixB5ERA_104s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "灶台"
+    },
+    "BV1b1ixB5ERA_116s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "灶台全景"
+    },
+    "BV1PW411F7mD_020s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木砧板上处理生鸡"
+    },
+    "BV1PW411F7mD_045s.jpg": {
+      "board_present": "unclear",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木砧板 + 刀",
+      "label_original_blind": "yes",
+      "revision_reason": "画面是编织竹席/垫子，不是标准砧板；判\"无板\"可辩护",
+      "revision_evidence": "experiments/label_verify_v1/v7_review.jpg"
+    },
+    "BV1PW411F7mD_070s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木砧板上分离鸡翅"
+    },
+    "BV1PW411F7mD_095s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木砧板 + 刀"
+    },
+    "BV1PW411F7mD_120s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木砧板上整鸡分解"
+    },
+    "BV1PW411F7mD_145s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木砧板切关节"
+    },
+    "BV1PW411F7mD_170s.jpg": {
+      "board_present": "unclear",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木砧板 + 刀",
+      "label_original_blind": "yes",
+      "revision_reason": "同一块编织垫，同上",
+      "revision_evidence": "experiments/label_verify_v1/v7_review.jpg"
+    },
+    "BV1PW411F7mD_195s.jpg": {
+      "board_present": "yes",
+      "food_present": "yes",
+      "usable": true,
+      "note": "木砧板"
+    },
+    "BV1PW411F7mD_220s.jpg": {
+      "board_present": "no",
+      "food_present": "yes",
+      "usable": true,
+      "note": "白盘上拍打，无砧板"
+    },
+    "BV1PW411F7mD_245s.jpg": {
+      "board_present": "unclear",
+      "food_present": "unclear",
+      "usable": false,
+      "note": "片尾广告"
+    }
+  },
+  "counts": {
+    "total": 20,
+    "usable": 19,
+    "board_present": 6,
+    "board_unclear": 3,
+    "board_absent": 11
+  },
+  "next": "跑合体批量：看炒锅线 10 帧是否零误报、木砧板 8 帧是否都检出。",
+  "revision_log": {
+    "revised_at": "2026-11-05T23:50:00+08:00",
+    "what": "2 帧\"木砧板\"实为编织竹席，改标 unclear（不计入正负例）",
+    "why": "复核模型\"漏检\"时放大确认：表面是编织纹垫子，不是标准砧板",
+    "keep": "原始盲标保留在 label_original_blind"
+  }
+}

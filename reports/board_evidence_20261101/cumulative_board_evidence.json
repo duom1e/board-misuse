@@ -26,10 +26,47 @@
     "vlm_parse_failures": 0
   },
   "cumulative_after_corrections": {
-    "board_frames": 32,
-    "board_hits": 32,
-    "no_board_frames": 54,
+    "board_frames": 48,
+    "board_hits": 48,
+    "no_board_frames": 111,
+    "false_alarms": 2,
+    "position_usable_among_board": 16
+  },
+  "v5": {
+    "frames": 23,
+    "board_frames": 4,
+    "board_hits": 4,
+    "position_usable_among_board": 3,
+    "no_board_frames": 16,
     "false_alarms": 0,
-    "position_usable_among_board": 11
+    "vlm_parse_failures": 0
+  },
+  "revision_count": 7,
+  "v6": {
+    "frames": 19,
+    "board_frames": 0,
+    "board_hits": 0,
+    "position_usable_among_board": 0,
+    "no_board_frames": 19,
+    "false_alarms": 0,
+    "vlm_parse_failures": 0
+  },
+  "v7": {
+    "frames": 20,
+    "board_frames": 6,
+    "board_hits": 6,
+    "position_usable_among_board": 2,
+    "no_board_frames": 11,
+    "false_alarms": 1,
+    "vlm_parse_failures": 0
+  },
+  "v8": {
+    "frames": 18,
+    "board_frames": 6,
+    "board_hits": 6,
+    "position_usable_among_board": 0,
+    "no_board_frames": 11,
+    "false_alarms": 1,
+    "vlm_parse_failures": 0
   }
 }

@@ -23,7 +23,8 @@ def main():
     if args.dirs:
         DIRS = [BASE / 'experiments' / name for name in args.dirs.split(',') if name]
     OUT = BASE / 'experiments' / args.out
-    OUT.mkdir(parents=True, exist_ok=True)
+    OUT.mkdir(parents=True, exist_ok=False)
+    (OUT / "results").mkdir()
     (OUT / 'decision_rule.json').write_text(json.dumps({
         'question': '合体入口在这 49 帧上的行为分布：两线一致、冲突、位置不可用各占多少？',
         'not_a_metric': '这不是准确率；有板样本仅 2 帧',
@@ -40,6 +41,8 @@ def main():
         for record in manifest['frames']:
             name = Path(record['file']).name
             result, _ = rc.analyze(record['file'], detectors, vlm)
+            (OUT / 'results' / (directory.name + '_' + name + '.json')).write_text(
+                json.dumps(result, ensure_ascii=False, indent=2), encoding='utf-8')
             label = labels.get(name, {})
             rows.append({
                 'frame': name, 'source': directory.name,

@@ -75,9 +75,65 @@ class HumanBoxTest(unittest.TestCase):
         try:
             result, _ = rc.analyze(tmp.name, {"board": _StubModel(), "food": _StubModel()}, no_vlm=True)
             self.assertEqual(result["board_presence"], "detector_only_absent")
+            self.assertFalse(result["board_absence_verified"])
+            self.assertEqual(result["board_observation"], "not_detected")
+            self.assertIn("未检出案板不等于", rc.report_text(result))
             self.assertFalse(result["position_usable"])
         finally:
             os.unlink(tmp.name)
+
+
+class PositionRegressionTest(unittest.TestCase):
+    def test_full_frame_rejected_at_all_resolutions(self):
+        for w,h in [(640,360),(1280,720),(1920,1080)]:
+            q, boxes, usable = rc.position_evidence([[0,0,w,h]],w,h,'yolo','detector_only_present')
+            self.assertFalse(usable)
+            self.assertEqual(boxes, [])
+            self.assertEqual(q['reason'], 'all_boxes_cover_most_of_frame')
+
+    def test_fallback_usable_only_when_presence_supported(self):
+        for presence, expected in [('present_vlm_box_coarse_using_yolo',True),('unknown',False)]:
+            self.assertEqual(rc.position_evidence([[10,10,100,100]],640,360,'yolo_fallback',presence)[2],expected)
+
+    def test_mixed_boxes_cannot_assign_food_using_full_frame(self):
+        from food_region_gate import locate
+        _, boxes, usable = rc.position_evidence([[0,0,640,360],[10,10,100,100]],640,360,'vlm','present')
+        self.assertTrue(usable)
+        self.assertEqual(locate([300,200,350,250],boxes,[],usable)['location'],'uncertain')
+
+    def test_human_full_frame_is_not_location_evidence(self):
+        self.assertFalse(rc.position_evidence([[0,0,640,360]],640,360,'human','present_human_box')[2])
+
+    def test_invalid_human_boxes_rejected(self):
+        for box in [[0,0,0,2],[-1,0,100,100],[0,0,float('nan'),100],[0,0,1001,100],[False,0,100,100]]:
+            with self.assertRaises(ValueError):
+                rc.validate_human_box(box)
+
+
+
+
+class TilingFallbackTest(unittest.TestCase):
+    def test_tile_boxes_map_back_to_frame(self):
+        # 右下角块：x 500..1000, y 500..1000；块内框 (0,0)-(1000,1000) 应铺满该块
+        mapped = rc.map_tile_boxes_to_frame((500, 500, 1000, 1000), [[0, 0, 1000, 1000]])
+        self.assertEqual(mapped, [[500.0, 500.0, 1000.0, 1000.0]])
+        half = rc.map_tile_boxes_to_frame((0, 0, 400, 200), [[500, 500, 1000, 1000]])
+        self.assertEqual(half, [[200.0, 100.0, 400.0, 200.0]])
+
+    def test_fuse_prefers_tiling_over_absent(self):
+        presence, boxes, source = rc.fuse('no_board_detected', None, None, [],
+                                          tiling={'boxes_px': [[10, 10, 20, 20]]})
+        self.assertEqual((presence, source), ('present_tiling_fallback', 'vlm_tiling'))
+        self.assertEqual(boxes, [[10, 10, 20, 20]])
+
+    def test_fuse_without_tiling_boxes_stays_absent(self):
+        presence, _, source = rc.fuse('no_board_detected', None, None, [], tiling={'boxes_px': []})
+        self.assertEqual((presence, source), ('absent', 'none'))
+
+    def test_tiling_source_is_usable_for_position(self):
+        quality, eligible, usable = rc.position_evidence([[100, 100, 300, 400]], 640, 480, 'vlm_tiling', 'present_tiling_fallback')
+        self.assertTrue(usable)
+        self.assertTrue(eligible)
 
 
 if __name__ == '__main__':
