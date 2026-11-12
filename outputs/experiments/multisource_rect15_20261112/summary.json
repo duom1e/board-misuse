@@ -1,0 +1,23 @@
+[
+  {
+    "threshold": 0.1,
+    "hits": 2,
+    "positive_total": 14,
+    "false_frames": 24,
+    "negative_total": 70
+  },
+  {
+    "threshold": 0.25,
+    "hits": 2,
+    "positive_total": 14,
+    "false_frames": 20,
+    "negative_total": 70
+  },
+  {
+    "threshold": 0.5,
+    "hits": 2,
+    "positive_total": 14,
+    "false_frames": 13,
+    "negative_total": 70
+  }
+]

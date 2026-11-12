@@ -1,0 +1,20 @@
+[
+  {
+    "size": 640,
+    "threshold": 0.1,
+    "hits": 9,
+    "false_frames": 24
+  },
+  {
+    "size": 640,
+    "threshold": 0.25,
+    "hits": 7,
+    "false_frames": 17
+  },
+  {
+    "size": 640,
+    "threshold": 0.5,
+    "hits": 5,
+    "false_frames": 11
+  }
+]
