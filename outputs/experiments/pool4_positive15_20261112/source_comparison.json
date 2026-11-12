@@ -1,0 +1,176 @@
+{
+  "groups": [
+    {
+      "source": "BV1dHckzwEBA",
+      "kind": "positive",
+      "count": 3,
+      "control_detected": 0,
+      "positive_detected": 0
+    },
+    {
+      "source": "BV1Fj411u7WL",
+      "kind": "negative",
+      "count": 12,
+      "control_detected": 3,
+      "positive_detected": 2
+    },
+    {
+      "source": "BV1rzdZBTEps",
+      "kind": "negative",
+      "count": 7,
+      "control_detected": 1,
+      "positive_detected": 0
+    },
+    {
+      "source": "BV1ocXNBrE66",
+      "kind": "negative",
+      "count": 11,
+      "control_detected": 2,
+      "positive_detected": 2
+    },
+    {
+      "source": "BV1Uq4y1R7Aj",
+      "kind": "negative",
+      "count": 8,
+      "control_detected": 1,
+      "positive_detected": 2
+    },
+    {
+      "source": "BV12a41187Ja",
+      "kind": "negative",
+      "count": 8,
+      "control_detected": 1,
+      "positive_detected": 1
+    },
+    {
+      "source": "BV1bqsfzbELh",
+      "kind": "negative",
+      "count": 1,
+      "control_detected": 1,
+      "positive_detected": 1
+    },
+    {
+      "source": "BV1xW411f7zP",
+      "kind": "negative",
+      "count": 7,
+      "control_detected": 0,
+      "positive_detected": 0
+    },
+    {
+      "source": "BV1pu411U7Zh",
+      "kind": "negative",
+      "count": 7,
+      "control_detected": 0,
+      "positive_detected": 2
+    },
+    {
+      "source": "BV18pRhBgEyw",
+      "kind": "negative",
+      "count": 9,
+      "control_detected": 2,
+      "positive_detected": 2
+    },
+    {
+      "source": "BV1TS4y1K7ZH",
+      "kind": "positive",
+      "count": 2,
+      "control_detected": 0,
+      "positive_detected": 0
+    },
+    {
+      "source": "BV1pu411U7Zh",
+      "kind": "positive",
+      "count": 3,
+      "control_detected": 3,
+      "positive_detected": 3
+    },
+    {
+      "source": "BV13s411H7dn",
+      "kind": "positive",
+      "count": 3,
+      "control_detected": 1,
+      "positive_detected": 1
+    },
+    {
+      "source": "BV1aR4y1Z7FR",
+      "kind": "positive",
+      "count": 3,
+      "control_detected": 1,
+      "positive_detected": 2
+    }
+  ],
+  "changes": [
+    {
+      "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\new_source_video_v1\\frames\\BV1Fj411u7WL_308s.jpg",
+      "kind": "negative",
+      "before": true,
+      "after": false
+    },
+    {
+      "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\new_source_video_v1\\frames\\BV1rzdZBTEps_340s.jpg",
+      "kind": "negative",
+      "before": true,
+      "after": false
+    },
+    {
+      "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\new_source_video_v2\\frames\\BV1ocXNBrE66_070s.jpg",
+      "kind": "negative",
+      "before": false,
+      "after": true
+    },
+    {
+      "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\new_source_video_v2\\frames\\BV1ocXNBrE66_110s.jpg",
+      "kind": "negative",
+      "before": true,
+      "after": false
+    },
+    {
+      "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\new_source_video_v2\\frames\\BV1Uq4y1R7Aj_024s.jpg",
+      "kind": "negative",
+      "before": false,
+      "after": true
+    },
+    {
+      "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\new_source_video_v3\\frames\\BV12a41187Ja_065s.jpg",
+      "kind": "negative",
+      "before": false,
+      "after": true
+    },
+    {
+      "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\new_source_video_v3\\frames\\BV12a41187Ja_215s.jpg",
+      "kind": "negative",
+      "before": true,
+      "after": false
+    },
+    {
+      "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\new_source_video_v5\\frames\\BV1pu411U7Zh_215s.jpg",
+      "kind": "negative",
+      "before": false,
+      "after": true
+    },
+    {
+      "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\new_source_video_v5\\frames\\BV1pu411U7Zh_265s.jpg",
+      "kind": "negative",
+      "before": false,
+      "after": true
+    },
+    {
+      "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\new_source_video_v5\\frames\\BV18pRhBgEyw_240s.jpg",
+      "kind": "negative",
+      "before": true,
+      "after": false
+    },
+    {
+      "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\new_source_video_v5\\frames\\BV18pRhBgEyw_600s.jpg",
+      "kind": "negative",
+      "before": false,
+      "after": true
+    },
+    {
+      "image": "D:\\CodexProjects\\board-misuse\\outputs\\roast_screen_v1\\BV1aR4y1Z7FR_00.jpg",
+      "kind": "positive",
+      "before": false,
+      "after": true
+    }
+  ]
+}

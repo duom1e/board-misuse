@@ -1,0 +1,111 @@
+[
+  {
+    "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\positive_pool_v4_20261112\\images\\BV15gZzYXE4N_04.jpg",
+    "original": "D:\\CodexProjects\\board-misuse\\outputs\\kitchen_positive_sources_v1\\BV15gZzYXE4N_04.jpg",
+    "box": [
+      0,
+      69,
+      640,
+      316
+    ],
+    "sha256": "cf34f32eeabfe92fb6a225f3500d69f07d53141d4d503a7155c28af1ce1463a7",
+    "source": "BV15gZzYXE4N",
+    "creator_scene_group": "yangguang",
+    "role": "training pool; historical diagnostic role retired for future models using this pool",
+    "quality": "single reviewer approximate; occluded board extent estimated",
+    "correction": null
+  },
+  {
+    "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\positive_pool_v4_20261112\\images\\BV15gZzYXE4N_09.jpg",
+    "original": "D:\\CodexProjects\\board-misuse\\outputs\\kitchen_positive_sources_v1\\BV15gZzYXE4N_09.jpg",
+    "box": [
+      0,
+      106,
+      617,
+      338
+    ],
+    "sha256": "768e08a0d93c39f6bc9efe3999c8a58f8d29f6b6a9c2feef191425f44558be60",
+    "source": "BV15gZzYXE4N",
+    "creator_scene_group": "yangguang",
+    "role": "training pool; historical diagnostic role retired for future models using this pool",
+    "quality": "single reviewer approximate; occluded board extent estimated",
+    "correction": "09 bottom changed359->338 to exclude lower program strip"
+  },
+  {
+    "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\positive_pool_v4_20261112\\images\\BV1aRmLBmE7i_02.jpg",
+    "original": "D:\\CodexProjects\\board-misuse\\outputs\\kitchen_positive_sources_v1\\BV1aRmLBmE7i_02.jpg",
+    "box": [
+      0,
+      181,
+      360,
+      545
+    ],
+    "sha256": "98c37a996ad136b8e70a5af4cfb2d54c5067049d7ca91adb16af09f2aece2d97",
+    "source": "BV1aRmLBmE7i",
+    "creator_scene_group": "zhangsen_counter_archive",
+    "role": "training pool; historical diagnostic role retired for future models using this pool",
+    "quality": "single reviewer approximate; occluded board extent estimated",
+    "correction": null
+  },
+  {
+    "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\positive_pool_v4_20261112\\images\\BV1aRmLBmE7i_06.jpg",
+    "original": "D:\\CodexProjects\\board-misuse\\outputs\\kitchen_positive_sources_v1\\BV1aRmLBmE7i_06.jpg",
+    "box": [
+      0,
+      261,
+      360,
+      530
+    ],
+    "sha256": "29646fd6a14161ce329137b9f2201f5805062d27ff6648466bd5bf32c776438a",
+    "source": "BV1aRmLBmE7i",
+    "creator_scene_group": "zhangsen_counter_archive",
+    "role": "training pool; historical diagnostic role retired for future models using this pool",
+    "quality": "single reviewer approximate; occluded board extent estimated",
+    "correction": null
+  },
+  {
+    "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\positive_pool_v4_20261112\\images\\BV14K4y1x7LF_04.jpg",
+    "original": "D:\\CodexProjects\\board-misuse\\outputs\\hand_food_sources_v1\\BV14K4y1x7LF_04.jpg",
+    "box": [
+      0,
+      0,
+      1270,
+      720
+    ],
+    "sha256": "e4cb327ff2e43dd456c5716dfdf488c90297a5da1e76ce8a5c8b51482dedc3ee",
+    "source": "BV14K4y1x7LF",
+    "creator_scene_group": "pepper_chopping_BV14K4y1x7LF",
+    "role": "training pool, previously food diagnostic source",
+    "quality": "single reviewer approximate, 04 board clipped by image edges; 05 hand occlusion"
+  },
+  {
+    "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\positive_pool_v4_20261112\\images\\BV14K4y1x7LF_05.jpg",
+    "original": "D:\\CodexProjects\\board-misuse\\outputs\\hand_food_sources_v1\\BV14K4y1x7LF_05.jpg",
+    "box": [
+      14,
+      57,
+      1270,
+      711
+    ],
+    "sha256": "ee8281d6a6db044e65582286332600906f6d01a9b662fc1e13102f3a7650232f",
+    "source": "BV14K4y1x7LF",
+    "creator_scene_group": "pepper_chopping_BV14K4y1x7LF",
+    "role": "training pool, previously food diagnostic source",
+    "quality": "single reviewer approximate, 04 board clipped by image edges; 05 hand occlusion"
+  },
+  {
+    "image": "D:\\CodexProjects\\board-misuse\\outputs\\experiments\\positive_pool_v4_20261112\\images\\BV1XN411q7XJ_03.jpg",
+    "original": "D:\\CodexProjects\\board-misuse\\outputs\\pepper_presence_sources_v2\\BV1XN411q7XJ_03.jpg",
+    "box": [
+      0,
+      0,
+      540,
+      544
+    ],
+    "sha256": "7d691fb82a4ea2f2655c33daad77cc79db84fa1b04499781e94e6f6911b39337",
+    "source": "BV1XN411q7XJ",
+    "creator_scene_group": "zhanghuchuan_pepper",
+    "role": "training candidate from prior food diagnostic source",
+    "quality": "Single reviewer visible extent bbox, top/left clipped and right occluded by colander; not inferred hidden full board"
+  }
+]
