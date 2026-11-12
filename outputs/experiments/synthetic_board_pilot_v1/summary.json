@@ -1,0 +1,10 @@
+{
+  "real": {
+    "round_board_hits": 0,
+    "negative_false_frames": 23
+  },
+  "mixed": {
+    "round_board_hits": 0,
+    "negative_false_frames": 17
+  }
+}

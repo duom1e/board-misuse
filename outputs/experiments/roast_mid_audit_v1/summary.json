@@ -1,0 +1,98 @@
+[
+  {
+    "model": "real",
+    "threshold": 0.01,
+    "hits": 7,
+    "false_frames": 64
+  },
+  {
+    "model": "real",
+    "threshold": 0.1,
+    "hits": 4,
+    "false_frames": 42
+  },
+  {
+    "model": "real",
+    "threshold": 0.25,
+    "hits": 4,
+    "false_frames": 32
+  },
+  {
+    "model": "real",
+    "threshold": 0.5,
+    "hits": 2,
+    "false_frames": 23
+  },
+  {
+    "model": "synthetic",
+    "threshold": 0.01,
+    "hits": 7,
+    "false_frames": 55
+  },
+  {
+    "model": "synthetic",
+    "threshold": 0.1,
+    "hits": 3,
+    "false_frames": 36
+  },
+  {
+    "model": "synthetic",
+    "threshold": 0.25,
+    "hits": 3,
+    "false_frames": 27
+  },
+  {
+    "model": "synthetic",
+    "threshold": 0.5,
+    "hits": 2,
+    "false_frames": 17
+  },
+  {
+    "model": "occlusion",
+    "threshold": 0.01,
+    "hits": 6,
+    "false_frames": 57
+  },
+  {
+    "model": "occlusion",
+    "threshold": 0.1,
+    "hits": 3,
+    "false_frames": 35
+  },
+  {
+    "model": "occlusion",
+    "threshold": 0.25,
+    "hits": 2,
+    "false_frames": 23
+  },
+  {
+    "model": "occlusion",
+    "threshold": 0.5,
+    "hits": 1,
+    "false_frames": 12
+  },
+  {
+    "model": "roast",
+    "threshold": 0.01,
+    "hits": 6,
+    "false_frames": 58
+  },
+  {
+    "model": "roast",
+    "threshold": 0.1,
+    "hits": 6,
+    "false_frames": 36
+  },
+  {
+    "model": "roast",
+    "threshold": 0.25,
+    "hits": 3,
+    "false_frames": 25
+  },
+  {
+    "model": "roast",
+    "threshold": 0.5,
+    "hits": 3,
+    "false_frames": 18
+  }
+]
