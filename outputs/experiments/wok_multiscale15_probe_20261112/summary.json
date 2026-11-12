@@ -1,0 +1,56 @@
+[
+  {
+    "size": 640,
+    "threshold": 0.1,
+    "hits": 9,
+    "false_frames": 37
+  },
+  {
+    "size": 640,
+    "threshold": 0.25,
+    "hits": 9,
+    "false_frames": 27
+  },
+  {
+    "size": 640,
+    "threshold": 0.5,
+    "hits": 7,
+    "false_frames": 18
+  },
+  {
+    "size": 960,
+    "threshold": 0.1,
+    "hits": 8,
+    "false_frames": 52
+  },
+  {
+    "size": 960,
+    "threshold": 0.25,
+    "hits": 7,
+    "false_frames": 42
+  },
+  {
+    "size": 960,
+    "threshold": 0.5,
+    "hits": 6,
+    "false_frames": 27
+  },
+  {
+    "size": 1280,
+    "threshold": 0.1,
+    "hits": 8,
+    "false_frames": 59
+  },
+  {
+    "size": 1280,
+    "threshold": 0.25,
+    "hits": 5,
+    "false_frames": 53
+  },
+  {
+    "size": 1280,
+    "threshold": 0.5,
+    "hits": 3,
+    "false_frames": 42
+  }
+]
