@@ -1,0 +1,93 @@
+[
+  {
+    "source": "白板",
+    "required": 4,
+    "segments": 95,
+    "frames": 3396,
+    "hit_indices": [
+      649,
+      1082,
+      1515,
+      1948,
+      2381,
+      4546
+    ]
+  },
+  {
+    "source": "白板",
+    "required": 5,
+    "segments": 81,
+    "frames": 3253,
+    "hit_indices": [
+      649,
+      1082,
+      1515,
+      1948,
+      2381,
+      4546
+    ]
+  },
+  {
+    "source": "炒锅线",
+    "required": 4,
+    "segments": 6,
+    "frames": 28,
+    "hit_indices": []
+  },
+  {
+    "source": "炒锅线",
+    "required": 5,
+    "segments": 1,
+    "frames": 21,
+    "hit_indices": []
+  },
+  {
+    "source": "切鸡",
+    "required": 4,
+    "segments": 133,
+    "frames": 4999,
+    "hit_indices": [
+      739,
+      1232,
+      1725,
+      2218,
+      2711,
+      3203,
+      3696,
+      4189,
+      5175,
+      5668
+    ]
+  },
+  {
+    "source": "切鸡",
+    "required": 5,
+    "segments": 110,
+    "frames": 4686,
+    "hit_indices": [
+      739,
+      1232,
+      1725,
+      2218,
+      2711,
+      3203,
+      3696,
+      4189,
+      5668
+    ]
+  },
+  {
+    "source": "食堂",
+    "required": 4,
+    "segments": 3,
+    "frames": 16,
+    "hit_indices": []
+  },
+  {
+    "source": "食堂",
+    "required": 5,
+    "segments": 3,
+    "frames": 10,
+    "hit_indices": []
+  }
+]
