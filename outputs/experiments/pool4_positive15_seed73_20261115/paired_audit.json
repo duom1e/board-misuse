@@ -1,0 +1,396 @@
+[
+  {
+    "seed": 42,
+    "size": 640,
+    "models": {
+      "control": {
+        "hits": 5,
+        "false": 11,
+        "hard_round": 0
+      },
+      "positive": {
+        "hits": 6,
+        "false": 12,
+        "hard_round": 0
+      }
+    },
+    "changes": [
+      {
+        "frame": "BV1Fj411u7WL_308s.jpg",
+        "source": "BV1Fj411u7WL",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1rzdZBTEps_340s.jpg",
+        "source": "BV1rzdZBTEps",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1ocXNBrE66_070s.jpg",
+        "source": "BV1ocXNBrE66",
+        "positive_label": false,
+        "control_detection": false,
+        "candidate_detection": true
+      },
+      {
+        "frame": "BV1ocXNBrE66_110s.jpg",
+        "source": "BV1ocXNBrE66",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1Uq4y1R7Aj_024s.jpg",
+        "source": "BV1Uq4y1R7Aj",
+        "positive_label": false,
+        "control_detection": false,
+        "candidate_detection": true
+      },
+      {
+        "frame": "BV12a41187Ja_065s.jpg",
+        "source": "BV12a41187Ja",
+        "positive_label": false,
+        "control_detection": false,
+        "candidate_detection": true
+      },
+      {
+        "frame": "BV12a41187Ja_215s.jpg",
+        "source": "BV12a41187Ja",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1pu411U7Zh_215s.jpg",
+        "source": "BV1pu411U7Zh",
+        "positive_label": false,
+        "control_detection": false,
+        "candidate_detection": true
+      },
+      {
+        "frame": "BV1pu411U7Zh_265s.jpg",
+        "source": "BV1pu411U7Zh",
+        "positive_label": false,
+        "control_detection": false,
+        "candidate_detection": true
+      },
+      {
+        "frame": "BV18pRhBgEyw_240s.jpg",
+        "source": "BV18pRhBgEyw",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV18pRhBgEyw_600s.jpg",
+        "source": "BV18pRhBgEyw",
+        "positive_label": false,
+        "control_detection": false,
+        "candidate_detection": true
+      },
+      {
+        "frame": "BV1aR4y1Z7FR_00.jpg",
+        "source": "BV1aR4y1Z7FR",
+        "positive_label": true,
+        "control_detection": false,
+        "candidate_detection": true
+      }
+    ]
+  },
+  {
+    "seed": 42,
+    "size": 960,
+    "models": {
+      "control": {
+        "hits": 1,
+        "false": 10,
+        "hard_round": 0
+      },
+      "positive": {
+        "hits": 2,
+        "false": 8,
+        "hard_round": 0
+      }
+    },
+    "changes": [
+      {
+        "frame": "BV1Fj411u7WL_084s.jpg",
+        "source": "BV1Fj411u7WL",
+        "positive_label": false,
+        "control_detection": false,
+        "candidate_detection": true
+      },
+      {
+        "frame": "BV1Fj411u7WL_212s.jpg",
+        "source": "BV1Fj411u7WL",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1Fj411u7WL_276s.jpg",
+        "source": "BV1Fj411u7WL",
+        "positive_label": false,
+        "control_detection": false,
+        "candidate_detection": true
+      },
+      {
+        "frame": "BV1ocXNBrE66_110s.jpg",
+        "source": "BV1ocXNBrE66",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1ocXNBrE66_130s.jpg",
+        "source": "BV1ocXNBrE66",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1ocXNBrE66_230s.jpg",
+        "source": "BV1ocXNBrE66",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1ocXNBrE66_270s.jpg",
+        "source": "BV1ocXNBrE66",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV12a41187Ja_265s.jpg",
+        "source": "BV12a41187Ja",
+        "positive_label": false,
+        "control_detection": false,
+        "candidate_detection": true
+      },
+      {
+        "frame": "BV1pu411U7Zh_065s.jpg",
+        "source": "BV1pu411U7Zh",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV18pRhBgEyw_690s.jpg",
+        "source": "BV18pRhBgEyw",
+        "positive_label": false,
+        "control_detection": false,
+        "candidate_detection": true
+      },
+      {
+        "frame": "BV1pu411U7Zh_140s.jpg",
+        "source": "BV1pu411U7Zh",
+        "positive_label": true,
+        "control_detection": false,
+        "candidate_detection": true
+      }
+    ]
+  },
+  {
+    "seed": 73,
+    "size": 640,
+    "models": {
+      "control": {
+        "hits": 7,
+        "false": 13,
+        "hard_round": 0
+      },
+      "positive": {
+        "hits": 6,
+        "false": 8,
+        "hard_round": 0
+      }
+    },
+    "changes": [
+      {
+        "frame": "BV1Fj411u7WL_052s.jpg",
+        "source": "BV1Fj411u7WL",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1Fj411u7WL_212s.jpg",
+        "source": "BV1Fj411u7WL",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1rzdZBTEps_084s.jpg",
+        "source": "BV1rzdZBTEps",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1ocXNBrE66_070s.jpg",
+        "source": "BV1ocXNBrE66",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1ocXNBrE66_130s.jpg",
+        "source": "BV1ocXNBrE66",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1Uq4y1R7Aj_024s.jpg",
+        "source": "BV1Uq4y1R7Aj",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV12a41187Ja_140s.jpg",
+        "source": "BV12a41187Ja",
+        "positive_label": false,
+        "control_detection": false,
+        "candidate_detection": true
+      },
+      {
+        "frame": "BV12a41187Ja_215s.jpg",
+        "source": "BV12a41187Ja",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1pu411U7Zh_015s.jpg",
+        "source": "BV1pu411U7Zh",
+        "positive_label": false,
+        "control_detection": false,
+        "candidate_detection": true
+      },
+      {
+        "frame": "BV1pu411U7Zh_190s.jpg",
+        "source": "BV1pu411U7Zh",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV18pRhBgEyw_150s.jpg",
+        "source": "BV18pRhBgEyw",
+        "positive_label": false,
+        "control_detection": false,
+        "candidate_detection": true
+      },
+      {
+        "frame": "BV13s411H7dn_00.jpg",
+        "source": "BV13s411H7dn",
+        "positive_label": true,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV13s411H7dn_01.jpg",
+        "source": "BV13s411H7dn",
+        "positive_label": true,
+        "control_detection": false,
+        "candidate_detection": true
+      },
+      {
+        "frame": "BV1aR4y1Z7FR_00.jpg",
+        "source": "BV1aR4y1Z7FR",
+        "positive_label": true,
+        "control_detection": true,
+        "candidate_detection": false
+      }
+    ]
+  },
+  {
+    "seed": 73,
+    "size": 960,
+    "models": {
+      "control": {
+        "hits": 3,
+        "false": 14,
+        "hard_round": 0
+      },
+      "positive": {
+        "hits": 2,
+        "false": 10,
+        "hard_round": 0
+      }
+    },
+    "changes": [
+      {
+        "frame": "BV1rzdZBTEps_084s.jpg",
+        "source": "BV1rzdZBTEps",
+        "positive_label": false,
+        "control_detection": false,
+        "candidate_detection": true
+      },
+      {
+        "frame": "BV1rzdZBTEps_340s.jpg",
+        "source": "BV1rzdZBTEps",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1ocXNBrE66_250s.jpg",
+        "source": "BV1ocXNBrE66",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1Uq4y1R7Aj_032s.jpg",
+        "source": "BV1Uq4y1R7Aj",
+        "positive_label": false,
+        "control_detection": false,
+        "candidate_detection": true
+      },
+      {
+        "frame": "BV12a41187Ja_165s.jpg",
+        "source": "BV12a41187Ja",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1xW411f7zP_095s.jpg",
+        "source": "BV1xW411f7zP",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1pu411U7Zh_090s.jpg",
+        "source": "BV1pu411U7Zh",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV18pRhBgEyw_600s.jpg",
+        "source": "BV18pRhBgEyw",
+        "positive_label": false,
+        "control_detection": true,
+        "candidate_detection": false
+      },
+      {
+        "frame": "BV1aR4y1Z7FR_00.jpg",
+        "source": "BV1aR4y1Z7FR",
+        "positive_label": true,
+        "control_detection": true,
+        "candidate_detection": false
+      }
+    ]
+  }
+]
