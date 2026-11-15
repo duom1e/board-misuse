@@ -1,0 +1,47 @@
+{
+  "imgsz": 640,
+  "dev": [
+    {
+      "threshold": 0.25,
+      "hits": 8,
+      "positive_total": 14,
+      "false_frames": 8,
+      "negative_total": 70
+    },
+    {
+      "threshold": 0.5,
+      "hits": 8,
+      "positive_total": 14,
+      "false_frames": 6,
+      "negative_total": 70
+    }
+  ],
+  "chicken": [
+    {
+      "threshold": 0.25,
+      "hits": 12,
+      "total": 12
+    },
+    {
+      "threshold": 0.5,
+      "hits": 12,
+      "total": 12
+    }
+  ],
+  "white": [
+    {
+      "threshold": 0.25,
+      "hits": 10,
+      "total": 12
+    },
+    {
+      "threshold": 0.5,
+      "hits": 9,
+      "total": 12
+    }
+  ],
+  "canteen": {
+    "single": 1,
+    "five": 1
+  }
+}

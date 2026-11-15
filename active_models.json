@@ -239,5 +239,38 @@
       "food detection in this domain still fails (0 detections at conf 0.5)",
       "labels for the canteen frames came from the model proposals + a fixed-region median, not hand drawing"
     ]
+  },
+  "board_candidate_neg15": {
+    "weights": "D:\\CodexProjects\\board-misuse\\outputs\\training_runs\\board_neg15_v1\\weights\\last.pt",
+    "imgsz": 640,
+    "status": "candidate only — NOT default; all metrics are development-set, no independent test",
+    "fixed_at": "2026-11-15",
+    "manifest": "training_runs/board_neg15_v1/manifest.json",
+    "verification": "training_runs/board_neg15_v1/verification_640.json",
+    "recipe": "yolo11n from COCO (200 epochs pretrained) → 15 epochs on 285 entries (270 base + 15 kitchen negatives), AdamW 1e-4, batch/nbs 8, seed 11",
+    "why_candidate": "重置到 COCO 起点并把起点从过拟合旧来源的 board_v2_real 换成 COCO 预训练",
+    "metrics_conf_0.25": {
+      "dev_hits": "8/14",
+      "dev_false_frames": "8/70",
+      "white_round": "10/12",
+      "chicken_block": "12/12",
+      "canteen_five_frame_segments": 1
+    },
+    "metrics_conf_0.5": {
+      "dev_hits": "8/14",
+      "dev_false_frames": "6/70",
+      "white_round": "9/12",
+      "chicken_block": "12/12"
+    },
+    "compared_to_previous_default": {
+      "previous_white_round": "7/12",
+      "previous_chicken_block": "11/12",
+      "previous_dev_false_frames": "19/70"
+    },
+    "not_do": [
+      "未替代 board 默认模型",
+      "未在独立来源验证",
+      "未做 960 输入复测"
+    ]
   }
 }

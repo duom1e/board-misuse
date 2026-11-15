@@ -1,0 +1,28 @@
+{
+  "source_run": "experiments/rerun_yolo11n_kitchenneg_seed11_20261115",
+  "backbone": "yolo11n.pt (COCO 起点)",
+  "seed": 11,
+  "entries": 285,
+  "epochs": 15,
+  "imgsz": 640,
+  "extra_negatives": "experiments/kitchen_neg2_20261115/images (15 张，另一食堂视频的锅/盆/托盘)",
+  "selection_rule": "conf .25 下要求切鸡 ≥11 且白板 ≥10，在满足者中取开发误报最低的种子（seed11: FP 8）",
+  "metrics_at_0.25": {
+    "white": 10,
+    "chicken": 12,
+    "dev_hits": 8,
+    "dev_false_frames": 8,
+    "canteen_five_segments": 1
+  },
+  "metrics_at_0.50": {
+    "white": 9,
+    "chicken": 12,
+    "dev_hits": 8,
+    "dev_false_frames": 6
+  },
+  "sha256": {
+    "best.pt": "66348739b481409c518339600ad3c8502a0b32f4c24d95c4a1bec19ba28740c8",
+    "last.pt": "7ed915eba3e87862b879af80889048bc3dbe37cb37921a35d52d073c1323520b"
+  },
+  "status": "candidate, NOT default; 评估均为开发集"
+}
