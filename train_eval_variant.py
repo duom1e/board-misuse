@@ -29,6 +29,7 @@ SEED = int(os.environ.get('SWAP_SEED', '73'))
 EXTRA_NEG = os.environ.get('EXTRA_NEG', '')
 EXTRA_POS = os.environ.get('EXTRA_POS', '')
 TAG = os.environ.get('VARIANT_TAG', 'plain')
+POS_REPEAT = int(os.environ.get('POS_REPEAT', '2'))
 OUT = BASE / 'experiments' / ('rerun_%s_%s_seed%d_20261115'
                               % (BACKBONE.replace('.pt', ''), TAG, SEED))
 CONF, IOU = 0.25, 0.5
@@ -53,7 +54,7 @@ def main():
         added += [str(p) for p in files]
     if EXTRA_POS:
         files = sorted((BASE / EXTRA_POS / 'images').glob('*.jpg'))
-        train += [str(p) for p in files] * 2
+        train += [str(p) for p in files] * POS_REPEAT
         added += [str(p) for p in files]
     (OUT / 'train.txt').write_text('\n'.join(train) + '\n')
     (OUT / 'data.yaml').write_text('path: %s\ntrain: train.txt\nval: %s\nnames: [cutting_board]\n'
