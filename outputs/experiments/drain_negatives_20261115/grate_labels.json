@@ -1,0 +1,18 @@
+{
+  "source": "BV1dC7H6PEoG",
+  "video_sha256": "da36c4a778399bcd0903f2c18c7f2c6ddddbe091cb617c4232cde25457b6219e",
+  "fps": 30,
+  "source_size": [1280,720],
+  "annotation_size": [768,432],
+  "selection": "Before prediction, seven frames centred on 7734, spaced 15 frames (0.5 s); source previously used for development.",
+  "region": "Conservative convex polygon inside the visible floor grate. Stove counter drainage slots are excluded. Empty when visible floor grate cannot reliably be delineated.",
+  "frames": [
+    {"frame":7689,"board":"unclear","note":"Metal prep table and two baskets. White support below the baskets is partly hidden.","polygon":[[431,151],[473,151],[455,373],[394,373]]},
+    {"frame":7704,"board":"unclear","note":"Basket hides much of the white shape beneath it. Floor grate visible beside table.","polygon":[[429,145],[469,145],[455,373],[392,373]]},
+    {"frame":7719,"board":"unclear","note":"Partly hidden white support remains under basket; wiping cloth on lower left.","polygon":[[432,137],[473,137],[458,369],[397,369]]},
+    {"frame":7734,"board":"unclear","note":"Edge of the same basket assembly and a thin white support are partly visible at far left. Floor grate clearly visible.","polygon":[[276,126],[319,122],[410,370],[348,370]]},
+    {"frame":7749,"board":"absent","note":"Stove, pans, strainers, ladle, hands, tiled floor and long grate. No visible cutting board.","polygon":[[91,210],[123,195],[220,308],[215,355],[202,369]]},
+    {"frame":7764,"board":"absent","note":"Wok, pots, mesh strainers and arms. Floor grate visible at lower left.","polygon":[[12,335],[56,325],[147,377],[80,403]]},
+    {"frame":7779,"board":"absent","note":"Wok and pots fill view. Floor grate only a sliver at lower left, unsuitable for a reliable region.","polygon":[]}
+  ]
+}

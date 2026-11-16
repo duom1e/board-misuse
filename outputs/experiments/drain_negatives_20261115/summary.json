@@ -1,0 +1,338 @@
+{
+  "data_audit": {
+    "train_slots": 270,
+    "validation_slots": 10,
+    "changed_train_slots": [
+      251,
+      253,
+      263,
+      265
+    ],
+    "unchanged_train_images": 266,
+    "label_differences": 0,
+    "validation_image_differences": 0
+  },
+  "arms": {
+    "control_42": {
+      "epochs": 15,
+      "weight_sha256": "cc27c18450d5b186823dd44ea8e74a1fc956010af91fe0f3f796052c8c0dd90c",
+      "static": {
+        "all": {
+          "0.25": {
+            "hits": 7,
+            "positive_total": 14,
+            "negative_total": 70,
+            "false_frames": 19
+          },
+          "0.5": {
+            "hits": 5,
+            "positive_total": 14,
+            "negative_total": 70,
+            "false_frames": 13
+          }
+        },
+        "known_source_disjoint": {
+          "0.25": {
+            "hits": 7,
+            "positive_total": 14,
+            "negative_total": 61,
+            "false_frames": 16
+          },
+          "0.5": {
+            "hits": 5,
+            "positive_total": 14,
+            "negative_total": 61,
+            "false_frames": 10
+          }
+        }
+      },
+      "videos": {
+        "canteen": {
+          "1": {
+            "events": 10,
+            "flagged_frames": 50
+          },
+          "5": {
+            "events": 5,
+            "flagged_frames": 23
+          }
+        },
+        "stove": {
+          "1": {
+            "events": 13,
+            "flagged_frames": 19
+          },
+          "5": {
+            "events": 0,
+            "flagged_frames": 0
+          }
+        },
+        "white": {
+          "1": {
+            "hits": 4,
+            "anchors": 12
+          },
+          "5": {
+            "hits": 3,
+            "anchors": 12
+          }
+        },
+        "chicken": {
+          "1": {
+            "hits": 11,
+            "anchors": 12
+          },
+          "5": {
+            "hits": 11,
+            "anchors": 12
+          }
+        }
+      }
+    },
+    "facility_42": {
+      "epochs": 15,
+      "weight_sha256": "d3486f0f3a633968982bf01a32cb8e0f0e0bf31b8c22161bc0ad441bb3ed3d55",
+      "static": {
+        "all": {
+          "0.25": {
+            "hits": 7,
+            "positive_total": 14,
+            "negative_total": 70,
+            "false_frames": 18
+          },
+          "0.5": {
+            "hits": 4,
+            "positive_total": 14,
+            "negative_total": 70,
+            "false_frames": 13
+          }
+        },
+        "known_source_disjoint": {
+          "0.25": {
+            "hits": 7,
+            "positive_total": 14,
+            "negative_total": 61,
+            "false_frames": 16
+          },
+          "0.5": {
+            "hits": 4,
+            "positive_total": 14,
+            "negative_total": 61,
+            "false_frames": 11
+          }
+        }
+      },
+      "videos": {
+        "canteen": {
+          "1": {
+            "events": 4,
+            "flagged_frames": 8
+          },
+          "5": {
+            "events": 0,
+            "flagged_frames": 0
+          }
+        },
+        "stove": {
+          "1": {
+            "events": 5,
+            "flagged_frames": 9
+          },
+          "5": {
+            "events": 0,
+            "flagged_frames": 0
+          }
+        },
+        "white": {
+          "1": {
+            "hits": 8,
+            "anchors": 12
+          },
+          "5": {
+            "hits": 6,
+            "anchors": 12
+          }
+        },
+        "chicken": {
+          "1": {
+            "hits": 11,
+            "anchors": 12
+          },
+          "5": {
+            "hits": 10,
+            "anchors": 12
+          }
+        }
+      }
+    },
+    "control_73": {
+      "epochs": 15,
+      "weight_sha256": "7b6ae47b5f3bbe3bb48aa03becd82903d43d1209bf6e549da92339d95e9d257b",
+      "static": {
+        "all": {
+          "0.25": {
+            "hits": 7,
+            "positive_total": 14,
+            "negative_total": 70,
+            "false_frames": 23
+          },
+          "0.5": {
+            "hits": 5,
+            "positive_total": 14,
+            "negative_total": 70,
+            "false_frames": 11
+          }
+        },
+        "known_source_disjoint": {
+          "0.25": {
+            "hits": 7,
+            "positive_total": 14,
+            "negative_total": 61,
+            "false_frames": 18
+          },
+          "0.5": {
+            "hits": 5,
+            "positive_total": 14,
+            "negative_total": 61,
+            "false_frames": 8
+          }
+        }
+      },
+      "videos": {
+        "canteen": {
+          "1": {
+            "events": 8,
+            "flagged_frames": 51
+          },
+          "5": {
+            "events": 3,
+            "flagged_frames": 32
+          }
+        },
+        "stove": {
+          "1": {
+            "events": 8,
+            "flagged_frames": 12
+          },
+          "5": {
+            "events": 0,
+            "flagged_frames": 0
+          }
+        },
+        "white": {
+          "1": {
+            "hits": 6,
+            "anchors": 12
+          },
+          "5": {
+            "hits": 3,
+            "anchors": 12
+          }
+        },
+        "chicken": {
+          "1": {
+            "hits": 11,
+            "anchors": 12
+          },
+          "5": {
+            "hits": 11,
+            "anchors": 12
+          }
+        }
+      }
+    },
+    "facility_73": {
+      "epochs": 15,
+      "weight_sha256": "d2f257b0f52661aa591626c92dc5087343bfde468f61341e015a4b19367c67f2",
+      "static": {
+        "all": {
+          "0.25": {
+            "hits": 8,
+            "positive_total": 14,
+            "negative_total": 70,
+            "false_frames": 21
+          },
+          "0.5": {
+            "hits": 7,
+            "positive_total": 14,
+            "negative_total": 70,
+            "false_frames": 6
+          }
+        },
+        "known_source_disjoint": {
+          "0.25": {
+            "hits": 8,
+            "positive_total": 14,
+            "negative_total": 61,
+            "false_frames": 17
+          },
+          "0.5": {
+            "hits": 7,
+            "positive_total": 14,
+            "negative_total": 61,
+            "false_frames": 4
+          }
+        }
+      },
+      "videos": {
+        "canteen": {
+          "1": {
+            "events": 9,
+            "flagged_frames": 15
+          },
+          "5": {
+            "events": 0,
+            "flagged_frames": 0
+          }
+        },
+        "stove": {
+          "1": {
+            "events": 27,
+            "flagged_frames": 70
+          },
+          "5": {
+            "events": 5,
+            "flagged_frames": 12
+          }
+        },
+        "white": {
+          "1": {
+            "hits": 5,
+            "anchors": 12
+          },
+          "5": {
+            "hits": 5,
+            "anchors": 12
+          }
+        },
+        "chicken": {
+          "1": {
+            "hits": 11,
+            "anchors": 12
+          },
+          "5": {
+            "hits": 11,
+            "anchors": 12
+          }
+        }
+      }
+    }
+  },
+  "video_sha256": {
+    "BV1bY4y1Y7v5": "a2059404d99a8290b20a7ca27e3b89f5fc7fbb9b053b3a5be4fbefad58a9cf02",
+    "BV1b1ixB5ERA": "c3b472efb241e9d0c2f14d2a2eb9ec25d7f7566f68a9434997e0025511e34fde",
+    "BV1264y1F7a6": "2ef2b2e2bfb594c194a4f1f7b0ce1dcf406bb750b5c15e97dd1294056f185c87",
+    "BV1Go4y1o7ym": "35e934d38c8709ea53dff4ccfc5e5114c4e8ace5523bd04038dfe9231a61de03"
+  },
+  "training": {
+    "epochs": 15,
+    "batch": 8,
+    "imgsz": 640,
+    "optimizer": "AdamW",
+    "lr0": 0.0001,
+    "nbs": 8,
+    "warmup_epochs": 0,
+    "amp": false,
+    "mosaic": 0
+  }
+}

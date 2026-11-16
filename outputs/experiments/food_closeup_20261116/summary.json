@@ -1,0 +1,290 @@
+{
+  "audit": {
+    "epochs_per_arm": 15,
+    "entries_per_arm": 285,
+    "initial_weight_sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+    "same_labels_and_validation": true,
+    "replacements": {
+      "266": {
+        "previous": "BV163411f7cv_016s.jpg",
+        "new": "BV14K4y1x7LF_f204.jpg",
+        "sha256": "a3fa7bfcf3f99802779f4b8f9223b2b294a5c39547295d5a45befdc625b3b0da"
+      },
+      "268": {
+        "previous": "BV163411f7cv_024s.jpg",
+        "new": "BV163411f7cv_f1992.jpg",
+        "sha256": "e0106f6d5a9a637ef2326b4854a7532ba08e6136d5e70d44ea9e41247c612424"
+      },
+      "270": {
+        "previous": "BV163411f7cv_032s.jpg",
+        "new": "BV1aRmLBmE7i_f26596.jpg",
+        "sha256": "d7c435e582d1644f71c9018beb216ffff8e7f479111dd04cacba0456b55dbd9a"
+      },
+      "272": {
+        "previous": "BV163411f7cv_040s.jpg",
+        "new": "BV1jJ411j7bC_f3391.jpg",
+        "sha256": "edaeaa5e76f7df17d19a5073df2253e1c9004c8b8760fc3c1618f36610de1987"
+      },
+      "274": {
+        "previous": "BV163411f7cv_048s.jpg",
+        "new": "BV1XN411q7XJ_f225.jpg",
+        "sha256": "f647b954a5fde82509c466e16f5efaf1af61a6da046aa202d7efaf92a6cf1bf9"
+      }
+    }
+  },
+  "case": "BV1Mg411U7SV_098.6s.jpg",
+  "models": {
+    "previous_11": {
+      "weight_sha256": "7ed915eba3e87862b879af80889048bc3dbe37cb37921a35d52d073c1323520b",
+      "summary": [
+        {
+          "threshold": 0.25,
+          "group": "kitchens",
+          "hits": 4,
+          "positives": 4,
+          "false_frames": 1,
+          "negatives": 15
+        },
+        {
+          "threshold": 0.25,
+          "group": "dev",
+          "hits": 8,
+          "positives": 14,
+          "false_frames": 8,
+          "negatives": 70
+        },
+        {
+          "threshold": 0.25,
+          "group": "white",
+          "hits": 10,
+          "positives": 12,
+          "false_frames": 0,
+          "negatives": 0
+        },
+        {
+          "threshold": 0.25,
+          "group": "chicken",
+          "hits": 12,
+          "positives": 12,
+          "false_frames": 0,
+          "negatives": 0
+        },
+        {
+          "threshold": 0.5,
+          "group": "kitchens",
+          "hits": 3,
+          "positives": 4,
+          "false_frames": 1,
+          "negatives": 15
+        },
+        {
+          "threshold": 0.5,
+          "group": "dev",
+          "hits": 8,
+          "positives": 14,
+          "false_frames": 6,
+          "negatives": 70
+        },
+        {
+          "threshold": 0.5,
+          "group": "white",
+          "hits": 9,
+          "positives": 12,
+          "false_frames": 0,
+          "negatives": 0
+        },
+        {
+          "threshold": 0.5,
+          "group": "chicken",
+          "hits": 12,
+          "positives": 12,
+          "false_frames": 0,
+          "negatives": 0
+        }
+      ],
+      "kitchen_hits_under_area06": {
+        "0.25": 2,
+        "0.5": 2
+      },
+      "fish_peak": {
+        "xyxy": [
+          35.324462890625,
+          4.42938232421875,
+          1275.5103759765625,
+          714.3875122070312
+        ],
+        "score": 0.9771856069564819,
+        "area": 0.955382022093642,
+        "iou": null
+      }
+    },
+    "control_11": {
+      "weight_sha256": "8bb9fb2613e0f782bc792bdbaecafd8a8f7ae6ed09619c4c588c070abf59c3c9",
+      "summary": [
+        {
+          "threshold": 0.25,
+          "group": "kitchens",
+          "hits": 3,
+          "positives": 4,
+          "false_frames": 3,
+          "negatives": 15
+        },
+        {
+          "threshold": 0.25,
+          "group": "dev",
+          "hits": 9,
+          "positives": 14,
+          "false_frames": 11,
+          "negatives": 70
+        },
+        {
+          "threshold": 0.25,
+          "group": "white",
+          "hits": 11,
+          "positives": 12,
+          "false_frames": 0,
+          "negatives": 0
+        },
+        {
+          "threshold": 0.25,
+          "group": "chicken",
+          "hits": 11,
+          "positives": 12,
+          "false_frames": 0,
+          "negatives": 0
+        },
+        {
+          "threshold": 0.5,
+          "group": "kitchens",
+          "hits": 3,
+          "positives": 4,
+          "false_frames": 1,
+          "negatives": 15
+        },
+        {
+          "threshold": 0.5,
+          "group": "dev",
+          "hits": 8,
+          "positives": 14,
+          "false_frames": 6,
+          "negatives": 70
+        },
+        {
+          "threshold": 0.5,
+          "group": "white",
+          "hits": 10,
+          "positives": 12,
+          "false_frames": 0,
+          "negatives": 0
+        },
+        {
+          "threshold": 0.5,
+          "group": "chicken",
+          "hits": 7,
+          "positives": 12,
+          "false_frames": 0,
+          "negatives": 0
+        }
+      ],
+      "kitchen_hits_under_area06": {
+        "0.25": 2,
+        "0.5": 2
+      },
+      "fish_peak": {
+        "xyxy": [
+          21.83984375,
+          5.47637939453125,
+          1278.74462890625,
+          718.7105712890625
+        ],
+        "score": 0.8183521628379822,
+        "area": 0.9727294582566053,
+        "iou": null
+      }
+    },
+    "food_11": {
+      "weight_sha256": "22ad14c1a87d3c88d160208b855dedb5351019353c2e54457613abeeadd633e9",
+      "summary": [
+        {
+          "threshold": 0.25,
+          "group": "kitchens",
+          "hits": 3,
+          "positives": 4,
+          "false_frames": 2,
+          "negatives": 15
+        },
+        {
+          "threshold": 0.25,
+          "group": "dev",
+          "hits": 9,
+          "positives": 14,
+          "false_frames": 6,
+          "negatives": 70
+        },
+        {
+          "threshold": 0.25,
+          "group": "white",
+          "hits": 11,
+          "positives": 12,
+          "false_frames": 0,
+          "negatives": 0
+        },
+        {
+          "threshold": 0.25,
+          "group": "chicken",
+          "hits": 11,
+          "positives": 12,
+          "false_frames": 0,
+          "negatives": 0
+        },
+        {
+          "threshold": 0.5,
+          "group": "kitchens",
+          "hits": 2,
+          "positives": 4,
+          "false_frames": 1,
+          "negatives": 15
+        },
+        {
+          "threshold": 0.5,
+          "group": "dev",
+          "hits": 8,
+          "positives": 14,
+          "false_frames": 2,
+          "negatives": 70
+        },
+        {
+          "threshold": 0.5,
+          "group": "white",
+          "hits": 11,
+          "positives": 12,
+          "false_frames": 0,
+          "negatives": 0
+        },
+        {
+          "threshold": 0.5,
+          "group": "chicken",
+          "hits": 11,
+          "positives": 12,
+          "false_frames": 0,
+          "negatives": 0
+        }
+      ],
+      "kitchen_hits_under_area06": {
+        "0.25": 2,
+        "0.5": 2
+      },
+      "fish_peak": {
+        "xyxy": [
+          48.7781982421875,
+          2.4716796875,
+          1280.0,
+          719.1671142578125
+        ],
+        "score": 0.966112494468689,
+        "area": 0.957477261570376,
+        "iou": null
+      }
+    }
+  }
+}

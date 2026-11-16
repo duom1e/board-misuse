@@ -1,0 +1,39 @@
+[
+  {
+    "source": "BV1sA411G7Yw",
+    "video_sha256": "d374dcfe0209a494825c6e31ceb7277684fb23c19a36db9bd51644e1c7555645",
+    "frame": 2273,
+    "crop": null,
+    "replace": "BV1sA411G7Yw_165s.jpg",
+    "review": "Black-and-white geometric kitchen floor, two cats and lower cabinets. Entire visible frame contains no board."
+  },
+  {
+    "source": "BV1sA411G7Yw",
+    "video_sha256": "d374dcfe0209a494825c6e31ceb7277684fb23c19a36db9bd51644e1c7555645",
+    "frame": 1219,
+    "crop": [
+      128,
+      302,
+      1150,
+      720
+    ],
+    "replace": "BV1sA411G7Yw_195s.jpg",
+    "review": "Crop below the dish rack. White recessed sink basin, faucet base and fixed counter edge."
+  },
+  {
+    "source": "BV14K4y1x7LF",
+    "video_sha256": "daadba9d4249328c0218ec9d3876893b0ff7e8ea6ab7d9925e1c192e148791a2",
+    "frame": 48,
+    "crop": null,
+    "replace": "BV163411f7cv_016s.jpg",
+    "review": "Running water and peppers inside a stainless sink, hands and rim visible. No board."
+  },
+  {
+    "source": "BV163411f7cv",
+    "video_sha256": "8e56f2fed3ca66d01821713f87d477c7ce149532b12f9d6b3b987179d21fffa3",
+    "frame": 40,
+    "crop": null,
+    "replace": "BV163411f7cv_024s.jpg",
+    "review": "Plastic slotted draining basket, filled with shredded potatoes. Rim and molded side slots surround the food."
+  }
+]

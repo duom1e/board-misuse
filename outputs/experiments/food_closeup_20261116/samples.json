@@ -1,0 +1,37 @@
+[
+  {
+    "source": "BV14K4y1x7LF",
+    "frame": 204,
+    "video_sha256": "daadba9d4249328c0218ec9d3876893b0ff7e8ea6ab7d9925e1c192e148791a2",
+    "crop": [270, 55, 1030, 575],
+    "observation": "剁椒装在橙边黑碗里。裁到碗内与上沿，去掉桌面。"
+  },
+  {
+    "source": "BV163411f7cv",
+    "frame": 1992,
+    "video_sha256": "8e56f2fed3ca66d01821713f87d477c7ce149532b12f9d6b3b987179d21fffa3",
+    "crop": null,
+    "observation": "成品土豆丝特写占据画面，顶部有弯曲的不锈钢盆沿。"
+  },
+  {
+    "source": "BV1jJ411j7bC",
+    "frame": 3391,
+    "video_sha256": "a34005f95ef5fafcde4e480f51e193db45c4a8c2fe938c6cbeb1495789a5111f",
+    "crop": null,
+    "observation": "烧味摆在反光金属展示托盘上，左上可见盘边，左下有夹菜用具。"
+  },
+  {
+    "source": "BV1XN411q7XJ",
+    "frame": 225,
+    "video_sha256": "fcc0503814bf512ab687a2b3841c3cddaf70029c0b7bc0af733d6a8fa1fdd9bb",
+    "crop": [350, 90, 1035, 629],
+    "observation": "手捧小碗，勺子向红色辣椒浇汁，画面保留碗沿。"
+  },
+  {
+    "source": "BV1aRmLBmE7i",
+    "frame": 26596,
+    "video_sha256": "b5b7ac8b9f630325b87c6d7a918f0066df09c90d64224a46a46bb30109a68447",
+    "crop": [0, 242, 360, 569],
+    "observation": "圆形陶锅内的汤和食物，取画面下部保留弧形锅壁，排除后方桌面。"
+  }
+]
