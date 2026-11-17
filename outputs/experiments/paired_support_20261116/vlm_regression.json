@@ -1,0 +1,1861 @@
+{
+  "revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+  "prompt_sha256": "a5521b0709d1825f322db4d6284f4c8d98dd6cb48dc9d95339b222edd138855e",
+  "summary": {
+    "dev": {
+      "total": 84,
+      "valid": 84,
+      "presence_hits": 11,
+      "localized": 11,
+      "false_frames": 0
+    },
+    "white": {
+      "total": 12,
+      "valid": 12,
+      "presence_hits": 11,
+      "localized": 11,
+      "false_frames": 0
+    },
+    "chicken": {
+      "total": 12,
+      "valid": 12,
+      "presence_hits": 12,
+      "localized": 12,
+      "false_frames": 0
+    }
+  },
+  "rows": [
+    {
+      "group": "dev",
+      "name": "BV1dHckzwEBA_06.jpg",
+      "presence": "yes",
+      "gt": [
+        165,
+        0,
+        438,
+        217
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[253,0,680,604]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          161.92,
+          0.0,
+          435.2,
+          217.44
+        ]
+      ],
+      "best_iou": 0.9767414221388689
+    },
+    {
+      "group": "dev",
+      "name": "BV1dHckzwEBA_10.jpg",
+      "presence": "yes",
+      "gt": [
+        210,
+        0,
+        504,
+        206
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[310,0,807,657]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          198.4,
+          0.0,
+          516.48,
+          236.52
+        ]
+      ],
+      "best_iou": 0.805026761277967
+    },
+    {
+      "group": "dev",
+      "name": "BV1dHckzwEBA_11.jpg",
+      "presence": "yes",
+      "gt": [
+        163,
+        13,
+        438,
+        256
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": 0
+    },
+    {
+      "group": "dev",
+      "name": "BV1Fj411u7WL_020s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Fj411u7WL_052s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Fj411u7WL_084s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Fj411u7WL_116s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Fj411u7WL_148s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Fj411u7WL_180s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Fj411u7WL_212s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Fj411u7WL_244s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Fj411u7WL_276s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Fj411u7WL_308s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Fj411u7WL_340s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Fj411u7WL_372s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1rzdZBTEps_052s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1rzdZBTEps_084s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1rzdZBTEps_116s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1rzdZBTEps_212s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1rzdZBTEps_244s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1rzdZBTEps_308s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1rzdZBTEps_340s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1ocXNBrE66_070s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1ocXNBrE66_090s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1ocXNBrE66_110s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1ocXNBrE66_130s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1ocXNBrE66_150s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1ocXNBrE66_170s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1ocXNBrE66_210s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1ocXNBrE66_230s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1ocXNBrE66_250s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1ocXNBrE66_270s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1ocXNBrE66_290s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Uq4y1R7Aj_008s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Uq4y1R7Aj_016s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Uq4y1R7Aj_024s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Uq4y1R7Aj_032s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Uq4y1R7Aj_040s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Uq4y1R7Aj_048s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Uq4y1R7Aj_064s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1Uq4y1R7Aj_072s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV12a41187Ja_015s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV12a41187Ja_040s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV12a41187Ja_065s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV12a41187Ja_140s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV12a41187Ja_165s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV12a41187Ja_215s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV12a41187Ja_265s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV12a41187Ja_290s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1bqsfzbELh_195s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1xW411f7zP_015s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1xW411f7zP_035s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1xW411f7zP_055s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1xW411f7zP_075s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1xW411f7zP_095s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1xW411f7zP_115s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1xW411f7zP_135s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1pu411U7Zh_015s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1pu411U7Zh_065s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1pu411U7Zh_090s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1pu411U7Zh_190s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1pu411U7Zh_215s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1pu411U7Zh_240s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1pu411U7Zh_265s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV18pRhBgEyw_060s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV18pRhBgEyw_150s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV18pRhBgEyw_240s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV18pRhBgEyw_330s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV18pRhBgEyw_420s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV18pRhBgEyw_600s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV18pRhBgEyw_690s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV18pRhBgEyw_780s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV18pRhBgEyw_960s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dev",
+      "name": "BV1TS4y1K7ZH_00.jpg",
+      "presence": "yes",
+      "gt": [
+        510,
+        350,
+        846,
+        687
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[367, 500, 620, 893]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          500.588,
+          360.0,
+          845.68,
+          642.96
+        ]
+      ],
+      "best_iou": 0.8195679959310886
+    },
+    {
+      "group": "dev",
+      "name": "BV1TS4y1K7ZH_06.jpg",
+      "presence": "yes",
+      "gt": [
+        514,
+        353,
+        847,
+        695
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": 0
+    },
+    {
+      "group": "dev",
+      "name": "BV1pu411U7Zh_115s.jpg",
+      "presence": "yes",
+      "gt": [
+        466,
+        187,
+        1280,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[407, 257, 907, 989]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          520.96,
+          185.04,
+          1160.96,
+          712.08
+        ]
+      ],
+      "best_iou": 0.7723248307809127
+    },
+    {
+      "group": "dev",
+      "name": "BV1pu411U7Zh_140s.jpg",
+      "presence": "yes",
+      "gt": [
+        400,
+        173,
+        1280,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[393, 234, 998, 997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          503.04,
+          168.48,
+          1277.44,
+          717.84
+        ]
+      ],
+      "best_iou": 0.8701972639178074
+    },
+    {
+      "group": "dev",
+      "name": "BV1pu411U7Zh_165s.jpg",
+      "presence": "yes",
+      "gt": [
+        188,
+        0,
+        1225,
+        684
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[141,0,950,957]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          180.48,
+          0.0,
+          1216.0,
+          689.04
+        ]
+      ],
+      "best_iou": 0.9770468621528743
+    },
+    {
+      "group": "dev",
+      "name": "BV13s411H7dn_00.jpg",
+      "presence": "yes",
+      "gt": [
+        281.3941018766756,
+        89.14285714285714,
+        991.7426273458445,
+        720.0
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[230, 143, 777, 997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          294.4,
+          102.96,
+          994.56,
+          717.84
+        ]
+      ],
+      "best_iou": 0.9531438320472824
+    },
+    {
+      "group": "dev",
+      "name": "BV13s411H7dn_01.jpg",
+      "presence": "yes",
+      "gt": [
+        494.15549597855227,
+        202.28571428571428,
+        1249.1152815013404,
+        720.0
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[383, 283, 975, 989]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          490.24,
+          203.76,
+          1248.0,
+          712.08
+        ]
+      ],
+      "best_iou": 0.9754366673035538
+    },
+    {
+      "group": "dev",
+      "name": "BV13s411H7dn_10.jpg",
+      "presence": "yes",
+      "gt": [
+        326.0053619302949,
+        161.14285714285714,
+        1019.1957104557641,
+        720.0
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": 0
+    },
+    {
+      "group": "dev",
+      "name": "BV1aR4y1Z7FR_00.jpg",
+      "presence": "yes",
+      "gt": [
+        0,
+        305,
+        480,
+        640
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[0,478,1000,998]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          0.0,
+          305.92,
+          480.0,
+          638.72
+        ]
+      ],
+      "best_iou": 0.9934328358208955
+    },
+    {
+      "group": "dev",
+      "name": "BV1aR4y1Z7FR_04.jpg",
+      "presence": "yes",
+      "gt": [
+        0,
+        204,
+        480,
+        602
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[0,327,1000,998]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          0.0,
+          209.28,
+          480.0,
+          638.72
+        ]
+      ],
+      "best_iou": 0.9033860875966139
+    },
+    {
+      "group": "dev",
+      "name": "BV1aR4y1Z7FR_11.jpg",
+      "presence": "yes",
+      "gt": [
+        0,
+        232,
+        480,
+        616
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[0,361,1000,998]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          0.0,
+          231.04,
+          480.0,
+          638.72
+        ]
+      ],
+      "best_iou": 0.9419152276295132
+    },
+    {
+      "group": "white",
+      "name": "BV1Go4y1o7ym_00.jpg",
+      "presence": "yes",
+      "gt": [
+        133.86486486486487,
+        322.2857142857143,
+        803.1891891891892,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[104, 440, 638, 997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          132.08,
+          316.8,
+          810.26,
+          717.84
+        ]
+      ],
+      "best_iou": 0.9682947623001343
+    },
+    {
+      "group": "white",
+      "name": "BV1Go4y1o7ym_01.jpg",
+      "presence": "yes",
+      "gt": [
+        133.86486486486487,
+        322.2857142857143,
+        803.1891891891892,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[102,450,638,997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          129.54,
+          324.0,
+          810.26,
+          717.84
+        ]
+      ],
+      "best_iou": 0.9738398868477754
+    },
+    {
+      "group": "white",
+      "name": "BV1Go4y1o7ym_02.jpg",
+      "presence": "yes",
+      "gt": [
+        133.86486486486487,
+        322.2857142857143,
+        803.1891891891892,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[106, 426, 634, 997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          134.62,
+          306.72,
+          805.18,
+          717.84
+        ]
+      ],
+      "best_iou": 0.9532498744689507
+    },
+    {
+      "group": "white",
+      "name": "BV1Go4y1o7ym_03.jpg",
+      "presence": "yes",
+      "gt": [
+        133.86486486486487,
+        332.57142857142856,
+        803.1891891891892,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[109,457,638,997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          138.43,
+          329.04,
+          810.26,
+          717.84
+        ]
+      ],
+      "best_iou": 0.9686049688589158
+    },
+    {
+      "group": "white",
+      "name": "BV1Go4y1o7ym_04.jpg",
+      "presence": "yes",
+      "gt": [
+        133.86486486486487,
+        332.57142857142856,
+        803.1891891891892,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[106,476,648,997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          134.62,
+          342.72,
+          822.96,
+          717.84
+        ]
+      ],
+      "best_iou": 0.940246646647961
+    },
+    {
+      "group": "white",
+      "name": "BV1Go4y1o7ym_05.jpg",
+      "presence": "yes",
+      "gt": [
+        133.86486486486487,
+        329.14285714285717,
+        803.1891891891892,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[102, 450, 570, 997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          129.54,
+          324.0,
+          723.9,
+          717.84
+        ]
+      ],
+      "best_iou": 0.861072739446807
+    },
+    {
+      "group": "white",
+      "name": "BV1Go4y1o7ym_06.jpg",
+      "presence": "yes",
+      "gt": [
+        133.86486486486487,
+        329.14285714285717,
+        803.1891891891892,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[106, 455, 634, 1000]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          134.62,
+          327.6,
+          805.18,
+          720.0
+        ]
+      ],
+      "best_iou": 0.9919982244485713
+    },
+    {
+      "group": "white",
+      "name": "BV1Go4y1o7ym_07.jpg",
+      "presence": "yes",
+      "gt": [
+        133.86486486486487,
+        329.14285714285717,
+        803.1891891891892,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[106, 459, 630, 997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          134.62,
+          330.48,
+          800.1,
+          717.84
+        ]
+      ],
+      "best_iou": 0.9853604318488531
+    },
+    {
+      "group": "white",
+      "name": "BV1Go4y1o7ym_08.jpg",
+      "presence": "yes",
+      "gt": [
+        133.86486486486487,
+        329.14285714285717,
+        803.1891891891892,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[109, 476, 634, 997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          138.43,
+          342.72,
+          805.18,
+          717.84
+        ]
+      ],
+      "best_iou": 0.950477709204895
+    },
+    {
+      "group": "white",
+      "name": "BV1Go4y1o7ym_09.jpg",
+      "presence": "yes",
+      "gt": [
+        133.86486486486487,
+        329.14285714285717,
+        803.1891891891892,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[110,459,630,997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          139.7,
+          330.48,
+          800.1,
+          717.84
+        ]
+      ],
+      "best_iou": 0.9778385964912284
+    },
+    {
+      "group": "white",
+      "name": "BV1Go4y1o7ym_10.jpg",
+      "presence": "yes",
+      "gt": [
+        133.86486486486487,
+        329.14285714285717,
+        803.1891891891892,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[114, 459, 634, 1000]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          144.78,
+          330.48,
+          805.18,
+          720.0
+        ]
+      ],
+      "best_iou": 0.9774297633226082
+    },
+    {
+      "group": "white",
+      "name": "BV1Go4y1o7ym_11.jpg",
+      "presence": "yes",
+      "gt": [
+        0.0,
+        48.0,
+        446.2162162162162,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": 0
+    },
+    {
+      "group": "chicken",
+      "name": "BV1264y1F7a6_00.jpg",
+      "presence": "yes",
+      "gt": [
+        52,
+        0,
+        1216,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[43,0,998,997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          55.04,
+          0.0,
+          1277.44,
+          717.84
+        ]
+      ],
+      "best_iou": 0.9446821091251746
+    },
+    {
+      "group": "chicken",
+      "name": "BV1264y1F7a6_01.jpg",
+      "presence": "yes",
+      "gt": [
+        96.08579088471849,
+        0,
+        1201.0723860589812,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[67, 176, 937, 997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          85.76,
+          126.72,
+          1199.36,
+          717.84
+        ]
+      ],
+      "best_iou": 0.8134866229657708
+    },
+    {
+      "group": "chicken",
+      "name": "BV1264y1F7a6_02.jpg",
+      "presence": "yes",
+      "gt": [
+        96.08579088471849,
+        0,
+        1201.0723860589812,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[75,10,907,989]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          96.0,
+          7.2,
+          1160.96,
+          712.08
+        ]
+      ],
+      "best_iou": 0.9433893774689023
+    },
+    {
+      "group": "chicken",
+      "name": "BV1264y1F7a6_03.jpg",
+      "presence": "yes",
+      "gt": [
+        89.22252010723861,
+        0,
+        1201.0723860589812,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[75,107,937,807]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          96.0,
+          77.04,
+          1199.36,
+          581.04
+        ]
+      ],
+      "best_iou": 0.6946549382716047
+    },
+    {
+      "group": "chicken",
+      "name": "BV1264y1F7a6_04.jpg",
+      "presence": "yes",
+      "gt": [
+        120.10723860589812,
+        0,
+        1280.0,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[127,12,1000,997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          162.56,
+          8.64,
+          1280.0,
+          717.84
+        ]
+      ],
+      "best_iou": 0.9489484171597635
+    },
+    {
+      "group": "chicken",
+      "name": "BV1264y1F7a6_05.jpg",
+      "presence": "yes",
+      "gt": [
+        113.24396782841823,
+        0,
+        1280.0,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[84,0,998,997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          107.52,
+          0.0,
+          1277.44,
+          717.84
+        ]
+      ],
+      "best_iou": 0.9899703566376264
+    },
+    {
+      "group": "chicken",
+      "name": "BV1264y1F7a6_06.jpg",
+      "presence": "yes",
+      "gt": [
+        75.49597855227881,
+        0,
+        1280.0,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[75,0,1000,997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          96.0,
+          0.0,
+          1280.0,
+          717.84
+        ]
+      ],
+      "best_iou": 0.9800282763532765
+    },
+    {
+      "group": "chicken",
+      "name": "BV1264y1F7a6_07.jpg",
+      "presence": "yes",
+      "gt": [
+        59,
+        0,
+        1280,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[47,0,1000,997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          60.16,
+          0.0,
+          1280.0,
+          717.84
+        ]
+      ],
+      "best_iou": 0.9960528091728091
+    },
+    {
+      "group": "chicken",
+      "name": "BV1264y1F7a6_08.jpg",
+      "presence": "yes",
+      "gt": [
+        68.63270777479893,
+        0,
+        1280.0,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[65,0,1000,997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          83.2,
+          0.0,
+          1280.0,
+          717.84
+        ]
+      ],
+      "best_iou": 0.9850105807365439
+    },
+    {
+      "group": "chicken",
+      "name": "BV1264y1F7a6_09.jpg",
+      "presence": "yes",
+      "gt": [
+        51.474530831099194,
+        0,
+        1280.0,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[43,0,1000,997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          55.04,
+          0.0,
+          1280.0,
+          717.84
+        ]
+      ],
+      "best_iou": 0.9941064720670391
+    },
+    {
+      "group": "chicken",
+      "name": "BV1264y1F7a6_10.jpg",
+      "presence": "yes",
+      "gt": [
+        34.316353887399465,
+        0,
+        1280.0,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[102,0,1000,997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          130.56,
+          0.0,
+          1280.0,
+          717.84
+        ]
+      ],
+      "best_iou": 0.9199700771349862
+    },
+    {
+      "group": "chicken",
+      "name": "BV1264y1F7a6_11.jpg",
+      "presence": "yes",
+      "gt": [
+        0.0,
+        0,
+        1259.4101876675604,
+        720
+      ],
+      "source": null,
+      "old": null,
+      "raw": "{\"boards\":[[0,107,984,997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          0.0,
+          77.04,
+          1259.52,
+          717.84
+        ]
+      ],
+      "best_iou": 0.8899309394191972
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+[
+  {
+    "name": "BV1Mg411U7SV_056.3s.jpg",
+    "original_presence": "yes",
+    "presence_review": "yes",
+    "box": [
+      49,
+      353,
+      996,
+      720
+    ],
+    "reason": "芋头下方正在使用的前景圆墩。可见弧形后沿和右沿，左下少量可见，底边截断。上方另一个局部圆形物不作为本次操作目标。",
+    "geometry_quality": "medium",
+    "width": 1280,
+    "height": 720,
+    "image_sha256": "7e2610ec03a8182443ece671d160437b13b82b63c4dc991f54657272aad7307e",
+    "coordinate_system": "xyxy at original resolution; upper-left origin; right and bottom exclusive"
+  },
+  {
+    "name": "BV1Mg411U7SV_070.4s.jpg",
+    "original_presence": "yes",
+    "presence_review": "yes",
+    "box": null,
+    "reason": "右下淡色板面与右上短弧可辨，大部分轮廓被猪皮、双手和刀遮住或超出画面。保留存在判断，排除边界评分。",
+    "geometry_quality": "unscorable",
+    "width": 1280,
+    "height": 720,
+    "image_sha256": "6c8ddb483d67fc5641afc243be3156b7634e3fa68a5ccf0cbdde43f26e4fc711",
+    "coordinate_system": "xyxy at original resolution; upper-left origin; right and bottom exclusive"
+  },
+  {
+    "name": "BV1Zq4y1j7mm_020.3s.jpg",
+    "original_presence": "yes",
+    "presence_review": "yes",
+    "box": [
+      0,
+      200,
+      1153,
+      720
+    ],
+    "reason": "切洋葱的绿色板。右后沿与右沿清晰，半透明字幕下仍可见左部板面，板面在左侧及下方截断。上界受手与洋葱遮挡，为近似值。",
+    "geometry_quality": "medium",
+    "width": 1280,
+    "height": 720,
+    "image_sha256": "211b19ae22878bab3b2cc34e35d0cc92360a5efbcc91d8144d7535ef17881a51",
+    "coordinate_system": "xyxy at original resolution; upper-left origin; right and bottom exclusive"
+  },
+  {
+    "name": "BV1Zq4y1j7mm_121.6s.jpg",
+    "original_presence": "yes",
+    "presence_review": "no",
+    "box": null,
+    "reason": "不锈钢容器内有红酱和片状食物，前后可见金属盘沿；画面无可见案板。维持原始文件，另记存在标签修正。",
+    "geometry_quality": "absence",
+    "width": 1280,
+    "height": 720,
+    "image_sha256": "a39eaa5a5d971b710adc63d4a740d5eb5625c5af008e25671117e01f30ff7501",
+    "coordinate_system": "xyxy at original resolution; upper-left origin; right and bottom exclusive"
+  }
+]

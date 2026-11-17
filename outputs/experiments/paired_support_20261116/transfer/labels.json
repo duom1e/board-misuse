@@ -1,0 +1,66 @@
+[
+  {
+    "source": "BV1qT4y127Go",
+    "frame": 943,
+    "video_sha256": "aecd2496f637ac7b123f3286a35e63b4193dde40b222eed65d5425350665cfd6",
+    "box": [
+      0,
+      323,
+      400,
+      720
+    ],
+    "reason": "画面左下木板上有黄色切块；可辨板顶边、右边与灶台的间隙，左边和底边被画面截断。仅框板在画面内的范围。"
+  },
+  {
+    "source": "BV1qT4y127Go",
+    "frame": 5093,
+    "video_sha256": "aecd2496f637ac7b123f3286a35e63b4193dde40b222eed65d5425350665cfd6",
+    "box": null,
+    "reason": "几只面碗和配料碗放在圆形餐桌转盘上，转盘、杯碗的外沿可辨，未见案板。"
+  },
+  {
+    "source": "BV14W4y1T7LC",
+    "frame": 2215,
+    "video_sha256": "76c6af89db7183998d2ab52edcf6f798bfe0bd7b235ef10ce40a874f7a11dd85",
+    "box": [
+      378,
+      285,
+      930,
+      540
+    ],
+    "reason": "师傅在圆木砧墩上切绿色食材。左缘、后沿及前沿可辨，右侧被手和衣袖部分遮挡；框取主操作砧墩的可见范围。"
+  },
+  {
+    "source": "BV14W4y1T7LC",
+    "frame": 443,
+    "video_sha256": "76c6af89db7183998d2ab52edcf6f798bfe0bd7b235ef10ce40a874f7a11dd85",
+    "box": null,
+    "reason": "人员在走道搬一叠盘碟，盘沿和托盘侧壁可辨，未见案板。此张辅助检查餐具误报，盘中仅有残留。"
+  },
+  {
+    "source": "BV1tP4y1R7Ye",
+    "frame": 2705,
+    "video_sha256": "aa4bf89c685574b68b08bff4f89c70295db5d6c5ad17d7cf29091a1894450d71",
+    "box": [
+      397,
+      250,
+      1280,
+      720
+    ],
+    "reason": "肉和菜刀在带提孔的矩形木板上，左角、左边与后边可辨；右侧和下侧截断，边框截至图像边缘。"
+  },
+  {
+    "source": "BV1tP4y1R7Ye",
+    "frame": 901,
+    "video_sha256": "aa4bf89c685574b68b08bff4f89c70295db5d6c5ad17d7cf29091a1894450d71",
+    "box": null,
+    "reason": "叶菜浸在水槽中的蓝色洗菜盆，右侧黄色菜篮，未见案板。"
+  },
+  {
+    "source": "BV1tP4y1R7Ye",
+    "frame": 3787,
+    "video_sha256": "aa4bf89c685574b68b08bff4f89c70295db5d6c5ad17d7cf29091a1894450d71",
+    "box": null,
+    "reason": "不锈钢水槽内把排骨从塑料盒倒入金属碗，容器和池壁可辨，未见案板。"
+  }
+]

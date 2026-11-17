@@ -1,0 +1,755 @@
+{
+  "detectors": {
+    "original": {
+      "model_sha256": "7ed915eba3e87862b879af80889048bc3dbe37cb37921a35d52d073c1323520b",
+      "metrics": {
+        "0.25": {
+          "chicken": {
+            "presence_hits": 12,
+            "positives": 12,
+            "located": 12,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          },
+          "dev": {
+            "presence_hits": 8,
+            "positives": 14,
+            "located": 8,
+            "boxed": 14,
+            "false_frames": 8,
+            "negatives": 70
+          },
+          "dishes": {
+            "presence_hits": 0,
+            "positives": 0,
+            "located": 0,
+            "boxed": 0,
+            "false_frames": 2,
+            "negatives": 3
+          },
+          "fit": {
+            "presence_hits": 5,
+            "positives": 5,
+            "located": 3,
+            "boxed": 5,
+            "false_frames": 2,
+            "negatives": 5
+          },
+          "kitchens": {
+            "presence_hits": 4,
+            "positives": 4,
+            "located": 3,
+            "boxed": 3,
+            "false_frames": 2,
+            "negatives": 14,
+            "old_presence_hits": 4,
+            "old_false_frames": 1
+          },
+          "transfer": {
+            "presence_hits": 0,
+            "positives": 3,
+            "located": 0,
+            "boxed": 3,
+            "false_frames": 2,
+            "negatives": 4,
+            "paired_source_pass": {
+              "BV14W4y1T7LC": false,
+              "BV1qT4y127Go": false,
+              "BV1tP4y1R7Ye": false
+            }
+          },
+          "white": {
+            "presence_hits": 10,
+            "positives": 12,
+            "located": 10,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          }
+        },
+        "0.5": {
+          "chicken": {
+            "presence_hits": 12,
+            "positives": 12,
+            "located": 12,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          },
+          "dev": {
+            "presence_hits": 8,
+            "positives": 14,
+            "located": 8,
+            "boxed": 14,
+            "false_frames": 6,
+            "negatives": 70
+          },
+          "dishes": {
+            "presence_hits": 0,
+            "positives": 0,
+            "located": 0,
+            "boxed": 0,
+            "false_frames": 2,
+            "negatives": 3
+          },
+          "fit": {
+            "presence_hits": 3,
+            "positives": 5,
+            "located": 3,
+            "boxed": 5,
+            "false_frames": 2,
+            "negatives": 5
+          },
+          "kitchens": {
+            "presence_hits": 2,
+            "positives": 4,
+            "located": 2,
+            "boxed": 3,
+            "false_frames": 2,
+            "negatives": 14,
+            "old_presence_hits": 3,
+            "old_false_frames": 1
+          },
+          "transfer": {
+            "presence_hits": 0,
+            "positives": 3,
+            "located": 0,
+            "boxed": 3,
+            "false_frames": 1,
+            "negatives": 4,
+            "paired_source_pass": {
+              "BV14W4y1T7LC": false,
+              "BV1qT4y127Go": false,
+              "BV1tP4y1R7Ye": false
+            }
+          },
+          "white": {
+            "presence_hits": 9,
+            "positives": 12,
+            "located": 9,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          }
+        }
+      }
+    },
+    "food_11": {
+      "model_sha256": "22ad14c1a87d3c88d160208b855dedb5351019353c2e54457613abeeadd633e9",
+      "metrics": {
+        "0.25": {
+          "chicken": {
+            "presence_hits": 11,
+            "positives": 12,
+            "located": 11,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          },
+          "dev": {
+            "presence_hits": 10,
+            "positives": 14,
+            "located": 9,
+            "boxed": 14,
+            "false_frames": 6,
+            "negatives": 70
+          },
+          "dishes": {
+            "presence_hits": 0,
+            "positives": 0,
+            "located": 0,
+            "boxed": 0,
+            "false_frames": 2,
+            "negatives": 3
+          },
+          "fit": {
+            "presence_hits": 3,
+            "positives": 5,
+            "located": 3,
+            "boxed": 5,
+            "false_frames": 0,
+            "negatives": 5
+          },
+          "kitchens": {
+            "presence_hits": 3,
+            "positives": 4,
+            "located": 2,
+            "boxed": 3,
+            "false_frames": 2,
+            "negatives": 14,
+            "old_presence_hits": 3,
+            "old_false_frames": 2
+          },
+          "transfer": {
+            "presence_hits": 3,
+            "positives": 3,
+            "located": 3,
+            "boxed": 3,
+            "false_frames": 1,
+            "negatives": 4,
+            "paired_source_pass": {
+              "BV14W4y1T7LC": true,
+              "BV1qT4y127Go": true,
+              "BV1tP4y1R7Ye": false
+            }
+          },
+          "white": {
+            "presence_hits": 12,
+            "positives": 12,
+            "located": 11,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          }
+        },
+        "0.5": {
+          "chicken": {
+            "presence_hits": 11,
+            "positives": 12,
+            "located": 11,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          },
+          "dev": {
+            "presence_hits": 8,
+            "positives": 14,
+            "located": 8,
+            "boxed": 14,
+            "false_frames": 2,
+            "negatives": 70
+          },
+          "dishes": {
+            "presence_hits": 0,
+            "positives": 0,
+            "located": 0,
+            "boxed": 0,
+            "false_frames": 2,
+            "negatives": 3
+          },
+          "fit": {
+            "presence_hits": 3,
+            "positives": 5,
+            "located": 3,
+            "boxed": 5,
+            "false_frames": 0,
+            "negatives": 5
+          },
+          "kitchens": {
+            "presence_hits": 2,
+            "positives": 4,
+            "located": 2,
+            "boxed": 3,
+            "false_frames": 1,
+            "negatives": 14,
+            "old_presence_hits": 2,
+            "old_false_frames": 1
+          },
+          "transfer": {
+            "presence_hits": 2,
+            "positives": 3,
+            "located": 2,
+            "boxed": 3,
+            "false_frames": 1,
+            "negatives": 4,
+            "paired_source_pass": {
+              "BV14W4y1T7LC": true,
+              "BV1qT4y127Go": false,
+              "BV1tP4y1R7Ye": false
+            }
+          },
+          "white": {
+            "presence_hits": 12,
+            "positives": 12,
+            "located": 11,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          }
+        }
+      }
+    },
+    "paired_11": {
+      "model_sha256": "c7f793d386f7492c22f5123042ef538edfb123cff8c1347fe864533e644c0b9f",
+      "metrics": {
+        "0.25": {
+          "chicken": {
+            "presence_hits": 10,
+            "positives": 12,
+            "located": 10,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          },
+          "dev": {
+            "presence_hits": 8,
+            "positives": 14,
+            "located": 7,
+            "boxed": 14,
+            "false_frames": 8,
+            "negatives": 70
+          },
+          "dishes": {
+            "presence_hits": 0,
+            "positives": 0,
+            "located": 0,
+            "boxed": 0,
+            "false_frames": 1,
+            "negatives": 3
+          },
+          "fit": {
+            "presence_hits": 5,
+            "positives": 5,
+            "located": 5,
+            "boxed": 5,
+            "false_frames": 0,
+            "negatives": 5
+          },
+          "kitchens": {
+            "presence_hits": 4,
+            "positives": 4,
+            "located": 3,
+            "boxed": 3,
+            "false_frames": 1,
+            "negatives": 14,
+            "old_presence_hits": 3,
+            "old_false_frames": 1
+          },
+          "transfer": {
+            "presence_hits": 3,
+            "positives": 3,
+            "located": 3,
+            "boxed": 3,
+            "false_frames": 0,
+            "negatives": 4,
+            "paired_source_pass": {
+              "BV14W4y1T7LC": true,
+              "BV1qT4y127Go": true,
+              "BV1tP4y1R7Ye": true
+            }
+          },
+          "white": {
+            "presence_hits": 11,
+            "positives": 12,
+            "located": 10,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          }
+        },
+        "0.5": {
+          "chicken": {
+            "presence_hits": 10,
+            "positives": 12,
+            "located": 10,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          },
+          "dev": {
+            "presence_hits": 7,
+            "positives": 14,
+            "located": 7,
+            "boxed": 14,
+            "false_frames": 5,
+            "negatives": 70
+          },
+          "dishes": {
+            "presence_hits": 0,
+            "positives": 0,
+            "located": 0,
+            "boxed": 0,
+            "false_frames": 0,
+            "negatives": 3
+          },
+          "fit": {
+            "presence_hits": 5,
+            "positives": 5,
+            "located": 5,
+            "boxed": 5,
+            "false_frames": 0,
+            "negatives": 5
+          },
+          "kitchens": {
+            "presence_hits": 3,
+            "positives": 4,
+            "located": 2,
+            "boxed": 3,
+            "false_frames": 1,
+            "negatives": 14,
+            "old_presence_hits": 3,
+            "old_false_frames": 1
+          },
+          "transfer": {
+            "presence_hits": 1,
+            "positives": 3,
+            "located": 1,
+            "boxed": 3,
+            "false_frames": 0,
+            "negatives": 4,
+            "paired_source_pass": {
+              "BV14W4y1T7LC": false,
+              "BV1qT4y127Go": false,
+              "BV1tP4y1R7Ye": true
+            }
+          },
+          "white": {
+            "presence_hits": 10,
+            "positives": 12,
+            "located": 10,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          }
+        }
+      }
+    },
+    "food_42": {
+      "model_sha256": "ac7bee918633b7ac20ad057d744ba83a166cb576c0204ed18b8e6b84306d8d50",
+      "metrics": {
+        "0.25": {
+          "chicken": {
+            "presence_hits": 10,
+            "positives": 12,
+            "located": 10,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          },
+          "dev": {
+            "presence_hits": 8,
+            "positives": 14,
+            "located": 8,
+            "boxed": 14,
+            "false_frames": 9,
+            "negatives": 70
+          },
+          "dishes": {
+            "presence_hits": 0,
+            "positives": 0,
+            "located": 0,
+            "boxed": 0,
+            "false_frames": 1,
+            "negatives": 3
+          },
+          "fit": {
+            "presence_hits": 3,
+            "positives": 5,
+            "located": 3,
+            "boxed": 5,
+            "false_frames": 0,
+            "negatives": 5
+          },
+          "kitchens": {
+            "presence_hits": 2,
+            "positives": 4,
+            "located": 2,
+            "boxed": 3,
+            "false_frames": 2,
+            "negatives": 14,
+            "old_presence_hits": 2,
+            "old_false_frames": 2
+          },
+          "transfer": {
+            "presence_hits": 3,
+            "positives": 3,
+            "located": 2,
+            "boxed": 3,
+            "false_frames": 2,
+            "negatives": 4,
+            "paired_source_pass": {
+              "BV14W4y1T7LC": true,
+              "BV1qT4y127Go": true,
+              "BV1tP4y1R7Ye": false
+            }
+          },
+          "white": {
+            "presence_hits": 10,
+            "positives": 12,
+            "located": 10,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          }
+        },
+        "0.5": {
+          "chicken": {
+            "presence_hits": 9,
+            "positives": 12,
+            "located": 9,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          },
+          "dev": {
+            "presence_hits": 6,
+            "positives": 14,
+            "located": 6,
+            "boxed": 14,
+            "false_frames": 6,
+            "negatives": 70
+          },
+          "dishes": {
+            "presence_hits": 0,
+            "positives": 0,
+            "located": 0,
+            "boxed": 0,
+            "false_frames": 1,
+            "negatives": 3
+          },
+          "fit": {
+            "presence_hits": 3,
+            "positives": 5,
+            "located": 3,
+            "boxed": 5,
+            "false_frames": 0,
+            "negatives": 5
+          },
+          "kitchens": {
+            "presence_hits": 2,
+            "positives": 4,
+            "located": 2,
+            "boxed": 3,
+            "false_frames": 1,
+            "negatives": 14,
+            "old_presence_hits": 2,
+            "old_false_frames": 1
+          },
+          "transfer": {
+            "presence_hits": 0,
+            "positives": 3,
+            "located": 0,
+            "boxed": 3,
+            "false_frames": 0,
+            "negatives": 4,
+            "paired_source_pass": {
+              "BV14W4y1T7LC": false,
+              "BV1qT4y127Go": false,
+              "BV1tP4y1R7Ye": false
+            }
+          },
+          "white": {
+            "presence_hits": 9,
+            "positives": 12,
+            "located": 9,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          }
+        }
+      }
+    },
+    "paired_42": {
+      "model_sha256": "b72e82bdcaeb101bb45d8101ed3142a561808021d3bab4836cb8ad21dca1cd4f",
+      "metrics": {
+        "0.25": {
+          "chicken": {
+            "presence_hits": 11,
+            "positives": 12,
+            "located": 11,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          },
+          "dev": {
+            "presence_hits": 8,
+            "positives": 14,
+            "located": 8,
+            "boxed": 14,
+            "false_frames": 15,
+            "negatives": 70
+          },
+          "dishes": {
+            "presence_hits": 0,
+            "positives": 0,
+            "located": 0,
+            "boxed": 0,
+            "false_frames": 2,
+            "negatives": 3
+          },
+          "fit": {
+            "presence_hits": 5,
+            "positives": 5,
+            "located": 5,
+            "boxed": 5,
+            "false_frames": 0,
+            "negatives": 5
+          },
+          "kitchens": {
+            "presence_hits": 3,
+            "positives": 4,
+            "located": 2,
+            "boxed": 3,
+            "false_frames": 1,
+            "negatives": 14,
+            "old_presence_hits": 3,
+            "old_false_frames": 1
+          },
+          "transfer": {
+            "presence_hits": 1,
+            "positives": 3,
+            "located": 1,
+            "boxed": 3,
+            "false_frames": 2,
+            "negatives": 4,
+            "paired_source_pass": {
+              "BV14W4y1T7LC": false,
+              "BV1qT4y127Go": true,
+              "BV1tP4y1R7Ye": false
+            }
+          },
+          "white": {
+            "presence_hits": 10,
+            "positives": 12,
+            "located": 10,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          }
+        },
+        "0.5": {
+          "chicken": {
+            "presence_hits": 10,
+            "positives": 12,
+            "located": 10,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          },
+          "dev": {
+            "presence_hits": 8,
+            "positives": 14,
+            "located": 8,
+            "boxed": 14,
+            "false_frames": 7,
+            "negatives": 70
+          },
+          "dishes": {
+            "presence_hits": 0,
+            "positives": 0,
+            "located": 0,
+            "boxed": 0,
+            "false_frames": 2,
+            "negatives": 3
+          },
+          "fit": {
+            "presence_hits": 5,
+            "positives": 5,
+            "located": 5,
+            "boxed": 5,
+            "false_frames": 0,
+            "negatives": 5
+          },
+          "kitchens": {
+            "presence_hits": 2,
+            "positives": 4,
+            "located": 2,
+            "boxed": 3,
+            "false_frames": 1,
+            "negatives": 14,
+            "old_presence_hits": 2,
+            "old_false_frames": 1
+          },
+          "transfer": {
+            "presence_hits": 0,
+            "positives": 3,
+            "located": 0,
+            "boxed": 3,
+            "false_frames": 2,
+            "negatives": 4,
+            "paired_source_pass": {
+              "BV14W4y1T7LC": false,
+              "BV1qT4y127Go": false,
+              "BV1tP4y1R7Ye": false
+            }
+          },
+          "white": {
+            "presence_hits": 10,
+            "positives": 12,
+            "located": 10,
+            "boxed": 12,
+            "false_frames": 0,
+            "negatives": 0
+          }
+        }
+      }
+    }
+  },
+  "vlm": {
+    "kitchens": {
+      "total": 20,
+      "valid": 20,
+      "presence_hits": 4,
+      "localized": 3,
+      "false_frames": 0
+    },
+    "transfer": {
+      "total": 7,
+      "valid": 7,
+      "presence_hits": 3,
+      "localized": 3,
+      "false_frames": 0
+    },
+    "dishes": {
+      "total": 3,
+      "valid": 3,
+      "presence_hits": 0,
+      "localized": 0,
+      "false_frames": 0
+    },
+    "dev": {
+      "total": 84,
+      "valid": 84,
+      "presence_hits": 11,
+      "localized": 11,
+      "false_frames": 0
+    },
+    "white": {
+      "total": 12,
+      "valid": 12,
+      "presence_hits": 11,
+      "localized": 11,
+      "false_frames": 0
+    },
+    "chicken": {
+      "total": 12,
+      "valid": 12,
+      "presence_hits": 12,
+      "localized": 12,
+      "false_frames": 0
+    }
+  },
+  "cascade": {
+    "original": {
+      "calls": 16,
+      "localized": 7,
+      "false_frames": 0,
+      "invalid": 0
+    },
+    "food_11": {
+      "calls": 16,
+      "localized": 8,
+      "false_frames": 0,
+      "invalid": 0
+    },
+    "paired_11": {
+      "calls": 16,
+      "localized": 6,
+      "false_frames": 0,
+      "invalid": 0
+    },
+    "food_42": {
+      "calls": 17,
+      "localized": 7,
+      "false_frames": 0,
+      "invalid": 0
+    },
+    "paired_42": {
+      "calls": 23,
+      "localized": 7,
+      "false_frames": 0,
+      "invalid": 0
+    }
+  }
+}

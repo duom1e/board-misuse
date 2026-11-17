@@ -1,0 +1,498 @@
+{
+  "revision": "ebb281ec70b05090aa6165b016eac8ec08e71b17",
+  "prompt_sha256": "a5521b0709d1825f322db4d6284f4c8d98dd6cb48dc9d95339b222edd138855e",
+  "summary": {
+    "kitchens": {
+      "total": 20,
+      "valid": 20,
+      "presence_hits": 4,
+      "localized": 3,
+      "false_frames": 0
+    },
+    "transfer": {
+      "total": 7,
+      "valid": 7,
+      "presence_hits": 3,
+      "localized": 3,
+      "false_frames": 0
+    },
+    "dishes": {
+      "total": 3,
+      "valid": 3,
+      "presence_hits": 0,
+      "localized": 0,
+      "false_frames": 0
+    }
+  },
+  "rows": [
+    {
+      "group": "kitchens",
+      "name": "BV1Mg411U7SV_014.1s.jpg",
+      "presence": "unclear",
+      "gt": null,
+      "source": "BV1Mg411U7SV",
+      "old": "no",
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Mg411U7SV_028.2s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1Mg411U7SV",
+      "old": "no",
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Mg411U7SV_042.2s.jpg",
+      "presence": "yes",
+      "gt": [
+        115,
+        594,
+        394,
+        720
+      ],
+      "source": "BV1Mg411U7SV",
+      "old": "unclear",
+      "raw": "{\"boards\":[[102, 776, 370, 997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          130.56,
+          558.72,
+          473.6,
+          717.84
+        ]
+      ],
+      "best_iou": 0.5712144797438795
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Mg411U7SV_056.3s.jpg",
+      "presence": "yes",
+      "gt": [
+        49,
+        353,
+        996,
+        720
+      ],
+      "source": "BV1Mg411U7SV",
+      "old": "yes",
+      "raw": "{\"boards\":[[100,478,700,997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          128.0,
+          344.16,
+          896.0,
+          717.84
+        ]
+      ],
+      "best_iou": 0.7907619987372513
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Mg411U7SV_070.4s.jpg",
+      "presence": "yes",
+      "gt": null,
+      "source": "BV1Mg411U7SV",
+      "old": "yes",
+      "raw": "{\"boards\":[[250,107,1000,997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          320.0,
+          77.04,
+          1280.0,
+          717.84
+        ]
+      ],
+      "best_iou": null
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Mg411U7SV_084.5s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1Mg411U7SV",
+      "old": "no",
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Mg411U7SV_098.6s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1Mg411U7SV",
+      "old": "no",
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Mg411U7SV_112.7s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1Mg411U7SV",
+      "old": "no",
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Mg411U7SV_126.8s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1Mg411U7SV",
+      "old": "no",
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Zq4y1j7mm_020.3s.jpg",
+      "presence": "yes",
+      "gt": [
+        0,
+        200,
+        1153,
+        720
+      ],
+      "source": "BV1Zq4y1j7mm",
+      "old": "yes",
+      "raw": "{\"boards\":[[287, 300, 907, 997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          367.36,
+          216.0,
+          1160.96,
+          717.84
+        ]
+      ],
+      "best_iou": 0.6532392384876188
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Zq4y1j7mm_040.5s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1Zq4y1j7mm",
+      "old": "no",
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Zq4y1j7mm_060.8s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1Zq4y1j7mm",
+      "old": "no",
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Zq4y1j7mm_081.1s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1Zq4y1j7mm",
+      "old": "no",
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Zq4y1j7mm_101.3s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1Zq4y1j7mm",
+      "old": "no",
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Zq4y1j7mm_121.6s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1Zq4y1j7mm",
+      "old": "yes",
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Zq4y1j7mm_141.9s.jpg",
+      "presence": "unclear",
+      "gt": null,
+      "source": "BV1Zq4y1j7mm",
+      "old": "no",
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Zq4y1j7mm_162.1s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1Zq4y1j7mm",
+      "old": "no",
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Zq4y1j7mm_182.4s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1Zq4y1j7mm",
+      "old": "no",
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Zq4y1j7mm_202.7s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1Zq4y1j7mm",
+      "old": "no",
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "kitchens",
+      "name": "BV1Mg411U7SV_140.8s.jpg",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1Mg411U7SV",
+      "old": "no",
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dishes",
+      "name": "5598",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1tP4y1R7Ye",
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dishes",
+      "name": "4787",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1eB4y1J7B6",
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "dishes",
+      "name": "3301",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1ax7pz1E4v",
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "transfer",
+      "name": "943",
+      "presence": "yes",
+      "gt": [
+        0,
+        323,
+        400,
+        720
+      ],
+      "source": "BV1qT4y127Go",
+      "old": null,
+      "raw": "{\"boards\":[[0, 450, 312, 1000]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          0.0,
+          324.0,
+          399.36,
+          720.0
+        ]
+      ],
+      "best_iou": 0.9958851385390428
+    },
+    {
+      "group": "transfer",
+      "name": "5093",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1qT4y127Go",
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "transfer",
+      "name": "2215",
+      "presence": "yes",
+      "gt": [
+        378,
+        285,
+        930,
+        540
+      ],
+      "source": "BV14W4y1T7LC",
+      "old": null,
+      "raw": "{\"boards\":[[300, 424, 720, 857]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          384.0,
+          305.28,
+          921.6,
+          617.04
+        ]
+      ],
+      "best_iou": 0.6926542704384423
+    },
+    {
+      "group": "transfer",
+      "name": "443",
+      "presence": "no",
+      "gt": null,
+      "source": "BV14W4y1T7LC",
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "transfer",
+      "name": "2705",
+      "presence": "yes",
+      "gt": [
+        397,
+        250,
+        1280,
+        720
+      ],
+      "source": "BV1tP4y1R7Ye",
+      "old": null,
+      "raw": "{\"boards\":[[306, 400, 778, 997]]}",
+      "valid": true,
+      "error": {},
+      "boxes": [
+        [
+          391.68,
+          288.0,
+          995.84,
+          717.84
+        ]
+      ],
+      "best_iou": 0.616840141554441
+    },
+    {
+      "group": "transfer",
+      "name": "901",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1tP4y1R7Ye",
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    },
+    {
+      "group": "transfer",
+      "name": "3787",
+      "presence": "no",
+      "gt": null,
+      "source": "BV1tP4y1R7Ye",
+      "old": null,
+      "raw": "{\"boards\":[]}",
+      "valid": true,
+      "error": {},
+      "boxes": [],
+      "best_iou": null
+    }
+  ]
+}

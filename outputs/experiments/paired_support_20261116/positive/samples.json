@@ -1,0 +1,97 @@
+[
+  {
+    "source": "BV1aRmLBmE7i",
+    "frame": 4619,
+    "video_sha256": "b5b7ac8b9f630325b87c6d7a918f0066df09c90d64224a46a46bb30109a68447",
+    "box": [
+      0,
+      474,
+      341,
+      569
+    ],
+    "width": 360,
+    "height": 640,
+    "box_area_fraction": 0.1406,
+    "review": "Meat on wooden paddle board. Wide shot with handle and front edge, distinct from old close-ups. Handle meets left border.",
+    "nearest_previous_same_source_by_gray64_mae": [
+      "BV1aRmLBmE7i_02.jpg",
+      62.573
+    ]
+  },
+  {
+    "source": "BV1jJ411j7bC",
+    "frame": 2167,
+    "video_sha256": "a34005f95ef5fafcde4e480f51e193db45c4a8c2fe938c6cbeb1495789a5111f",
+    "box": [
+      267,
+      308,
+      957,
+      488
+    ],
+    "width": 1280,
+    "height": 720,
+    "box_area_fraction": 0.1348,
+    "review": "Food on red-lit chopping block. Visible wooden rim and top only; exclude the metal mount, handles and protective guard. Rear left portion obscured by hand.",
+    "nearest_previous_same_source_by_gray64_mae": [
+      "BV1jJ411j7bC_10.jpg",
+      51.188
+    ]
+  },
+  {
+    "source": "BV1jJ411j7bC",
+    "frame": 4615,
+    "video_sha256": "a34005f95ef5fafcde4e480f51e193db45c4a8c2fe938c6cbeb1495789a5111f",
+    "box": [
+      282,
+      124,
+      949,
+      647
+    ],
+    "width": 1280,
+    "height": 720,
+    "box_area_fraction": 0.3785,
+    "review": "Chopped roast on dark round block. Top-down close shot includes wooden sidewall, excludes table and cloth. Sleeve occludes upper right rim.",
+    "nearest_previous_same_source_by_gray64_mae": [
+      "BV1jJ411j7bC_07.jpg",
+      63.995
+    ]
+  },
+  {
+    "source": "BV1jJ411j7bC",
+    "frame": 5431,
+    "video_sha256": "a34005f95ef5fafcde4e480f51e193db45c4a8c2fe938c6cbeb1495789a5111f",
+    "box": [
+      431,
+      493,
+      912,
+      665
+    ],
+    "width": 1280,
+    "height": 720,
+    "box_area_fraction": 0.0898,
+    "review": "Chicken portion on round board. Wider frontal view than old waist-level images; food, raised cleaver, counter and background distinct. Front left rim partly obscured by tray.",
+    "nearest_previous_same_source_by_gray64_mae": [
+      "BV1jJ411j7bC_07.jpg",
+      61.44
+    ]
+  },
+  {
+    "source": "BV15J411D718",
+    "frame": 416,
+    "video_sha256": "cb124ea20073729c8a7a40d2d01b3f50e8527239763734ff52cca35a5e80e81a",
+    "box": [
+      307,
+      252,
+      998,
+      720
+    ],
+    "width": 1280,
+    "height": 720,
+    "box_area_fraction": 0.3509,
+    "review": "Whole plucked chicken on round yellow block, two cleavers visible. Bottom of sidewall cut off by frame. Old training frames show jointed pieces and a different hand/knife arrangement.",
+    "nearest_previous_same_source_by_gray64_mae": [
+      "BV15J411D718_03.jpg",
+      30.809
+    ]
+  }
+]
